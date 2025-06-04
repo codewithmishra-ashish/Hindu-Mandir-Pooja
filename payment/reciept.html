@@ -9,34 +9,34 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '495269903249950');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=495269903249950&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "nsotq330nv");
-</script>
-  
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '495269903249950');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=495269903249950&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nsotq330nv");
+    </script>
+
     <style>
-      /* General styling */
       body {
         font-family: "Roboto", sans-serif;
         display: flex;
@@ -44,36 +44,34 @@
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        background-color: #f4f4f4;
+        background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
         box-sizing: border-box;
       }
 
-      /* Receipt container styling */
       .receipt-container {
         position: relative;
-        width: 400px; /* Increased width for better readability */
-        padding: 30px; /* Increased padding for better spacing */
-        border-radius: 15px; /* Increased border radius for a smoother look */
+        width: 90%;
+        max-width: 500px;
+        padding: 30px;
+        border-radius: 15px;
         background-color: #fff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Adjusted shadow for a softer look */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         text-align: left;
         overflow: hidden;
-      }
-      .receipt-container img {
-        margin-top: 30px; /* Adjusted margin for better spacing */
-        opacity: 0.4; /* Set opacity for lighter watermark */
+        border: 2px solid transparent;
+        background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #a52a2a, #cc3333);
+        background-clip: padding-box, border-box;
       }
 
-      /* Watermark image styling */
       .watermark {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.1; /* Set opacity for lighter watermark */
+        opacity: 0.1;
         z-index: 0;
-        pointer-events: none; /* Prevent interaction */
+        pointer-events: none;
       }
 
       .receipt-content {
@@ -81,110 +79,198 @@
         z-index: 1;
       }
 
-      h2 {
-        color: #a52a2a;
-        text-align: center;
-        font-size: 24px; /* Increased font size for better readability */
-        margin-bottom: 30px; /* Adjusted margin for better spacing */
+      .divider {
+        height: 2px;
+        background: linear-gradient(to right, transparent, #a52a2a, transparent);
+        margin: 20px 0;
       }
 
-      .receipt-details {
-        border: 1px solid #ddd;
-        padding: 15px; /* Adjusted padding for better spacing */
-        border-radius: 10px;
-      }
-
-      .receipt-details p {
-        font-size: 18px; /* Increased font size for better readability */
-        margin: 10px 0; /* Adjusted margin for better spacing */
-        color: #333;
-      }
-
-      .receipt-details p strong {
-        font-weight: bold;
-      }
-
-      /* Print button styling */
-      .print-button {
-        display: block;
+      .cart-items-table {
         width: 100%;
-        padding: 15px; /* Adjusted padding for better spacing */
-        margin-top: 30px; /* Adjusted margin for better spacing */
-        background-color: #a52a2a;
-        color: #fff;
-        text-align: center;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px; /* Increased font size for better readability */
-        cursor: pointer;
+        border-collapse: collapse;
+        margin: 15px 0;
       }
 
-      .print-button:hover {
-        background-color: #a52a2a;
+      .cart-items-table th,
+      .cart-items-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
       }
 
-      /* Print styles */
+      .cart-items-table th {
+        background-color: #f9f9f9;
+        color: #a52a2a;
+        font-weight: 600;
+      }
+
+      .cart-items-table tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      .total-row {
+        font-weight: bold;
+        color: #a52a2a;
+      }
+
       @media print {
         body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
           background: none;
         }
-
-        .print-button {
-          display: none; /* Hide print button */
-        }
-
         .receipt-container {
-          box-shadow: none; /* Remove shadow for cleaner printing */
+          box-shadow: none;
+          border: 1px solid #333;
+          width: 100%;
+          max-width: 600px;
         }
-
-        .receipt-details {
-          border: 1px solid #333; /* Darker border for printing */
-          padding: 20px; /* Adjusted padding for better spacing */
+        .print-button {
+          display: none;
         }
-
-        h2 {
-          font-size: 28px; /* Increased font size for printing */
+        .divider {
+          background: #a52a2a;
         }
+      }
 
-        .receipt-details p {
-          font-size: 20px; /* Increased font size for printing */
+      @media (max-width: 480px) {
+        .receipt-container {
+          width: 95%;
+          padding: 15px;
+        }
+        .cart-items-table th,
+        .cart-items-table td {
+          padding: 8px;
+          font-size: 0.9em;
         }
       }
     </style>
   </head>
   <body>
     <div class="receipt-container">
-      <!-- Watermark Image -->
       <img src="assets/img/Hindu Mandir Puja logo (2).png" alt="Watermark" class="watermark" />
 
       <div class="receipt-content">
-        <h2>Payment Receipt</h2>
-        <div class="receipt-details">
-          <p><strong>Event Name:</strong> <span id="eventName"></span></p>
-          <p><strong>Name:</strong> <span id="receiptName"></span></p>
-          <p><strong>Phone:</strong> <span id="receiptPhone"></span></p>
-          <p><strong>Address:</strong> <span id="receiptAddress"></span></p>
-          <p><strong>Amount:</strong> ₹<span id="receiptAmount"></span></p>
-          <p><strong>Payment ID:</strong> <span id="paymentId"></span></p>
-          <p><strong>Date:</strong> <span id="paymentDate"></span></p>
+        <!-- Header Section -->
+        <div class="text-center mb-6">
+          <h1 class="text-3xl font-bold text-[#a52a2a]">Payment Receipt</h1>
+          <p class="text-sm text-gray-500 mt-1">Hindu Mandir Puja</p>
         </div>
-        <button class="print-button" onclick="window.print()">
+
+        <div class="divider"></div>
+
+        <!-- Receipt Details -->
+        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+          <div class="space-y-2">
+            <p class="text-lg"><strong class="text-[#a52a2a]">Event Name:</strong> <span id="eventName"></span></p>
+            <p class="text-lg"><strong class="text-[#a52a2a]">Name:</strong> <span id="receiptName"></span></p>
+            <p class="text-lg"><strong class="text-[#a52a2a]">Phone:</strong> <span id="receiptPhone"></span></p>
+            <p class="text-lg"><strong class="text-[#a52a2a]">Address:</strong> <span id="receiptAddress"></span></p>
+            <p class="text-lg"><strong class="text-[#a52a2a]">Payment ID:</strong> <span id="paymentId"></span></p>
+            <p class="text-lg"><strong class="text-[#a52a2a]">Date:</strong> <span id="paymentDate"></span></p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Cart Items Section -->
+        <div class="cart-items-section">
+          <h2 class="text-xl font-semibold text-[#a52a2a] mb-3">Cart Items</h2>
+          <div id="cartItemsList" class="text-gray-700">
+            <table class="cart-items-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody id="cartItemsTableBody"></tbody>
+            </table>
+            <div id="cartTotal" class="text-right text-lg font-semibold text-[#a52a2a] mt-2"></div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Total Amount -->
+        <div class="text-right">
+          <p class="text-xl font-bold text-[#a52a2a]"><strong>Total Amount:</strong> ₹<span id="receiptAmount"></span></p>
+        </div>
+
+        <!-- Print Button -->
+        <button class="print-button bg-gradient-to-r from-[#a52a2a] to-[#cc3333] text-white px-4 py-3 rounded-lg w-full mt-6 text-lg font-semibold hover:transform hover:-translate-y-1 hover:shadow-lg transition-all" onclick="window.print()">
           Download Receipt
         </button>
       </div>
     </div>
 
     <script>
-      // Populate receipt with URL parameters
-      document.getElementById("eventName").innerText = localStorage.getItem('eventName');
-      document.getElementById("receiptName").innerText = localStorage.getItem('name');
-      document.getElementById("receiptPhone").innerText = localStorage.getItem('phone');
-      document.getElementById("receiptAmount").innerText = localStorage.getItem('amount');
-      document.getElementById("paymentId").innerText = localStorage.getItem('payment_id');
-      document.getElementById("paymentDate").innerText = localStorage.getItem('date');
+      document.addEventListener("DOMContentLoaded", function () {
+        // Populate receipt details from localStorage
+        document.getElementById("eventName").innerText = localStorage.getItem('eventName') || 'N/A';
+        document.getElementById("receiptName").innerText = localStorage.getItem('name') || 'N/A';
+        document.getElementById("receiptPhone").innerText = localStorage.getItem('phone') || 'N/A';
+        document.getElementById("receiptAddress").innerText = localStorage.getItem('address') || 'N/A';
+        document.getElementById("receiptAmount").innerText = localStorage.getItem('amount') || '0.00';
+        document.getElementById("paymentId").innerText = localStorage.getItem('payment_id') || 'N/A';
+        document.getElementById("paymentDate").innerText = localStorage.getItem('date') || 'N/A';
+
+        // Retrieve cart items from localStorage
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || {};
+        const cartItemsArray = Object.keys(cartItems)
+          .filter(key => cartItems[key].quantity > 0)
+          .map(key => ({
+            name: key,
+            quantity: cartItems[key].quantity,
+            price: cartItems[key].price
+          }));
+
+        const cartItemsTableBody = document.getElementById("cartItemsTableBody");
+        const cartTotalDiv = document.getElementById("cartTotal");
+
+        if (cartItemsArray.length > 0) {
+          let total = 0;
+          cartItemsArray.forEach(item => {
+            const row = document.createElement("tr");
+            row.className = "hover:bg-gray-50";
+
+            // Item name (capitalized)
+            const nameCell = document.createElement("td");
+            nameCell.textContent = item.name.charAt(0).toUpperCase() + item.name.slice(1);
+            row.appendChild(nameCell);
+
+            // Quantity
+            const qtyCell = document.createElement("td");
+            qtyCell.textContent = item.quantity;
+            row.appendChild(qtyCell);
+
+            // Price
+            const priceCell = document.createElement("td");
+            priceCell.textContent = `₹${item.price.toFixed(2)}`;
+            row.appendChild(priceCell);
+
+            // Subtotal
+            const subtotal = item.quantity * item.price;
+            total += subtotal;
+            const subtotalCell = document.createElement("td");
+            subtotalCell.textContent = `₹${subtotal.toFixed(2)}`;
+            row.appendChild(subtotalCell);
+
+            cartItemsTableBody.appendChild(row);
+          });
+
+          // Display total
+          cartTotalDiv.textContent = `Cart Total: ₹${total.toFixed(2)}`;
+        } else {
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+          cell.setAttribute("colspan", "4");
+          cell.className = "text-center text-gray-500 italic py-3";
+          cell.textContent = "No items in cart.";
+          row.appendChild(cell);
+          cartItemsTableBody.appendChild(row);
+        }
+      });
     </script>
   </body>
 </html>
