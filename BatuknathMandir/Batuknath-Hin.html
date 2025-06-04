@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>बटुक भैरव मंदिर</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- हैडर सेक्शन -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+      <nav class="fixed w-full h-16 md:h-20 z-50 bg-white">
+        <div class="container mx-auto px-4 md:px-6 py-2 md:py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 md:gap-4">
+              <img
+                src="../assets/img/Hindu Mandir Puja logo (2).png"
+                alt="ॐ लोगो"
+                class="h-12 scale-150 md:h-16"
+              />
+              <div>
+                <h1 class="text-xl md:text-2xl font-bold text-orange-600">
+                  हिंदू मंदिर पूजा
+                </h1>
+                <p class="text-xs md:text-sm text-gray-600">
+                  आपकी आस्था और हमारी सेवा
+                </p>
+              </div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >होम</a
+              >
+              <a
+                href="/poojaBooking.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >पूजाएं</a
+              >
+              <a
+                href="/Chadhawas"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >चढ़ावा</a
+              >
+              <a
+                href="/Blogs"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >ब्लॉग</a
+              >
+              <a
+                href="/Library"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >लाइब्रेरी</a
+              >
+              <a href="./BatukBhairav-Eng.html">
+              <button
+                class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+              >
+                In English
+              </button>
+              </a>
+            </div>
+
+            <div class="md:hidden">
+              <button id="mobileMenuBtn" class="text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- मोबाइल मेनू -->
+          <div
+            id="mobileMenu"
+            class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+          >
+            <div class="flex flex-col space-y-4 p-4">
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >होम</a
+              >
+              <a
+                href="/poojaBooking.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >पूजाएं</a
+              >
+              <a
+                href="/Chadhawas"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >चढ़ावा</a
+              >
+              <a
+                href="/Blogs"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >ब्लॉग</a
+              >
+              <a
+                href="/Library"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >लाइब्रेरी</a
+              >
+              <a href="./BatukBhairav-Eng.html">
+              <button
+                class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+              >
+                In English
+              </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script>
+        // मोबाइल मेनू फंक्शनैलिटी
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener("click", () => {
+          isMenuOpen = !isMenuOpen;
+
+          // टॉगल मेनू विजिबिलिटी
+          mobileMenu.classList.toggle("hidden");
+
+          // टॉगल आइकन बीटवीन बार्स एंड टाइम्स
+          const menuIcon = mobileMenuBtn.querySelector("i");
+          menuIcon.classList.remove(isMenuOpen ? "fa-bars" : "fa-times");
+          menuIcon.classList.add(isMenuOpen ? "fa-times" : "fa-bars");
+        });
+
+        // बाहर क्लिक करने पर मेनू बंद करें
+        document.addEventListener("click", (e) => {
+          if (
+            !mobileMenuBtn.contains(e.target) &&
+            !mobileMenu.contains(e.target) &&
+            !isMenuOpen
+          ) {
+            mobileMenu.classList.add("hidden");
+            const menuIcon = mobileMenuBtn.querySelector("i");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+            isMenuOpen = false;
+          }
+        });
+      </script>
+    </header>
+
+    <!-- मुख्य कंटेंट -->
+    <div class="mt-20 container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- इमेज सेक्शन -->
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img
+            src="https://kashiarchan.com/Upload/Temple638514761963806056Batuk%20Bhairav%20Temple%20Kashi%2001.jpg"
+            alt="बटुक भैरव इमेज"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+
+        <!-- विवरण सेक्शन -->
+        <div class="space-y-6">
+          <h1
+            id="mandir-heading"
+            class="text-3xl md:text-4xl font-bold text-gray-800"
+          >
+            बटुक भैरव मंदिर – सुरक्षा और सफलता के लिए पूजा
+          </h1>
+          <p id="mandir-description" class="text-gray-600">
+            क्या आप लगातार असफलताओं, तनाव या नकारात्मकता से जूझ रहे हैं? क्या आपको अपनी कोशिशों के बावजूद रुकावटें महसूस हो रही हैं? काशी में बटुक भैरव पूजा जीवन की चुनौतियों को दूर करने का एक शक्तिशाली माध्यम है। बटुक भैरव, भगवान शिव का बाल रूप, भक्तों को सुरक्षा, सफलता और शांति का आशीर्वाद देते हैं। यह पूजा आपके घर और परिवार को बुरी नजर और नकारात्मक ऊर्जाओं से भी सुरक्षित करती है।
+          </p>
+
+          <div class="flex items-center space-x-2 text-gray-700">
+            <img
+              src="https://img.icons8.com/material-outlined/24/000000/place-marker.png"
+              alt="लोकेशन आइकन"
+            />
+            <strong>स्थान:</strong> काशी खंड, वाराणसी
+          </div>
+
+          <div class="countdown bg-orange-100 p-4 rounded-lg">
+            <div class="flex items-center space-x-2">
+              <img
+                src="https://img.icons8.com/material-outlined/24/000000/calendar.png"
+                alt="कैलेंडर आइकन"
+              />
+              <span id="countdown-timer" class="text-orange-600 font-semibold"
+                >गणना जारी...</span
+              >
+            </div>
+          </div>
+
+          <p class="devotee-count text-green-600 font-medium">
+            200+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+          </p>
+          <div class="flex">
+            <button
+              onclick="document.getElementById('participate-section').scrollIntoView({ behavior: 'smooth' })"
+              class="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105"
+            >
+              पूजा पैकेज चुनें
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="bg-white py-12 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <img
+              src="../assets/img/family-sits-table-with-sign-that-says-god.jpg"
+              alt="बटुक भैरव मंदिर"
+              class="rounded-lg shadow-lg w-full h-96"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+              बटुक भैरव पूजा के लाभ
+            </h2>
+            <ul class="mt-4 space-y-3 text-gray-600">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-shield-alt text-orange-500 text-xs"></i>
+                <span>नकारात्मकता से सुरक्षा: बटुक भैरव का आशीर्वाद आपको बुरी नजर, नकारात्मक ऊर्जाओं और आध्यात्मिक बाधाओं से बचाता है।</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-star text-orange-500 text-xs"></i>
+                <span>सफलता और खुशी: यदि बाधाएं और असफलताएं लगातार आ रही हैं, तो यह पूजा बाधाओं को दूर करने में मदद करती है, सफलता का मार्ग प्रशस्त करती है।</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-peace text-orange-500 text-xs"></i>
+                <span>मानसिक शांति: बटुक भैरव के आशीर्वाद से तनाव दूर होता है और भावनात्मक संतुलन प्राप्त होता है।</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- पूजा पैकेज सेक्शन -->
+    <div id="participate-section" class="bg-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- पैकेज 1 -->
+          <div id="package1" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                नाम गोत्र संकल्प (1 भक्त के लिए)
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹851</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">पुजारी संकल्प के दौरान आपका नाम और गोत्र का उच्चारण करेंगे।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">वीडियो कॉल के माध्यम से लाइव पूजा में शामिल हों।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">व्हाट्सएप पर आपके नाम संकल्प के साथ पूजा का वीडियो प्राप्त करें।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">फल, मिठाई और सूखे मेवे का भोग, प्रसाद आपके पते पर भेजा जाएगा।</span>
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('851', 'नाम गोत्र संकल्प (1 भक्त के लिए)')"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-12 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              अभी भाग लें
+            </button>
+            <h2 class="text-center text-gray-600 text-sm md:text-base lg:text-lg">
+              400+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+            </h2>
+          </div>
+
+          <!-- पैकेज 2 -->
+          <div id="package2" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                नाम गोत्र संकल्प (2 भक्तों के लिए)
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹1251</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">पुजारी संकल्प के दौरान आप और आपके साथी का नाम और गोत्र का उच्चारण करेंगे।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">वीडियो कॉल के माध्यम से लाइव पूजा में शामिल हों।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">व्हाट्सएप पर आपके नामों के संकल्प के साथ पूजा का वीडियो प्राप्त करें।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">फल, मिठाई और सूखे मेवे का भोग, प्रसाद आपके पते पर भेजा जाएगा।</span>
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('1251', 'नाम गोत्र संकल्प (2 भक्तों के लिए)')"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-12 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              अभी भाग लें
+            </button>
+            <h2 class="text-center text-gray-600 text-sm md:text-base lg:text-lg">
+              350+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+            </h2>
+          </div>
+
+          <!-- पैकेज 3 -->
+          <div id="package3" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                नाम गोत्र संकल्प (परिवार के लिए)
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹2100</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">पुजारी संकल्प के दौरान आपके पूरे परिवार के नाम और गोत्र का उच्चारण करेंगे।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">वीडियो कॉल के माध्यम से लाइव पूजा में शामिल हों।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">व्हाट्सएप पर आपके परिवार के नाम संकल्प के साथ पूजा का वीडियो प्राप्त करें।</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg">फल, मिठाई और सूखे मेवे का भोग, प्रसाद आपके पते पर भेजा जाएगा।</span>
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('2100', 'नाम गोत्र संकल्प (परिवार के लिए)')"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-12 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              अभी भाग लें
+            </button>
+            <h2 class="text-center text-gray-600 text-sm md:text-base lg:text-lg">
+              250+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- मंदिर की जानकारी -->
+    <div id="about" class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+              मंदिर के बारे में
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              काशी में बटुक भैरव मंदिर भगवान शिव के बाल रूप, बटुक भैरव को समर्पित सबसे प्रतिष्ठित मंदिरों में से एक है। जीवन की कठिनाइयों और बाधाओं का सामना कर रहे लोगों के लिए यहां पूजा करना विशेष रूप से लाभदायक है। बटुक भैरव का आशीर्वाद शक्ति, साहस और सुरक्षा प्रदान करता है, जो इस मंदिर को आध्यात्मिक साधकों के लिए एक शरणस्थली बनाता है।
+            </p>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="https://i.ytimg.com/vi/d8IF41pke54/mqdefault.jpg"
+                alt="बटुक भैरव मंदिर के अंदर"
+                class="w-full h-[400px] object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- अतिरिक्त अनुष्ठान -->
+    <div class="container mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        अतिरिक्त अनुष्ठान
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- बायां कॉलम -->
+        <div class="space-y-6">
+          <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-apple-alt text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">पंचमेवा</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">पांच प्रकार के सूखे मेवों का पवित्र भोग।</p>
+          </div>
+
+          <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-spa text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">चंदन तिलक</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">भक्ति और पवित्रता के लिए चंदन का तिलक।</p>
+          </div>
+
+          <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-link text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">गंडा मेला</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">पूजा के दौरान प्रदान किया जाने वाला सुरक्षात्मक धागा।</p>
+          </div>
+        </div>
+
+        <!-- दायां कॉलम -->
+        <div class="space-y-6">
+          <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-fire-alt text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">विभूति</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">आध्यात्मिक शुद्धि और सुरक्षा का प्रतीक पवित्र भस्म।</p>
+          </div>
+
+          <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-shield-alt text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">काल भैरव सुरक्षा यंत्र</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">नकारात्मक ऊर्जाओं और बाधाओं से बचाव के लिए दैवीय कवच, जो आध्यात्मिक सुरक्षा प्रदान करता है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- अक्सर पूछे जाने वाले प्रश्न -->
+    <section class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          अक्सर पूछे जाने वाले प्रश्न
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              पूजा सेवा कैसे बुक करें?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              हमारी वेबसाइट पर जाकर आसानी से पूजा बुक करें। बस अपना नाम और गोत्र भरें, भुगतान करें, और पूजा सेवा बुक हो जाएगी।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              अगर मुझे अपना गोत्र नहीं पता है तो?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              यदि आपको अपना गोत्र नहीं पता है, तो कृपया पूजा बुक करते समय अपना गोत्र "कश्यप" दर्ज करें।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              भुगतान कैसे करें?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              भुगतान करना बहुत आसान है। आप हमारी वेबसाइट पर उपलब्ध सुरक्षित भुगतान विकल्पों के माध्यम से आसानी से ऑनलाइन भुगतान कर सकते हैं। अपनी सुविधानुसार डेबिट कार्ड, क्रेडिट कार्ड या यूपीआई जैसे विकल्पों का उपयोग करें और तुरंत पूजा सेवा बुक करें।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              मुझे कैसे पता चलेगा कि मेरे नाम से पूजा की गई है?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              हां, आप वीडियो कॉल के माध्यम से पूजा देख सकेंगे, और पूजा पूरी होने के बाद पूजा का वीडियो आपको व्हाट्सएप पर भेज दिया जाएगा, साथ ही प्रसाद आपके दिए गए पते पर भेज दिया जाएगा।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              क्या मुझे पूजा का वीडियो मिलेगा?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              हां, पूजा पूरी होने के बाद पूजा का वीडियो आपको व्हाट्सएप पर साझा किया जाएगा।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              पूजा के लिए मुझे क्या तैयारी करनी होगी?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              पूजा के लिए किसी विशेष तैयारी की आवश्यकता नहीं है; पुजारी आपको सभी अनुष्ठानों के बारे में मार्गदर्शन करेंगे।
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- भक्त कॉर्नर -->
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-4 mb-8 md:mb-12">
+          <img
+            src="../assets/img/lotus.png"
+            alt="भक्त आइकन"
+            class="h-6 sm:h-8 md:h-12"
+          />
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600"
+          >
+            प्रसन्न भक्त कॉर्नर
+          </h2>
+          <img
+            src="../assets/img/lotus.png"
+            alt="दायां आइकन"
+            class="h-6 sm:h-8 md:h-12"
+          />
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div
+            class="testimonial-slider flex flex-nowrap p-2 sm:p-4 animate-scroll"
+          >
+            <!-- प्रशंसापत्र कार्ड 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  महामृत्युंजय यंत्र
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  मेरे पिता का स्वास्थ्य बिगड़ रहा था जब तक हमने हिंदू मंदिर पूजा महामृत्युंजय यंत्र उनके बिस्तर के पास नहीं रखा, जिसने उनकी स्थिति को स्थिर करने में मदद की।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-1.jpg"
+                  alt="निशा कोठारी"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    निशा कोठारी
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">व्हाट्सएप के माध्यम से</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- प्रशंसापत्र कार्ड 2 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  प्रसाद वितरण
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  प्रसाद वितरण सेवा अद्भुत है। मुझे काशी विश्वनाथ मंदिर से पवित्र प्रसाद 3 दिनों के भीतर प्राप्त हुआ। सेवा से बहुत संतुष्ट हूं।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-2.jpg"
+                  alt="राजेश कुमार"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    राजेश कुमार
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">गूगल के माध्यम से</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- प्रशंसापत्र कार्ड 3 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  ऑनलाइन पूजा
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  भारत से दूर रहते हुए, ऑनलाइन पूजा सेवा ने मुझे हमारी परंपराओं से जुड़े रहने में मदद की। लाइव स्ट्रीमिंग बिल्कुल स्पष्ट थी।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-3.jpg"
+                  alt="प्रिया शर्मा"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    प्रिया शर्मा
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">फेसबुक के माध्यम से</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- निरंतर स्क्रॉल के लिए डुप्लिकेट कार्ड -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  महामृत्युंजय यंत्र
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  मेरे पिता का स्वास्थ्य बिगड़ रहा था जब तक हमने हिंदू मंदिर पूजा महामृत्युंजय यंत्र उनके बिस्तर के पास नहीं रखा, जिसने उनकी स्थिति को स्थिर करने में मदद की।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-1.jpg"
+                  alt="निशा कोठारी"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    निशा कोठारी
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">व्हाट्सएप के माध्यम से</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+
+          @media (max-width: 640px) {
+            .animate-scroll {
+              animation-duration: 20s;
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- फुटर -->
+    <footer class="bg-[#FEF7ED] text-black pt-16 pb-6">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <div class="flex justify-center items-center gap-2">
+              <img
+                src="../assets/img/Hindu Mandir Puja logo (2).png"
+                alt="हिंदू मंदिर पूजा लोगो"
+                class="h-16"
+              />
+              <h2 class="text-xl font-bold">हिंदू मंदिर पूजा</h2>
+            </div>
+            <p class="text-gray-900">
+              हिंदू मंदिर पूजा एक भक्तिमय प्लेटफॉर्म है जो आपको भारत के मंदिरों, पंडितों और तीर्थ क्षेत्रों से जोड़ता है।
+            </p>
+            <p class="text-gray-900">भारत में 🙏 के साथ बनाया गया</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">हिंदू मंदिर पूजा</h3>
+            <div class="space-y-2">
+              <a
+                href="#"
+                class="block text-gray-900 hover:text-black transition"
+                >मंदिर</a
+              >
+              <a
+                href="#"
+                class="block text-gray-900 hover:text-black transition"
+                >दर्शन</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">कानूनी</h3>
+            <div class="space-y-2">
+              <a
+                href="#"
+                class="block text-gray-900 hover:text-black transition"
+                >गोपनीयता नीति</a
+              >
+              <a
+                href="#"
+                class="block text-gray-900 hover:text-black transition"
+                >नियम और शर्तें</a
+              >
+              <a
+                href="#"
+                class="block text-gray-900 hover:text-black transition"
+                >वापसी और धनवापसी नीति</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">हमें फॉलो करें</h3>
+            <div class="flex gap-4 mb-6">
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-youtube text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-meta text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-instagram text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-x-twitter text-xl"></i
+              ></a>
+            </div>
+            <h3 class="text-xl font-bold mb-4">संपर्क</h3>
+            <div class="space-y-2 text-gray-900">
+              <p>वाराणसी - 221001</p>
+              <p>📞 +91 8810733829</p>
+              <p>📧 hindumandirpuja@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-900"
+        >
+          &copy; 2024 हिंदू मंदिर पूजा प्राइवेट लिमिटेड
+        </div>
+      </div>
+    </footer>
+    <script>
+      const processSection = document.getElementById("pujaProcessSection");
+      const progressLine = document.getElementById("progressLine");
+      const mobileProgressLine = document.getElementById("mobileProgressLine");
+      const icons = document.querySelectorAll(".process-icon");
+      let lineAnimationStarted = false;
+      let sectionAnimated = false;
+
+      function handleScroll() {
+        const sectionTop = processSection.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.7;
+
+        if (sectionTop <= triggerPoint && !sectionAnimated) {
+          // Animate section appearance
+          processSection.style.opacity = "1";
+          sectionAnimated = true;
+
+          // Start icon animations
+          icons.forEach((icon, index) => {
+            setTimeout(() => {
+              icon.style.transform = "scale(1.5)";
+              icon.style.filter = "brightness(1.2)";
+            }, index * 500);
+          });
+
+          // Animate progress lines
+          lineAnimationStarted = true;
+          progressLine.style.width = "100%";
+          mobileProgressLine.style.width = "100%";
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Initial check
+    </script>
+    <script>
+      // JavaScript remains unchanged
+      function startCountdown() {
+        const targetDate = new Date("June 10, 2025 00:00:00").getTime();
+
+        setInterval(() => {
+          const now = new Date().getTime();
+          const timeLeft = targetDate - now;
+
+          if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+              (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+              (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById(
+              "countdown-timer"
+            ).innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          } else {
+            document.getElementById("countdown-timer").innerText = "EXPIRED";
+          }
+        }, 1000);
+      }
+
+      startCountdown();
+
+      function redirectToAddToCart(amount, event) {
+          localStorage.setItem('pujaPackageName', event)
+          localStorage.setItem('pujaAmount', amount);
+          window.location.href = `AddToCartBatuk-Hin.html`;
+        }
+    </script>
+    <script src="../assets/js/puja.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2504 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Color Variables */
+  :root {
+    --primary-color: #a52a2a;
+    --text-color: black;
+    --bg-color: white;
+    --hover-color: black;
+    /* Updated hover color for navbar */
+  }
+  
+  body, html {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Main Styles */
+  body {
+    font-family: "Nirmala UI";
+    background-color: white;
+    color: #333;
+  }
+  
+  /* Header */
+  
+  header {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 22px;
+      background-color: #f8f8f8;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+      border: 1px solid #ddd;
+      width: 100%;
+      height: 67px;
+  }
+  
+  header.scrolled {
+    background-color: #a52a2a;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .header-left a {
+    text-decoration: none; /* Remove underline or other default link styles */
+  }
+  
+  .header-left img {
+    width: 92px;
+    height: 75px;
+  }
+  
+  .header-right ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  .header-right ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    transition: color 0.3s;
+    font-family: "Garamond", serif;
+  }
+  
+  .header-right ul li a:hover {
+    color: var(--hover-color);
+    /* Navbar hover color updated to black */
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Main Content */
+  .content {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .image-section {
+    width: 100vw;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Full width of the container */
+    max-width: 900px;
+    /* Cap the maximum width on larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Cover the container space */
+    border-radius: 10px;
+  }
+  
+  .details-section {
+    flex: 2;
+  }
+  
+  .details-section h1 {
+    /* color: #a52a2a; */
+    margin-bottom: 0.5rem;
+    color: black;
+  }
+  
+  .details-section p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Countdown Timer */
+  .countdown {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: red;
+    font-size: 1.2rem;
+  }
+  
+  .countdown img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .devotee-count {
+    margin-top: 10px;
+    /* Adjust the value as needed */
+  }
+  
+  /* Button Styling */
+  .button-container {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  /* Base styles for the button */
+  .button-container button {
+    position: relative;
+    overflow: hidden;
+    background-color: #b54123;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Garamond", serif;
+  }
+  
+  /* Continuous shiny effect */
+  .button-container button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    transform: skewX(-45deg);
+    animation: subtleShine 3s infinite;
+  }
+  
+  /* Animation for continuous shine */
+  @keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+  }
+  
+  
+  /* Tabs Section */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #ffd586;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .tabs button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .tabs button:hover {
+    color: #a52a2a;
+  }
+  
+  /* Section About Puja */
+  .about-section {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .about-section h2 {
+    color: #a52a2a;
+    margin-bottom: 1rem;
+  }
+  
+  /* Notification */
+  .notification {
+    background-color: #2db92d;
+    color: white;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  /* Moving Text Section */
+  /* Moving Text Section */
+  .moving-text-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    /* Full-width wrapper */
+  }
+  
+  .moving-text-section {
+    display: flex;
+    gap: 50px;
+    /* Adds space between each line */
+    animation: scrollText 27s linear infinite;
+  }
+  
+  .moving-text-section p {
+    flex: none;
+    /* Prevents flex items from resizing */
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
+  
+  /* Animation for smooth scrolling */
+  @keyframes scrollText {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* beenfits section */
+  
+  /* Benefits of Puja Section */
+  .benefits-of-puja {
+    background-color: white;
+    padding: 40px;
+    /* Increased padding for more space around the content */
+    text-align: center;
+    color: black;
+  }
+  
+  .benefits-of-puja h2 {
+    color: #b54123;
+    font-size: 2.5em;
+    /* Increased font size */
+    margin-bottom: 30px;
+    /* Increased bottom margin */
+  }
+  
+  .benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Space between the cards */
+    justify-content: center;
+  }
+  
+  .benefit-card {
+    background-color: white;
+    border: 2px solid #a52a2a;
+    border-radius: 8px;
+    width: 36%;
+    /* Adjusted width to ensure two cards per row */
+    padding: 30px;
+    /* Increased padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* Smooth hover effect */
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-15px);
+    /* Move the card up */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* Increased shadow effect on hover */
+  }
+  
+  .benefit-card .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Space below the icon */
+    background-color: #a52a2a;
+    /* Background color for the icon */
+  }
+  
+  .benefit-card .icon i {
+    color:#a52a2a;
+    /* Icon color */
+    font-size: 28px;
+    /* Icon size */
+  }
+  
+  .benefit-card h3 {
+    color: #b54123;
+    font-size: 1.6em;
+    /* Increased font size for the heading */
+    margin: 0;
+    margin-bottom: 10px;
+    /* Added margin below heading */
+    text-align: center;
+    /* Center the heading */
+  }
+  
+  .benefit-card p {
+    color: black;
+    font-size: 1.1em;
+    /* Increased font size for better readability */
+    line-height: 1.6;
+    /* Increased line height for better spacing between lines */
+    text-align: justify;
+    /* Justify the paragraph for a clean layout */
+  }
+  
+  /* Benefits of Puja Section Hover Effects */
+  .benefit-card:hover {
+    transform: translateY(-15px);
+    /* Move the card up further */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* Increase shadow effect on hover */
+  }
+  
+  /* Participate Card Styles */
+  /* Participate Section Styles */
+  .participate-section {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2px;
+    /* Center the entire section on the page */
+  }
+  
+  .participate-section h2 {
+    font-size: 30px;
+    color: #b54123;
+    margin-bottom: 20px;
+  }
+  
+  /* Card Container */
+  .cards-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    /* Space between cards */
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on mobile */
+    padding-left: 0;
+    /* Make sure cards start at the very beginning */
+  }
+  
+  /* Individual Card Styles */
+  .participate-card {
+    background-color: #a52a2a;
+    border-radius: 10px;
+    flex: 0 0 100%;
+    /* Each card takes up full viewport width */
+    min-width: 100%;
+    /* Ensures full width on small screens */
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 10px;
+    /* Optional: Inner padding for content spacing */
+    width: 490px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    /* Add spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth effect on hover */
+    min-height: 470px;
+    /* Set a minimum height for all cards */
+    box-sizing: border-box;
+  }
+  
+  /* Card Hover Effect */
+  .participate-card:hover {
+    transform: scale(1.05) translateY(-10px);
+    /* Enlarge and move the card up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Shadow on hover */
+  }
+  
+  /* Card Header Section (Heading + Price) */
+  .card-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    /* Adds space below price */
+  }
+  
+  /* Card Heading */
+  .participate-card h3 {
+    font-size: 1.6em;
+    margin: 0;
+    /* Removes margin for precise alignment */
+    color: #fff;
+  }
+  
+  /* Price Styling */
+  .participate-card .price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: white;
+    /* Change this to match the button color or any other theme color */
+    margin-top: 5px;
+    /* Adds slight gap between heading and price */
+    text-align: center;
+    /* Center align the price */
+    width: 100%;
+    /* Make price take full width */
+  }
+  
+  /* Card List */
+  .participate-card ul {
+    font-size: 1.1em;
+    list-style-type: none;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Allows content to take up remaining space */
+    padding-left: 0;
+    /* Remove default padding for list items */
+  }
+  
+  .participate-card ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* Button Styles */
+  .participate-card button {
+    width: 100%;
+    /* Makes the button take full width */
+    background-color: white;
+    color: #b54123;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width */
+    margin-top: auto;
+    /* Pushes button to the bottom */
+  }
+  
+  /* Button Hover Effect */
+  .participate-card button:hover {
+    background-color: #f1977c;
+  }
+  
+  /* how it works css starts */
+  
+  /* How It Works Section */
+  .how-it-works {
+    text-align: center;
+    padding: 20px 0; /* Reduce top and bottom padding */
+    background-color: #fdf6ef;
+    position: relative;
+  }
+  
+  .how-it-works h2 {
+    font-size: 23px; /* Adjust font size slightly */
+    color: #c24619;
+    margin-bottom: 20px; /* Reduce space below heading */
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .how-it-works h2::before,
+  .how-it-works h2::after {
+    content: "✧";
+    font-size: 1.5em;
+    color: #c24619;
+    position: absolute;
+    top: -5px;
+  }
+  
+  .how-it-works h2::before {
+    right: 100%;
+    margin-right: 10px;
+  }
+  
+  .how-it-works h2::after {
+    left: 100%;
+    margin-left: 10px;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: auto;
+    gap: 15px; /* Reduce gap between steps */
+    padding: 0 10px; /* Remove vertical padding, keep horizontal */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .step {
+    text-align: center;
+    min-width: 140px; /* Set a minimum width for each step */
+    margin: 0; /* Remove outer margin */
+    padding: 5px 10px; /* Smaller padding inside each step */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    scroll-snap-align: start;
+  }
+  
+  .icon svg {
+    width: 40px; /* Reduce icon size */
+    height: 40px;
+    margin-bottom: 5px; /* Reduce space below icon */
+  }
+  
+  .step h3 {
+    font-size: 14px; /* Reduce font size for title */
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 2px; /* Small margin below title */
+  }
+  
+  .step p {
+    font-size: 12px; /* Reduce font size for description */
+    color: #555;
+    margin: 0;
+  }
+  
+  .divider {
+    height: 2px;
+    width: 40px; /* Smaller width for divider */
+    background-color: #c24619;
+    align-self: center;
+  }
+  
+  /* how it works css ends */
+  
+  .faq-section {
+    width: 82%;
+    margin: 2rem auto;
+    text-align: center;
+    margin-top: -30px;
+  }
+  
+  .faq-section h2 {
+    font-size: 2.3rem;
+    color: #b54123;
+    margin-bottom: 2rem;
+    font-family: "Georgia", serif;
+  }
+  
+  .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .faq-item {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin: 0;
+  }
+  
+  .faq-question {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    margin: 0;
+  }
+  
+  .faq-question:hover {
+    background-color: #a52a2a;
+    color: white;
+  }
+  
+  .faq-question::after {
+    content: "▼";
+    font-size: 1.2rem;
+    color: #b54123;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  .faq-question.active::after {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    display: none;
+    /* Hide initially */
+    background-color: #ffffff;
+    color: #333333;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .faq-answer.open {
+    display: block;
+    /* Show when 'open' class is applied */
+  }
+  
+  .faq-question.active {
+    background-color: #a52a2a;
+    color: #ffffff;
+  }
+  
+  /* Devotee Corner */
+  /* Devotee Corner */
+  .devotee-corner {
+    text-align: center;
+    color: #b54123;
+    margin-bottom: 40px;
+    /* Increased bottom margin for spacing */
+    position: relative;
+    /* For positioning pseudo-elements */
+    padding: 40px;
+    /* Add padding for better spacing */
+    background-color: white;
+    /* Background color to match the design */
+  }
+  
+  .devotee-corner h2 {
+    font-size: 2.5em;
+    /* Increased font size */
+    color: #c24619;
+    /* Change color to match your design */
+    margin: 0;
+    /* Remove default margin */
+    display: inline-block;
+    /* Center-aligns and allows closer decoration */
+    position: relative;
+    /* For positioning pseudo-elements */
+    font-weight: bold;
+    /* Bold heading */
+    margin-bottom: 20px;
+    /* Space between heading and testimonial boxes */
+  }
+  
+  /* Decorative symbols before and after the heading */
+  .devotee-corner h2::before,
+  .devotee-corner h2::after {
+    content: "✧";
+    /* Symbol to use for decoration */
+    font-size: 1.5em;
+    /* Size of the decorative symbols */
+    color: #c24619;
+    /* Color of the symbols */
+    position: absolute;
+    top: -13px;
+    /* Position relative to the heading */
+  }
+  
+  .devotee-corner h2::before {
+    right: 100%;
+    /* Positions directly left of the heading */
+    margin-right: 13px;
+    /* Controls spacing between symbol and heading */
+  }
+  
+  .devotee-corner h2::after {
+    left: 100%;
+    /* Positions directly right of the heading */
+    margin-left: 13px;
+    /* Controls spacing between symbol and heading */
+  }
+  
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    /* Increased padding for larger boxes */
+    width: 400px;
+    /* Increased width of boxes */
+    height: auto;
+    /* Changed to auto to allow height adjustment based on content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Added transition for hover effect */
+    display: flex;
+    flex-direction: column;
+    /* Flex direction to stack content */
+    justify-content: space-between;
+    /* Space between content for consistent height */
+  }
+  
+  /* Increase the font size of testimonial heading and content */
+  .testimonial h3 {
+    color: #333;
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    /* Increased font size */
+  }
+  
+  .testimonial p {
+    font-size: 1.1em;
+    /* Increased font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Allow paragraph to grow and take available space */
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    /* Space between testimonial content and profile */
+  }
+  
+  .profile img {
+    border-radius: 50%;
+    border: 2px solid #b54123;
+    width: 50px;
+    /* Adjusted image size */
+    height: 50px;
+    /* Adjusted image size */
+  }
+  
+  .profile .details {
+    color: #333;
+    text-align: left;
+  }
+  
+  .profile .name {
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+    /* Adjust font size for the name */
+  }
+  
+  .profile p {
+    margin: 0;
+    font-size: 0.9em;
+    /* Font size for the source of review */
+    color: #777;
+  }
+  
+  .stars {
+    color: #a52a2a;
+    font-size: 1em;
+    /* Font size for star rating */
+    margin-top: 5px;
+  }
+  
+  /* Add hover effect for testimonial boxes */
+  .testimonial:hover {
+    box-shadow: 0 4px 20px rgba(255, 87, 34, 0.5);
+    /* Shadow effect on hover */
+    transform: translateY(-10px);
+    /* Move up more on hover */
+  }
+  
+  /* Arrow effect */
+  .testimonial::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ddd transparent transparent transparent;
+  }
+  
+  /* footer section */
+  /* Footer Styles */
+  #footer {
+    background-color: #fdf6ef;
+    /* Match the background color used previously */
+    color: #333;
+    /* Dark text for readability */
+    padding: 40px 0;
+    /* Top and bottom padding for spacing */
+    text-align: center;
+    /* Center align text */
+  }
+  
+  #footer h3 {
+    font-size: 2em;
+    /* Increase heading size */
+    color: #c24619;
+    /* Match the color from previous sections */
+    margin-bottom: 15px;
+    /* Space below heading */
+    font-weight: bold;
+    /* Bold heading */
+  }
+  
+  #footer p {
+    font-size: 1.1em;
+    /* Slightly larger font for the paragraph */
+    line-height: 1.6;
+    /* Improve readability */
+    margin-bottom: 20px;
+    /* Space below paragraph */
+  }
+  
+  .social-links {
+    margin-bottom: 20px;
+    /* Space below social links */
+  }
+  
+  .social-links a {
+    font-size: 1.5em;
+    /* Size of the social media icons */
+    color: #b54123;
+    /* Color of the icons */
+    margin: 0 10px;
+    /* Space between icons */
+    transition: color 0.3s;
+    /* Smooth color transition on hover */
+  }
+  
+  .social-links a:hover {
+    color: #c24619;
+    /* Change color on hover */
+  }
+  
+  .copyright {
+    font-size: 0.9em;
+    /* Smaller font size for copyright text */
+    color: #777;
+    /* Lighter color for contrast */
+    margin-top: 10px;
+    /* Space above copyright text */
+  }
+  
+  /* Responsive Styles */
+  
+  .header-left a {
+    text-decoration: none;
+    /* Removes underline */
+    color: inherit;
+    /* Inherits the text color from the parent */
+  }
+  
+  /* About Section */
+  .about-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color:white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    color: #a52a2a;
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section p {
+    color: var(--text-color);
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Media Query for Extra Small Devices (Mobile Phones) */
+  
+  @media (max-width: 480px) {
+    #current-time{
+      color: #a52a2a;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .benefits-of-puja {
+      padding: 20px;
+  }
+  
+  .benefit-card {
+    width: 100%;
+    padding: 10px 15px; /* Reduced padding to decrease box height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #b54123;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Column layout for mobile */
+  }
+  
+  .benefit-card .header-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%; /* Ensures the header container takes full width */
+    text-align: left; /* Aligns contents to the left */
+  }
+  
+  .benefit-card .icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #b54123;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      flex-shrink: 0;
+  }
+  
+  .benefit-card .icon i {
+      color: white;
+      font-size: 20px;
+  }
+  
+  .benefit-card h3 {
+    font-size: 14px;
+    color: #b54123;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 50px); /* Takes full width minus icon and arrow */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  .toggle-arrow {
+    font-size: 1.2em;
+    color: #b54123;
+    margin-left: auto; /* Pushes the arrow to the far right */
+    transition: transform 0.3s;
+  }
+  
+  .benefit-content {
+      display: none;
+      font-size: 14px;
+      color: #333;
+      padding-top: 10px;
+      line-height: 1.4;
+  }
+  
+  .benefit-card.expanded .benefit-content {
+      display: block;
+  }
+  
+  .benefit-card.expanded .toggle-arrow {
+      transform: rotate(180deg);
+  }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 22px;
+      background-color: #f8f8f8;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+      border: 1px solid #ddd;
+      width: 100%;
+      height: 56px;
+  }
+    .benefits-of-puja {
+        padding: 20px;
+        text-align: center;
+    }
+  
+    .benefits-of-puja h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+  
+    .benefits-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+  
+    .benefit-card {
+        width: 98%;
+        padding: 15px;
+        border-radius: 8px;
+        transition: none;
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        margin-right: 9px;
+    }
+    .benefit-card:hover {
+      transform: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+    .benefit-card .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+  
+    .benefit-card .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #b54123;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+  
+    .benefit-card .icon i {
+        color: #fff;
+        font-size: 20px;
+    }
+  
+    .benefit-card h3 {
+        font-size: 14px;
+        margin: 0;
+        color: #b54123;
+    }
+  
+    .toggle-arrow {
+      font-size: 27px;
+      color: #b54123;
+      transition: transform 0.3s;
+      margin-right: -10px;
+      margin-top: -43px;
+    }
+  
+    .benefit-content {
+        display: none;
+        font-size: 1em;
+        color: #333;
+        padding-top: 10px;
+        line-height: 1.4;
+    }
+  
+    /* Expandable content on click */
+    .benefit-card.expanded .benefit-content {
+        display: block;
+    }
+  
+    .benefit-card.expanded .toggle-arrow {
+        transform: rotate(180deg);
+    }
+    .language-toggle {
+      background-color: #b54123;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      width: 49px;
+      margin-right: -175px;
+    }
+    .steps-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+  }
+  
+  .step {
+      flex: 0 0 80%;
+      min-width: 250px;
+      scroll-snap-align: start;
+  }
+  
+  .divider {
+      display: inline-block;
+      height: 2px;
+      width: 45px; /* Adjust width for smaller screens */
+      background-color: #c24619;
+      align-self: center; /* Align with steps vertically */
+  }
+  
+    .header-left img {
+      width: 62px;
+          height: 41px;
+          margin-left: -20px;
+    }
+      #puja-package-container {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          margin: 0 auto;
+      }
+  
+    #puja-package-container button {
+      flex: 1;
+      padding: 10px;
+      background-color: #a52a2a;
+      color: wheat;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      min-width: 89px;
+      font-size: 18px;
+      font-weight: 400;
+      border: 70px black;
+      border-radius: 5px;
+      height: 39px;
+    }
+  
+    .package-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 120px; /* Adjust width as needed */
+      margin: 10px;
+      text-align: center;
+  }
+  
+  .package-image {
+    width: 87%;
+    height: 64px;
+    border-radius: 10px;
+    margin-bottom: -14px;
+  }
+  
+  button {
+      width: 100%;
+      padding: 10px;
+      background-color: #c24619;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+    #puja-package-container button:hover {
+      background-color: #e64a19;
+      /* Hover effect */
+    }
+  
+    .benefit-content {
+      display: none;
+    }
+  
+    .toggle-arrow {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  
+    .benefit-card.expanded .benefit-content {
+      display: block;
+    }
+  
+    .benefit-card.expanded .toggle-arrow {
+      transform: rotate(180deg);
+    }
+  
+    .benefits-of-puja {
+      background-color: white;
+      padding: 40px;
+      text-align: center;
+      color: black;
+      width: 372px;
+      margin-top: -30px;
+    }
+  
+    
+  
+    .benefit-card p {
+      font-size: 12px;
+        line-height: 19px;
+        text-align: left;
+        margin-top: -24px;
+    }
+  
+    .benefit-card .icon i {
+      font-size: 20px;
+      /* Adjust icon font size */
+    }
+  
+    /* Heading to the right of the icon */
+    .benefit-card h3 {
+      font-size: 17px;
+      margin: 0;
+      flex: 1;
+      margin-left: -2px;
+      margin-top: -22px;
+    }
+  
+    .benefit-card .icon {
+      width: 30px;
+      /* Smaller icon size */
+      height: 30px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+  
+    .benefits-of-puja h2 {
+      display: block;
+      visibility: visible;
+      font-size: 28px; /* Adjust as needed */
+      color: #b54123; /* Desired color */
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  
+    .details-section h1 {
+      /* color: #a52a2a; */
+      margin-bottom: 0.5rem;
+      color: black;
+      font-size: 20px;
+      text-align: left;
+    }
+    .details-section p {
+      margin-bottom: 10px;
+    }
+  
+    .content {
+      display: block;
+      gap: 2rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    .cards-container {
+      padding-left: 10px;
+      /* Small left padding for consistent look */
+    }
+  
+    .participate-card {
+      width: 100vw;
+      /* Full viewport width */
+      margin: 0;
+      /* Remove any margin to prevent cut-off */
+    }
+  
+    .benefits-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .benefit-card .header-container {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin-bottom: 10px;
+      /* Space between heading and paragraph */
+    }
+  
+    .benefit-card {
+      flex: 0 0 80%;
+      min-width: 250px;
+      scroll-snap-align: start;
+    }
+  
+    .faq-section h2 {
+      font-size: 1.8rem;
+      /* Decrease heading size */
+      margin-bottom: 1.5rem;
+    }
+  
+    .faq-question {
+      font-size: 1.2rem;
+      /* Decrease font size for FAQ questions */
+      padding: 1.2rem;
+      /* Adjust padding for smaller screens */
+    }
+  
+    .faq-answer {
+      font-size: 1rem;
+      /* Decrease font size for FAQ answers */
+      padding: 1rem;
+      /* Reduce padding */
+      line-height: 1.4;
+      /* Adjust line height */
+    }
+  
+    #footer h3 {
+      font-size: 1.7em;
+      /* Decrease heading size */
+      margin-bottom: 10px;
+    }
+  
+    #footer p {
+      font-size: 1em;
+      /* Decrease paragraph font size */
+      line-height: 1.4;
+      /* Adjust line height */
+    }
+  
+    .social-links a {
+      font-size: 1.4em;
+      /* Decrease icon size */
+      margin: 0 8px;
+      /* Adjust spacing between icons */
+    }
+  
+    .copyright {
+      font-size: 1em;
+      /* Smaller font size for copyright text */
+      margin-top: 5px;
+    }
+  
+    .about-section {
+      max-width: 90%;
+      /* Reduce width for smaller screens */
+      padding: 1rem;
+      /* Reduce padding */
+      border-radius: 15px;
+      /* Slightly smaller border radius */
+    }
+  
+    .about-section h2 {
+      font-size: 2em;
+      /* Decrease heading font size */
+      margin-bottom: 0.5rem;
+    }
+  
+    .about-section p {
+      font-size: 1.2em;
+      /* Decrease paragraph font size */
+      line-height: 1.4;
+      /* Adjust line height */
+      text-align: justify;
+    }
+  
+    /* Puja Package Section - Horizontal Scroll */
+    .cards-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      /* Space between cards */
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling on mobile */
+      margin-bottom: 36px;
+    }
+  
+    .participate-card {
+      flex: 0 0 80%;
+      /* Each card takes 80% of the viewport width */
+      min-width: 280px;
+      /* Minimum width to keep cards readable */
+      max-width: 90%;
+      /* Max width to prevent cards from being too wide */
+      scroll-snap-align: start;
+      margin-right: 10px;
+      /* Space between cards */
+      box-sizing: border-box;
+      /* Ensure padding is within width */
+    }
+  
+    /* Ensure text fits within the card */
+    .participate-card h3 {
+      font-size: 1.5em;
+    }
+  
+    .participate-card .price {
+      font-size: 1.2em;
+    }
+  
+    .participate-card ul {
+      font-size: 1em;
+    }
+  
+    .participate-card button {
+      font-size: 1em;
+    }
+  
+    .testimonials {
+      display: flex;
+      /* Use flexbox for horizontal layout */
+      flex-wrap: nowrap;
+      /* Prevent wrapping of testimonials */
+      justify-content: flex-start;
+      /* Align items to the left */
+      gap: 10px;
+      /* Reduced gap between testimonials */
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      padding-bottom: 10px;
+      /* Padding at the bottom to accommodate scroll */
+      width: 100%;
+      /* Full width of the container */
+    }
+  
+    /* Ensure testimonials are sized properly */
+    .testimonial {
+      flex: 0 0 auto;
+      /* Prevent flex from growing/shrinking */
+      width: 100%;
+      /* Control width of each testimonial (make it smaller on mobile) */
+      min-width: 250px;
+      /* Set minimum width */
+      /* max-width: 350px;  */
+      padding: 15px;
+      /* Adjust padding for better spacing */
+      box-sizing: border-box;
+      /* Include padding in width calculation */
+      text-align: left;
+      /* Align text to the left */
+    }
+  
+    /* Adjust heading size */
+    .testimonial h3 {
+      font-size: 1.4em;
+      /* Reduce font size for heading */
+    }
+  
+    /* Adjust testimonial paragraph size */
+    .testimonial p {
+      font-size: 1.2em;
+      /* Slightly smaller text for paragraphs */
+    }
+  
+    /* Adjust profile section */
+    .profile img {
+      width: 50px;
+      /* Smaller profile image */
+      height: 40px;
+    }
+  
+    /* Adjust font sizes for profile text */
+    .profile .name {
+      font-size: 1em;
+      /* Smaller name font */
+    }
+  
+    .profile p {
+      font-size: 0.8em;
+      /* Smaller source font */
+    }
+  
+    .devotee-corner h2 {
+      font-size: 1.5em;
+      /* Smaller font size for the heading */
+      margin-bottom: 15px;
+      /* Adjust margin for spacing */
+    }
+  
+    /* Add hover effect for testimonials */
+    .testimonial:hover {
+      box-shadow: 0 4px 20px rgba(255, 87, 34, 0.5);
+      transform: translateY(-10px);
+    }
+  
+    .image-section img {
+      width: 81%;
+      max-width: 100%;
+      margin: 0 auto;
+      height: 270px;
+      margin-right: 55px;
+      margin-bottom: 20px;
+      align-items: center;
+      /* margin-left: auto; */
+    }
+  
+    header {
+      width: 105%;
+      height: 51px;
+    }
+  
+    .hamburger-menu {
+      display: block;
+      font-size: 1.5em;
+      color: white;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+  
+  /* For small devices */
+  @media (max-width: 768px) {
+    
+    .faq-section h2 {
+      font-size: 23px;
+      /* Decrease heading size */
+      margin-bottom: 1.5rem;
+    }
+  
+    .faq-question {
+      font-size: 13px;
+      /* Decrease font size for FAQ questions */
+      padding: 1rem;
+      /* Adjust padding for smaller screens */
+    }
+  
+    .faq-answer {
+      font-size: 12px;
+      /* Decrease font size for FAQ answers */
+      padding: 1rem;
+      /* Reduce padding */
+      line-height: 1.4;
+      /* Adjust line height */
+    }
+  
+    #footer h3 {
+      font-size: 21px;
+      /* Decrease heading size */
+      margin-bottom: 10px;
+    }
+  
+    #footer p {
+      font-size: 14px;
+          line-height: 1.4;
+          padding: 0px 8px;
+    }
+  
+    .social-links a {
+      font-size: 1.2em;
+      /* Decrease icon size */
+      margin: 0 8px;
+      /* Adjust spacing between icons */
+    }
+  
+    .copyright {
+      font-size: 0.8em;
+      /* Smaller font size for copyright text */
+      margin-top: 5px;
+    }
+  
+    .about-section {
+      max-width: 90%;
+      /* Reduce width for smaller screens */
+      padding: 1rem;
+      /* Reduce padding */
+      border-radius: 15px;
+      margin-top: 3px;
+      /* Slightly smaller border radius */
+    }
+  
+    .about-section h2 {
+      font-size: 22px;
+      /* Decrease heading font size */
+      margin-bottom: 0.5rem;
+    }
+  
+    .about-section p {
+      font-size: 14px;
+      /* Decrease paragraph font size */
+      line-height: 1.4;
+      /* Adjust line height */
+      text-align: justify;
+    }
+  
+    .testimonials {
+      display: flex;
+      /* Use flexbox for horizontal layout */
+      flex-wrap: nowrap;
+      /* Prevent wrapping of testimonials */
+      justify-content: flex-start;
+      /* Align items to the left */
+      gap: 10px;
+      /* Reduced gap between testimonials */
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      padding-bottom: 10px;
+      /* Padding at the bottom to accommodate scroll */
+      width: 100%;
+      /* Full width of the container */
+    }
+  
+    /* Ensure testimonials are sized properly */
+    .testimonial {
+      flex: 0 0 auto;
+      /* Prevent flex from growing/shrinking */
+      width: 100%;
+      /* Control width of each testimonial (make it smaller on mobile) */
+      min-width: 250px;
+      /* Set minimum width */
+      /* max-width: 350px;  */
+      padding: 15px;
+      /* Adjust padding for better spacing */
+      box-sizing: border-box;
+      /* Include padding in width calculation */
+      text-align: left;
+      /* Align text to the left */
+    }
+  
+    /* Adjust heading size */
+    .testimonial h3 {
+      font-size: 14px;
+      /* Reduce font size for heading */
+    }
+  
+    /* Adjust testimonial paragraph size */
+    .testimonial p {
+      font-size: 12px;
+      margin-bottom: 4px;
+      /* Slightly smaller text for paragraphs */
+    }
+  
+    /* Adjust profile section */
+    .profile img {
+      width: 40px;
+      /* Smaller profile image */
+      height: 40px;
+    }
+  
+    /* Adjust font sizes for profile text */
+    .profile .name {
+      font-size: 12px;
+      /* Smaller name font */
+    }
+  
+    .profile p {
+      font-size: 10px;
+      /* Smaller source font */
+    }
+  
+    .devotee-corner h2 {
+      font-size: 23px;
+      /* Smaller font size for the heading */
+      margin-bottom: 15px;
+      /* Adjust margin for spacing */
+    }
+  
+    /* Add hover effect for testimonials */
+    .testimonial:hover {
+      box-shadow: 0 4px 20px rgba(255, 87, 34, 0.5);
+      transform: translateY(-10px);
+    }
+  
+    /* Hamburger Menu Display */
+    .hamburger-menu {
+      display: block;
+      font-size: 1.5em;
+      color: black;
+      cursor: pointer;
+    }
+  
+    /* Hide the full navbar initially */
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0px;
+      background-color: #a52a2a;
+      padding: 10px 0;
+      border-radius: 8px;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+      /* Show menu when active */
+     
+      margin-top: -5px;
+      background-color: white;
+      width: 100%;
+    
+    }
+  
+    .navbar-menu ul {
+      flex-direction: column;
+      text-align: center;
+      background-color: white;
+      width: 100%;
+      margin-top: -13px;
+      width: 100%;
+      margin-left: 20px;
+  
+    }
+  
+    .navbar-menu ul li {
+      padding: 10px 0;
+      border-top: 1px solid #ddd;
+     
+     
+    
+    }
+  
+    .navbar-menu ul li a {
+      color: white;
+      font-size: 1.2em;
+      text-decoration: none;
+      color: black;
+    }
+  
+    /* Benefits Section Scrolling */
+    .benefits-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .benefit-card {
+      flex: 0 0 80%;
+      min-width: 250px;
+      scroll-snap-align: start;
+      padding-bottom: 7px;
+    }
+  
+    /* Puja Packages Scrolling */
+    .cards-container {
+      padding-left: 10px;
+      /* Small left padding for consistent look */
+    }
+  
+    .participate-card {
+      width: 100vw;
+      /* Full viewport width */
+      margin: 0;
+      /* Remove any margin to prevent cut-off */
+    }
+  
+    .steps-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .step {
+      flex: 0 0 80%;
+      /* Each step card takes 80% of viewport */
+      min-width: 250px;
+      scroll-snap-align: start;
+    }
+  
+    .image-section img {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      height: 270px;
+      margin-right: 38px;
+      margin-bottom: 20px;
+      align-items: center;
+      /* margin-left: auto; */
+    }
+  
+    /* Benefits Section Images */
+    /* .benefit-card .icon {
+          width: 64px;
+          height: 61px;
+      } */
+  }
+  
+  /* Card Container - For larger screens */
+  
+  @media (min-width: 1024px) {
+
+
+    .language-toggle {
+      background-color: rgb(181, 65, 35);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      width: 57px;
+      margin-right: -575px;
+  }
+
+
+    .benefits-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Space between cards */
+      justify-content: center; /* Center the cards */
+      padding: 20px;
+  }
+  
+  /* Individual Benefit Cards */
+  .benefit-card {
+      /* flex: 1 1 calc(50% - 40px);  */
+      max-width: calc(50% - 40px); /* Ensure each card takes half the row */
+      box-sizing: border-box;
+      border: 2px solid #a52a2a;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Space between icon and text */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+  }
+  
+  /* Icon Styling */
+  .benefit-card .icon {
+      flex-shrink: 0; /* Prevent icon from resizing */
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #a52a2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .benefit-card .icon i {
+      font-size: 24px;
+      color: white;
+  }
+  
+  /* Text Styling */
+  .benefit-card h3 {
+      font-size: 1.5rem;
+      color: #a52a2a;
+      margin-bottom: 10px;
+  }
+  
+  .benefit-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+  }
+  
+
+
+
+
+
+  
+    header {
+      height: 80px; /* Increased navbar height */
+      padding: 15px 30px; /* Adjusted padding for more space */
+      font-size: 1.2em; /* Increased font size */
+  }
+  
+  .header-right ul li a {
+      font-size: 1.1rem; /* Increased navbar link font size */
+      font-weight: bold; /* Make navbar links bold */
+  }
+
+  
+  #countdown-timer {
+    margin-top: 20px;
+    font-size: 1.4rem; /* Increased font size for countdown */
+    color: #b54123; /* Font color for better visibility */
+    font-weight: bold;
+}
+
+  
+  
+    /* Event Card */
+  .event-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  
+  
+  /* Details Section */
+  .details-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .details-section h1 {
+    font-size: 27px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.4;
+  }
+  
+  /* Location and Date Styling */
+  .details-section .location, .details-section .date {
+    font-size: 17px;
+        color: #555;
+        margin-top: 8px;
+        display: flex
+;
+        align-items: center;
+  }
+  
+  .details-section .location i, .details-section .date i {
+    color: #c24619;
+    margin-right: 5px;
+  }
+  
+    .benefits-container .benefit-card .toggle-arrow {
+      display: none;
+  }
+  .package-item img,
+  .package-item button {
+      display: none;
+  }
+    .language-toggle {
+      background-color: #b54123;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      width: 57px;
+      margin-right: -402px;
+    }
+      .benefit-card:hover {
+          transform: none;
+          box-shadow: none;
+      }
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      /* Center the cards when there are fewer than 4 */
+      gap: 35px;
+      /* Space between cards */
+      padding: 20px;
+      /* Padding around the container */
+      flex-wrap: nowrap;
+      /* Prevent cards from wrapping */
+      width: 100%;
+      /* Full width of the container */
+      overflow: hidden;
+      /* Hide any overflow (no scrollbar) */
+    }
+  
+    .participate-card {
+      flex: 1 0 calc(25% - 35px);
+      /* Each card takes up 25% of the space, but will expand */
+      min-width: 200px;
+      /* Minimum card width */
+      /* Ensure the card width is 25% minus the gap */
+      box-sizing: border-box;
+      /* Include padding/borders in the width calculation */
+      margin: 0;
+      /* No additional margin */
+    }
+  }
+  
+  /* Small Desktops - Up to 992px */
+  /* @media (max-width: 992px) {
+      .content {
+          max-width: 90%;
+          padding: 1rem;
+      }
+  
+      
+      .benefit-card {
+          width: 48%;
+      }
+  
+     
+      .cards-container {
+          flex-wrap: wrap;
+      }
+  
+      .participate-card {
+          width: 48%;
+      }
+  
+   
+      .social-links a {
+          font-size: 1.4em;
+      }
+  }
+   */
+  
+  
+   
+  
+  
+  
+  .language-toggle:hover {
+    background-color: #a52a2a;
+  }
+  .divider {
+    height: 4px;
+    width: 80px; /* Increase width to make dividers longer */
+    background-color: #c24619;
+    margin: 0 20px;
+    flex-shrink: 0;
+  }
+  
+  
+  /* Responsive Styling for Small Devices */
+  @media (max-width: 480px) {
+    .details-section {
+        padding: 15px;
+    }
+  
+    .details-section h1 {
+        font-size: 19px;
+        margin: -7px 0;
+        line-height: 1.3;
+    }
+  
+    /* Stack location and date vertically on small screens */
+    .details-section .location, .details-section .date {
+      display: flex;
+      align-items: center; /* Align icon and text vertically centered */
+      gap: 5px; /* Space between icon and text */
+      font-size: 14px;
+      color: #555;
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+  
+    .details-section .location i, .details-section .date i {
+        margin-right: 0;
+        margin-bottom: 3px;
+        color: #c24619; /* Icon color */
+        font-size: 14px;
+    }
+  }
+  
+  
+
+
+
+  /* Responsive design for tablets (768px to 1024px) */
+/* Responsive design for tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Top Section: Image on the left, Text on the right */
+  
+  .benefit-card {
+    background-color: white;
+    border: 2px solid #a52a2a;
+    border-radius: 8px;
+    width: 36%;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.benefit-card .icon {
+  background-color: #b54123; /* Background color for the icon */
+  color: white; /* Icon color */
+}
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .image-section {
+    flex: 1;
+    display: flex; /* Hide images in this section */
+  }
+
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .details-section {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .details-section h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .details-section p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  /* Benefits Section: Two Cards in a Row */
+  .benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+
+  .benefit-card {
+    flex: 1 1 48%; /* Two cards in a row */
+    max-width: 48%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .benefit-card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.2rem;
+    color: #a52a2a;
+    margin-bottom: 10px;
+  }
+
+  .benefit-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+    text-align: justify;
+  }
+  .benefit-card .toggle-arrow {
+    display: none; /* Hide the arrow */
+  }
+
+  /* Navbar EN Button Styling */
+  .language-toggle {
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Select Puja Button Styling */
+  .button-container button {
+    width: 100%;
+    background-color: #a52a2a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-size: 1rem;
+    font-family: "Garamond", serif;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button-container button:hover {
+    background-color: #e64a19;
+  }
+
+  /* Hide Package Images and Buttons */
+  .package-item img,
+  .package-item button {
+    display: none;
+  }
+
+  /* Reviews: Horizontal Scroll */
+  .testimonials {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of reviews */
+    gap: 20px; /* Space between reviews */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px; /* Add padding for consistent spacing */
+    scroll-snap-type: x mandatory; /* Smooth scroll behavior */
+    -webkit-overflow-scrolling: touch; /* Better touch behavior on mobile */
+    margin: 0; /* Reset margin */
+  }
+
+  .testimonial {
+    flex: 0 0 80%; /* Ensure each review takes up 80% of the viewport */
+    min-width: 280px; /* Set minimum width for proper visibility */
+    max-width: 90%; /* Prevent reviews from being too wide */
+    box-sizing: border-box;
+    padding: 20px; /* Adjust padding for better spacing */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  /* Fix for first review alignment */
+  .testimonials .testimonial:first-child {
+    margin-left: 0 !important; /* Ensure no left margin for the first review */
+  }
+
+  .testimonial h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .profile .details {
+    font-size: 0.9rem;
+  }
+
+  /* Horizontal Scroll Styling */
+  .testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  button {
+    width: 55%;
+        padding: 17px;
+        background-color: #c24619;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 13px;
+}
+
+  /* Hover Effect */
+  .button-container button:hover {
+    background-color: #e64a19; /* Slightly lighter on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+  }
+
+  .language-toggle {
+    background-color: #b54123;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        width: 49px;
+        margin-right: -281px;
+}
+}
+
+/* Responsive design for desktops (1024px and above) */
+@media (min-width: 1024px) {
+
+
+  .image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Container */
+.text-container {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text-container .location-date {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.text-container .location,
+.text-container .date {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.text-container .location i,
+.text-container .date i {
+    margin-right: 10px;
+    color: #a52a2a;
+}
+
+#countdown-timer {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: #b54123;
+    font-weight: bold;
+}
+
+.text-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.text-container button:hover {
+    background-color: #e64a19;
+}
+  button {
+    width: 34%;
+    padding: 10px;
+    background-color: #c24619;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 8px;
+}
+  header {
+
+    padding: 15px 30px;
+        height: 98px;
+  }
+
+  .header-left img {
+    width: 100px;
+    height: auto;
+  }
+
+  .content {
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+
+  .header-left img {
+    border: none; /* Remove border for larger screens */
+    box-shadow: none; /* Remove any shadow */
+}
+  .details-section h1 {
+    font-size: 34px;
+    text-align: left;
+  }
+
+  .benefits-container {
+    justify-content: space-around;
+  }
+
+  .benefit-card {
+    width: 44%;
+    margin: 20px;
+  }
+
+  .participate-card {
+    max-width: 60%;
+    margin: 20px auto;
+  }
+
+  .faq-section h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+#countdown-timer {
+  font-family: "Garamond", serif;
+    font-size: 15px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 7px;
+}
+
+#countdown-timer .time-number {
+  font-size: 24px; /* Larger font for numbers */
+  font-weight: bold;
+  color: var(--primary-color); /* Use your primary theme color */
+  margin-right: 5px;
+}
+
+
+
+
+

@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mrityunjay Mahadev Rudraksha Puja</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+<!-- End Google Tag Manager -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "nsotq330nv");
+</script>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '808518914545478');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+ 
+
+<script>
+  
+  async function sendEventToWebhook(eventName, customData = {}, userData = {}) {
+  const WEBHOOK_URL = "https://hook.eu2.make.com/w4q6m5jrjoy7dwh5g6qcaec8dw2jss8u"; // Your Webhook URL
+
+  const eventData = {
+    event_name: eventName,
+    event_time: Math.floor(Date.now() / 1000), // Current timestamp in seconds
+    event_source_url: window.location.href, // Current page URL
+    user_data: {
+      em: userData.email ? sha256(userData.email) : null, // SHA256 hashed email
+      ph: userData.phone ? sha256(userData.phone) : null, // SHA256 hashed phone
+      client_ip_address: userData.ip || null, // Optionally capture IP
+    },
+    custom_data: customData,
+  };
+
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventData),
+    });
+
+    if (response.ok) {
+      console.log(`${eventName} event sent successfully`);
+    } else {
+      console.error(`Failed to send ${eventName} event`, response.statusText);
+    }
+  } catch (error) {
+    console.error(`Error sending ${eventName} event:`, error);
+  }
+}
+
+// SHA256 hash function
+function sha256(data) {
+  const encoder = new TextEncoder();
+  const dataBuffer = encoder.encode(data);
+
+  return crypto.subtle.digest("SHA-256", dataBuffer).then((hashBuffer) => {
+    return Array.from(new Uint8Array(hashBuffer))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+  });
+}
+</script>
+
+<script>
+  function scrolltoPuja(eventName) {
+      dataLayer.push({
+          'event': 'select puja package',
+          'eventName': eventName
+      });
+      console.log('Event tracked:', eventName);
+      window.addEventListener("load", () => {
+  sendEventToWebhook("PageView", {}, { email: "user@example.com" });
+});
+
+  }
+  function AddToCart(eventName) {
+    const pujaCard = document.getElementById('package1');
+    const pujaName = pujaCard.getAttribute('data-pujatype');
+    const pujaPrice = pujaCard.getAttribute('data-price');
+    const pujaLocation = pujaCard.getAttribute('data-location');
+    const pujaId = pujaCard.getAttribute('data-id');
+      dataLayer.push({
+          'event': 'add_to_cart',
+          'add_to_cart': {
+            'id': pujaId,
+            'item_name': eventName,
+            'pujatype': pujaName,
+            'price': pujaPrice,
+            'location': pujaLocation,
+            'currency': 'INR'
+          }
+      });
+      console.log('Tracked puja selection:', {
+            item_name: eventName,
+            pujatype: pujaName,
+            price: pujaPrice,
+            location: pujaLocation,
+            currency: 'INR'
+        });  }
+
+        sendEventToWebhook(
+    "AddToCart",
+    {
+      value: 1500, // Product price in INR
+      currency: "INR", // Currency set to INR
+      content_ids: [pujaId], // Product ID
+      content_type: "product",
+    },
+    { email: "user@example.com" }
+  );
+
+  document.querySelector("#addToCartButton").addEventListener("click", (e) => {
+  const button = e.target;
+  const addToCartData = {
+    value: parseFloat(button.getAttribute("data-product-price")), // Single product price
+    currency: "INR",
+    content_ids: [pujaId],
+    content_category: button.getAttribute("data-product-category"),
+    content_name: button.getAttribute("data-product-name"),
+    contents: [
+      {
+        id: button.getAttribute("data-product-id"),
+        quantity: 1,
+        item_price: parseFloat(button.getAttribute("data-product-price")),
+      },
+    ],
+    user_email: "user@example.com", // User's email
+  };
+
+  trackAddToCart(addToCartData);
+});
+
+
+
+</script>
+  </head>
+<body class="bg-gray-50">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Header Section -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="fixed w-full h-18 md:h-20 z-50 bg-white">
+          <div class="container mx-auto px-4 md:px-6 py-2 md:py-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2 sm:gap-3 md:gap-4">
+                <img
+                  src="../assets/img/Hindu Mandir Puja logo (2).png"
+                  alt="Om Logo"
+                  class="h-8 sm:h-10 md:h-12 lg:h-16 scale-125 sm:scale-150"
+                />
+                <div>
+                  <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-orange-600 leading-tight">
+                    हिन्दू मंदिर पूजा
+                  </h1>
+                  <p class="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600">
+                    आपका विश्वास & हमारी सेवा
+                  </p>
+                </div>
+              </div>
+  
+              <div class="hidden md:hidden lg:flex items-center space-x-8">
+                <a href="../index.html" class="text-gray-700 hover:text-orange-500 transition"
+                  >होम</a
+                >
+                <a
+                  href="../poojaBooking.html"
+                  class="text-gray-700 hover:text-orange-500 transition"
+                  >पूजाएं</a
+                >
+                <a
+                  href="../chadhawa.html"
+                  class="text-gray-700 hover:text-orange-500 transition"
+                  >प्रसाद </a
+                >
+                <a
+                  href="Blogs/blog1.html"
+                  class="text-gray-700 hover:text-orange-500 transition"
+                  >ब्लॉग्स</a
+                >
+                <a href="MrityuMahadev-Eng.html">
+                  <button
+                    class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+                  >
+                In English
+                  </button>
+                </a>
+                
+              </div>
+  
+              <div class="flex items-center gap-4 lg:hidden">
+                <a href="MrityuMahadev-Eng.html">
+                  <button
+                    class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-2 text-[10px] rounded-full hover:shadow-lg transition"
+                  >
+                    In English
+                  </button>
+                </a>
+                <button id="mobileMenuBtn" class="text-gray-700">
+                  <i class="fas fa-bars text-xl"></i>
+                </button>
+              </div>
+            </div>
+  
+            <!-- Mobile Menu -->
+            <div
+              id="mobileMenu"
+              class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+            >
+              <div class="flex flex-col space-y-4 p-4">
+                <a href="../index.html" class="text-gray-700 hover:text-orange-500 transition"
+                  >होम</a
+                >
+                <a
+                  href="../poojaBooking.html"
+                  class="text-gray-700 hover:text-orange-500 transition"
+                  >पूजाएं</a
+                >
+                <a
+                  href="../chadhawa.html"
+                  class="text-gray-700 hover:text-orange-500 transition"
+                  >प्रसाद </a
+                >
+                <a
+                  href="Blogs/blog1.html"
+                  class="text-gray-700 hover:text-orange-500 transition"
+                  >ब्लॉग्स</a
+                >
+               
+               
+              </div>
+            </div>
+          </div>
+        </nav>
+        <script>
+          // Mobile menu functionality
+          const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+          const mobileMenu = document.getElementById("mobileMenu");
+          let isMenuOpen = false;
+  
+          mobileMenuBtn.addEventListener("click", () => {
+            isMenuOpen = !isMenuOpen;
+  
+            // Toggle menu visibility
+            mobileMenu.classList.toggle("hidden");
+  
+            // Toggle icon between bars and times
+            const menuIcon = mobileMenuBtn.querySelector("i");
+            menuIcon.classList.remove(isMenuOpen ? "fa-bars" : "fa-times");
+            menuIcon.classList.add(isMenuOpen ? "fa-times" : "fa-bars");
+          });
+  
+          // Close menu when clicking outside
+          document.addEventListener("click", (e) => {
+            if (
+              !mobileMenuBtn.contains(e.target) &&
+              !mobileMenu.contains(e.target) &&
+              !isMenuOpen
+            ) {
+              mobileMenu.classList.add("hidden");
+              const menuIcon = mobileMenuBtn.querySelector("i");
+              menuIcon.classList.remove("fa-times");
+              menuIcon.classList.add("fa-bars");
+              isMenuOpen = false;
+            }
+          });
+        </script>
+        <!-- Bottom Navigation Bar with Scroll to Book Puja Button -->
+        <div
+          class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-orange-100 z-50"
+        >
+          <!-- Scroll to Book Puja Button -->
+          <div
+            id="scrollToBookBtn"
+            class="fixed sm:hidden block bottom-20 right-4 z-50 opacity-0 transition-opacity duration-300"
+          >
+            <button
+              onclick="document.getElementById('Puja-section').scrollIntoView({behavior: 'smooth'})"
+              class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+            >
+              <i class="fas fa-om"></i>
+              <span>पूजा बुक करें</span>
+            </button>
+          </div>
+          <script>
+            window.addEventListener("scroll", () => {
+              const scrollBtn = document.getElementById("scrollToBookBtn");
+              const scrollPercentage =
+                (window.scrollY /
+                  (document.documentElement.scrollHeight - window.innerHeight)) *
+                100;
+  
+              if (scrollPercentage > 50) {
+                scrollBtn.style.opacity = "1";
+              } else {
+                scrollBtn.style.opacity = "0";
+              }
+            });
+          </script>
+  
+          <!-- Bottom Navigation -->
+          <div class="container mx-auto px-4 py-1 md:hidden">
+            <div class="flex items-center justify-between">
+              <a
+                href="../index.html"
+                class="flex flex-col items-center transition"
+              >
+                <i class="fas fa-home text-md"></i>
+                <span class="text-[10px] mt-0.5">होम</span>
+              </a>
+              <a
+                href="../poojaBooking.html"
+                class="flex flex-col items-center text-orange-600 hover:text-orange-500 transition"
+              >
+                <i class="fas fa-om text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5"
+                  >पूजाएं</span
+                >
+              </a>
+              <a
+                href="../chadhawa.html"
+                class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+              >
+                <i class="fas fa-gift text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5"
+                  >चढ़ावे</span
+                >
+              </a>
+              <!-- <a href="/Temples" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                    <i class="fas fa-gopuram text-md"></i>
+                    <span class="text-[10px] mt-0.5">Temples</span>
+                </a> -->
+              <!-- <a
+                href="#"
+                class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+              >
+                <i class="fas fa-book text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5"
+                  >लाइब्रेरी</span
+                >
+              </a> -->
+              <a
+                href="./Blogs/blog1.html"
+                class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+              >
+                <i class="fas fa-blog text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5"
+                  >ब्लॉग्स</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      <!-- Main Content -->
+      <div class="mt-20 container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <!-- Image Section -->
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img
+              src="../assets/img/landing-page/landing page Mahamrityunjaya Mantra Chanting & Rudrabhishek.png"
+              alt="Mahamrityunjaya Mandir Image"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+  
+          <!-- Details Section -->
+          <div class="space-y-6">
+            <h1
+              id="mandir-heading"
+              class="text-2xl md:text-4xl font-bold text-gray-800"
+            >
+             बच्चे की लंबी उम्र तेज़ बुद्धि और बीमारियों से रक्षा के लिए 11000 महामृत्युंजय जाप
+            </h1>
+           
+  
+            <div class="flex items-center space-x-2 text-gray-700">
+              <img
+                src="https://img.icons8.com/material-outlined/24/000000/place-marker.png"
+                alt="Location Icon"
+              />
+              <strong>स्थान:</strong>
+              <span class="text-orange-600 text-[12px]"
+                >महामृत्युंजय मंदिर, काशी</span
+              >
+            </div>
+  
+            <div class="countdown bg-orange-100 p-4 rounded-lg">
+              <div class="flex items-center space-x-2">
+                <img
+                  src="https://img.icons8.com/material-outlined/24/000000/calendar.png"
+                  alt="Calendar Icon"
+                />
+                <span id="countdown-timer" class="text-orange-600 font-semibold"
+                  >गणना की जा रही है...</span
+                >
+              </div>
+            </div>
+  
+            <p class="devotee-count text-green-600 font-medium">
+              200+ भक्तों ने पहले ही इस पूजा की बुकिंग की है
+            </p>
+            <button
+              onclick="scrollToSection(); scrolltoPuja('Mrityunjay Mahadev Mandir')"
+              class="bg-orange-500 text-center text-white px-16 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 "
+            >
+              Select Puja Package
+            </button>
+            <script>
+              function scrollToSection() {
+                if (window.innerWidth <= 768) {
+                  document.getElementById('Puja-section').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  document.getElementById('participate-section').scrollIntoView({ behavior: 'smooth' });
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold text-center mb-8 text-gray-800">महामृत्युंजय मंदिर के बारे में</h2>
+        <p id="mandir-description" class="text-gray-600">
+            महामृत्युंजय पूजा भगवान शिव को समर्पित एक शक्तिशाली अनुष्ठान है, जिसका प्रदर्शन जीवन में आने वाली चुनौतियों, बीमारियों, और अप्रत्याशित खतरों से निपटने के लिए किया जाता है। इस पूजा में महामृत्युंजय मंत्र का जाप और रुद्राभिषेक शामिल हैं, जिन्हें शांति, सुरक्षा, और अच्छे स्वास्थ्य के लिए लाभकारी माना जाता है।
+        </p>
+    </div>
+    <!-- Benefits Section -->
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">महामृत्युंजय पूजा के लाभ</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-heart text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">बेहतर स्वास्थ्य और दीर्घायु</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">पूजा आपके बच्चे को बीमारियों से बचाने और स्वस्थ जीवन प्रदान करने में सहायक मानी जाती है। यह उनके शरीर को रोगों से लड़ने की शक्ति देती है</p>
+                </div>
+
+                <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">स्मरण शक्ति में सुधार</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed"> महामृत्युंजय मंत्र का जाप और पूजा बच्चों की याददाश्त तेज होती है, जिससे उन्हें पाठ याद रखने में आसानी होती है।</p>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-peace text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">एकाग्रता में वृद्धि</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">महामृत्युंजय मंत्र का जाप और पूजा बच्चों की ध्यान केंद्रित करने की क्षमता को बढ़ा सकती है। इससे उन्हें पढ़ाई में बेहतर प्रदर्शन करने में मदद मिलती है।</p>
+                </div>
+
+                <div class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fist-raised text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">दुर्घटनाओं से सुरक्षा</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed"> महामृत्युंजय मंत्र का जाप बच्चों को अप्रिय घटनाओं और दुर्घटनाओं से बचाने के लिए एक सुरक्षा कवच की तरह काम कर सकती है।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+ <!-- Puja Packages Section -->
+    <div id="participate-section" class="bg-white py-12 hidden md:block">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Package 1 -->
+          <div data-id="1" data-pujatype="Personal Sankalp Puja" data-price="851" data-location="Mrityunjay Mahadev Temple, Kashi" id="package1" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                बाल आरोग्य पूजा
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹851</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >आपका बच्चा बार-बार बीमार पड़ रहा है, जिससे आपका मन चिंतित रहता है?</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >वीडियो कॉल के माध्यम से लाइव भाग लें।</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >व्हाट्सएप पर आपके नाम संकल्प के साथ पूजा का वीडियो प्राप्त करें।</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('851','बाल आरोग्य पूजा');"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-40 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              Participate Now
+            </button>
+            <h2
+              class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+            >
+              400+ Devotees already booked this Puja
+            </h2>
+          </div>
+
+          <!-- Package 2 -->
+          <div data-id="2" data-pujatype="Couple Sankalp Puja" data-price="1051" data-location="Mrityunjay Mahadev Temple, Kashi" id="package2" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                बुद्धि और दीर्घायु पूजन
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹1051</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >आपका बच्चा पढ़ाई में मन नहीं लगाता, उसकी एकाग्रता भंग रहती है?
+.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >मृत्युंजय महादेव की यह विशेष पूजा आपके बच्चे के मन को शांति और बुद्धि को तेज करेगी। काशी के पवित्र मंदिर में वेद मंत्रों के साथ यह प्रार्थना समर्पित होगी।</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >पूरी श्रद्धा और वैदिक रीति से संपन्न पूजा के दर्शन आपको व्हाट्सएप पर पूजा के बाद आशीर्वाद स्वरूप वीडियो प्राप्त करें।</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >फल, मिठाई और सूखे मेवे की अर्पणा शामिल है, जिसे प्रसाद कहा जाता है और आपके घर पर डिलीवर किया जाएगा।</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('1051','बुद्धि और दीर्घायु पूजन');"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-16 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              Participate Now
+            </button>
+            <h2
+              class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+            >
+              350+ Devotees already booked this Puja
+            </h2>
+          </div>
+
+          <!-- Package 3 -->
+          <div data-id="3" data-pujatype="Family Sankalp Puja" data-price="1251" data-location="Mrityunjay Mahadev Temple, Kashi" id="package3" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">सम्पूर्ण बाल सुरक्षा </h3>
+              <p class="text-xl font-semibold text-orange-600">₹1251</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >आपके मन में अपने बच्चे की सुरक्षा को लेकर हर पल एक चिंता बनी रहती है सेहत, पढ़ाई, भविष्य, मानसिक शक्ति  हर क्षेत्र में आप उसकी सुरक्षा चाहते हैं</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >यह सम्पूर्ण बाल सुरक्षा अनुष्ठान मृत्युंजय महादेव का एक विशेष सुरक्षा कवच है।</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >पूरी श्रद्धा और वैदिक रीति से संपन्न पूजा के दर्शन आपको व्हाट्सएप पर पूजा के बाद आशीर्वाद स्वरूप वीडियो प्राप्त करें।</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >फल, मिठाई और सूखे मेवे की अर्पणा शामिल है, जिसे प्रसाद कहा जाता है और आपके घर पर डिलीवर किया जाएगा।</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('1251','सम्पूर्ण बाल सुरक्षा');"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-12 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              Participate Now
+            </button>
+            <h2
+              class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+            >
+              250+ Devotees already booked this Puja
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 768px) {
+        #participate-section .grid {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+        }
+        #participate-section .grid > div {
+          flex: 0 0 80%;
+          scroll-snap-align: start;
+          margin-right: 1rem;
+        }
+      }
+    </style>
+
+    <!-- Mobile Puja Packages Section -->
+    <div id="Puja-section" class="md:hidden block pt-12">
+      <div class="container mx-auto px-4">
+        <!-- Package Tabs -->
+        <div class="grid grid-cols-3 gap-2 mb-4">
+          <!-- Tab 1 -->
+          <div data-id="1" data-pujatype="Personal Sankalp Puja" data-price="851" data-location="Mrityunjay Mahadev Temple, Kashi" class="relative puja-tab active" data-puja="personal-sankalp">
+            <h4 class="text-center text-[10px] font-bold text-gray-600">
+              बाल आरोग्य पूजा
+            </h4>
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+            >
+              <img
+                src="../assets/img/icons/ChildProtection .png"
+                alt="Personal Sankalp Puja"
+                class="w-full h-[80%] mb-4 object-contain"
+              />
+              <span
+                class="absolute bottom-1 text-[14px] font-bold text-[#F68D1C]"
+                >₹851</span
+              >
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div data-id="2" data-pujatype="Couple Sankalp Puja" data-price="1051" data-location="Mrityunjay Mahadev Temple, Kashi" class="relative puja-tab" data-puja="couple-sankalp">
+            <h4 class="text-center text-[10px] font-bold text-gray-600">
+              बुद्धि और दीर्घायु पूजन
+            </h4>
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+            >
+              <img
+                src="../assets/img/icons/Childstudy.png"
+                alt="Couple Sankalp Puja"
+                class="w-full h-[80%] mb-4 rounded-full object-contain"
+              />
+              <span
+                class="absolute bottom-1 text-[14px] font-bold text-[#3564E2]"
+                >₹1051</span
+              >
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div data-id="3" data-pujatype="Family Sankalp Puja" data-price="1251" data-location="Mrityunjay Mahadev Temple, Kashi" class="relative puja-tab" data-puja="family-sankalp">
+            <h4 class="text-center text-[10px] font-bold text-gray-600">
+             सम्पूर्ण बाल सुरक्षा पूजा
+            </h4>
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+            >
+              <img
+                src="../assets/img/icons/ChildHealth .png"
+                alt="Family Sankalp Puja"
+                class="w-full h-[80%] mb-4 rounded-full object-contain"
+              />
+              <span
+                class="absolute bottom-1 text-[14px] font-bold text-[#FF3201]"
+                >₹1251</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Package Details with Swiper -->
+        <div class="border border-[#430ABD] rounded-lg pb-3">
+          <div class="puja-slider overflow-hidden">
+            <div class="puja-slider-wrapper flex transition-transform duration-300">
+              <!-- Personal Sankalp Puja Details -->
+              <div data-id="1" data-pujatype="Personal Sankalp Puja" data-price="851" data-location="Mrityunjay Mahadev Temple, Kashi" id="personal-sankalp-details" class="puja-details w-full flex-shrink-0">
+                <div
+                  class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+                >
+                  <div class="text-center px-3 mt-2">
+                    <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                      बाल आरोग्य पूजा
+                    </h3>
+                    <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                      ></span
+                    >
+                  </div>
+                </div>
+
+                <hr class="mx-3" />
+
+                <div class="px-4">
+                  <div class="space-y-4 mt-4">
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >यह पूजा उन बच्चों के लिए विशेष रूप से महत्वपूर्ण है जो बार-बार बीमार पड़ते हैं</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >काशी के पवित्र  मंदिर में आपके बच्चे के नाम-गोत्र से होगी यह विशेष प्रार्थना जो हर कष्ट और रोग के निवारणकर्ता हैं।</span
+                      >
+                    </div>
+
+
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >पूरी श्रद्धा और वैदिक रीति से संपन्न पूजा के दर्शन आपको व्हाट्सएप पर पूजा के बाद आशीर्वाद स्वरूप वीडियो प्राप्त करें।  </span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mx-4 mt-3" />
+
+                <div class="px-4 pt-3">
+                  <button
+                    onclick="redirectToAddToCart('851','बाल आरोग्य पूजा');"
+                    class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+                  >
+                    <span class="text-white text-sm font-bold pr-2"
+                      >PARTICIPATE</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <!-- Couple Sankalp Puja Details -->
+              <div data-id="2" data-pujatype="Couple Sankalp Puja" data-price="1051" data-location="Mrityunjay Mahadev Temple, Kashi" id="couple-sankalp-details" class="puja-details w-full flex-shrink-0">
+                <div
+                  class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+                >
+                  <div class="text-center px-3 mt-2">
+                    <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                      बुद्धि और दीर्घायु पूजन
+                    </h3>
+                    <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                      > </span
+                    >
+                  </div>
+                </div>
+
+                <hr class="mx-3" />
+
+                <div class="px-4">
+                  <div class="space-y-4 mt-4">
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >आपका बच्चा पढ़ाई में मन नहीं लगाता तो यह पूजा बच्चों की एकाग्रता स्मरण शक्ति और सीखने की क्षमता को बढ़ाने में सहायक  है। </span
+                      >
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >मृत्युंजय महादेव की यह विशेष पूजा आपके बच्चे के मन को शांति और बुद्धि को तेज करेगी। काशी के पवित्र मंदिर में वेद मंत्रों के साथ यह प्रार्थना समर्पित होगी।</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >पूरी श्रद्धा और वैदिक रीति से संपन्न पूजा के दर्शन आपको व्हाट्सएप पर पूजा के बाद आशीर्वाद स्वरूप वीडियो प्राप्त करें।</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >फल, मिठाई और सूखे मेवे की अर्पणा शामिल है, जिसे प्रसाद कहा जाता है और आपके घर पर डिलीवर किया जाएगा।</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mx-4 mt-3" />
+
+                <div class="px-4 pt-3">
+                  <button
+                    onclick="redirectToAddToCart('1051','बुद्धि और दीर्घायु पूजन');"
+                    class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+                  >
+                    <span class="text-white text-sm font-bold pr-2"
+                      >PARTICIPATE</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <!-- Family Sankalp Puja Details -->
+              <div data-id="3" data-pujatype="Family Sankalp Puja" data-price="1251" data-location="Mrityunjay Mahadev Temple, Kashi" id="family-sankalp-details" class="puja-details w-full flex-shrink-0">
+                <div
+                  class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+                >
+                  <div class="text-center px-3 mt-2">
+                    <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                      बाल सुरक्षा अनुष्ठान
+                    </h3>
+                    <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                      ></span
+                    >
+                  </div>
+                </div>
+
+                <hr class="mx-3" />
+
+                <div class="px-4">
+                  <div class="space-y-4 mt-4">
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >आपके मन में अपने बच्चे की सुरक्षा को लेकर हर पल एक चिंता बनी रहती है सेहत, पढ़ाई, भविष्य, मानसिक शक्ति हर क्षेत्र में आप उसकी सुरक्षा चाहते हैं</span
+                      >
+                    </div>
+                    <div class="space-y-4 mt-4">
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >यह सम्पूर्ण बाल सुरक्षा अनुष्ठान मृत्युंजय महादेव का एक विशेष सुरक्षा कवच है।</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >पूरी श्रद्धा और वैदिक रीति से संपन्न पूजा के दर्शन आपको व्हाट्सएप पर पूजा के बाद आशीर्वाद स्वरूप वीडियो प्राप्त करें।</span
+                      >
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                      <img
+                        src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                        width="24"
+                        height="24"
+                        alt="check"
+                      />
+                      <span
+                        >फल, मिठाई और सूखे मेवे की अर्पणा शामिल है, जिसे प्रसाद कहा जाता है और आपके घर पर डिलीवर किया जाएगा।</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mx-4 mt-3" />
+
+                <div class="px-4 pt-3">
+                  <button
+                    onclick="redirectToAddToCart('1251','सम्पूर्ण बाल सुरक्षा');"
+                    class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+                  >
+                    <span class="text-white text-sm font-bold pr-2"
+                      >PARTICIPATE</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!-- Slider Pagination Dots -->
+          <div class="slider-pagination flex justify-center gap-2 mt-4">
+            <span class="pagination-dot active" data-index="0"></span>
+            <span class="pagination-dot" data-index="1"></span>
+            <span class="pagination-dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Slider Styles */
+      .puja-slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .puja-slider-wrapper {
+        display: flex;
+        transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        will-change: transform;
+      }
+      
+      .puja-details {
+        width: 100%;
+        flex-shrink: 0;
+      }
+      
+      /* Tab Styles */
+      .puja-tab {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .puja-tab.active div {
+        border: 2px solid #430ABD;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Pagination Dots */
+      .slider-pagination {
+        margin-top: 12px;
+      }
+      
+      .pagination-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #D1D5DB;
+        display: inline-block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .pagination-dot.active {
+        width: 24px;
+        border-radius: 4px;
+        background-color: #430ABD;
+      }
+      
+      /* Touch Styles */
+      .puja-slider {
+        touch-action: pan-x;
+      }
+      
+      /* Navigation Arrows */
+      .slider-nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      
+      .slider-nav-arrow:hover {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      
+      .slider-nav-prev {
+        left: 5px;
+      }
+      
+      .slider-nav-next {
+        right: 5px;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements
+        const pujaTabs = document.querySelectorAll(".puja-tab");
+        const sliderWrapper = document.querySelector(".puja-slider-wrapper");
+        const paginationDots = document.querySelectorAll(".pagination-dot");
+        const slider = document.querySelector(".puja-slider");
+        
+        // Add navigation arrows
+        const prevArrow = document.createElement("div");
+        prevArrow.className = "slider-nav-arrow slider-nav-prev";
+        prevArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
+        
+        const nextArrow = document.createElement("div");
+        nextArrow.className = "slider-nav-arrow slider-nav-next";
+        nextArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
+        
+        slider.appendChild(prevArrow);
+        slider.appendChild(nextArrow);
+        
+        // Current slide index
+        let currentIndex = 0;
+        
+        // Slide width (100% of container)
+        const slideWidth = 100;
+        
+        // Touch variables
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+        let initialTransform = 0;
+        let lastTouchTime = 0;
+        let isFastSwipe = false;
+        
+        // Function to update the slider position
+        function updateSliderPosition(index, animate = true) {
+          // Ensure index is within bounds
+          if (index < 0) index = 0;
+          if (index >= pujaTabs.length) index = pujaTabs.length - 1;
+          
+          if (animate) {
+            sliderWrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)";
+          } else {
+            sliderWrapper.style.transition = "none";
+          }
+          
+          sliderWrapper.style.transform = `translateX(-${index * slideWidth}%)`;
+          
+          // Update active tab with smooth animation
+          pujaTabs.forEach((tab, i) => {
+            if (i === index) {
+              tab.classList.add("active");
+              tab.querySelector("div").style.border = "2px solid #430ABD";
+              tab.querySelector("div").style.transform = "translateY(-2px)";
+              tab.querySelector("div").style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            } else {
+              tab.classList.remove("active");
+              tab.querySelector("div").style.border = "none";
+              tab.querySelector("div").style.transform = "translateY(0)";
+              tab.querySelector("div").style.boxShadow = "none";
+            }
+          });
+          
+          // Update pagination dots with smooth animation
+          paginationDots.forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.add("active");
+            } else {
+              dot.classList.remove("active");
+            }
+          });
+          
+          // Update navigation arrows visibility
+          if (index === 0) {
+            prevArrow.style.opacity = "0.5";
+            prevArrow.style.pointerEvents = "none";
+          } else {
+            prevArrow.style.opacity = "1";
+            prevArrow.style.pointerEvents = "auto";
+          }
+          
+          if (index === pujaTabs.length - 1) {
+            nextArrow.style.opacity = "0.5";
+            nextArrow.style.pointerEvents = "none";
+          } else {
+            nextArrow.style.opacity = "1";
+            nextArrow.style.pointerEvents = "auto";
+          }
+          
+          currentIndex = index;
+        }
+        
+        // Add click event listener to each tab
+        pujaTabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            updateSliderPosition(index);
+          });
+        });
+        
+        // Add click event listener to pagination dots
+        paginationDots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            updateSliderPosition(index);
+          });
+        });
+        
+        // Add click event listeners to navigation arrows
+        prevArrow.addEventListener("click", () => {
+          updateSliderPosition(currentIndex - 1);
+        });
+        
+        nextArrow.addEventListener("click", () => {
+          updateSliderPosition(currentIndex + 1);
+        });
+        
+        // Touch events for slider with improved physics
+        slider.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+          initialTransform = currentIndex * slideWidth;
+          sliderWrapper.style.transition = "none";
+          lastTouchTime = Date.now();
+          isFastSwipe = false;
+        }, { passive: true });
+        
+        slider.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          
+          currentX = e.touches[0].clientX;
+          const diffX = startX - currentX;
+          const translateX = -initialTransform + (-diffX / slider.offsetWidth * 100);
+          
+          // Add resistance at the edges for better UX
+          let finalTranslateX = translateX;
+          
+          if (translateX > 0) {
+            finalTranslateX = translateX * 0.3; // Add resistance when trying to drag past first slide
+          } else if (translateX < -((pujaTabs.length - 1) * slideWidth)) {
+            const overscroll = translateX + ((pujaTabs.length - 1) * slideWidth);
+            finalTranslateX = -((pujaTabs.length - 1) * slideWidth) + (overscroll * 0.3); // Add resistance when trying to drag past last slide
+          }
+          
+          sliderWrapper.style.transform = `translateX(${finalTranslateX}%)`;
+          
+          // Calculate swipe speed for momentum effect
+          const touchDuration = Date.now() - lastTouchTime;
+          isFastSwipe = touchDuration < 200 && Math.abs(diffX) > 30;
+        }, { passive: true });
+        
+        slider.addEventListener("touchend", (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+          
+          // Re-enable transitions
+          sliderWrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)";
+          
+          const diffX = startX - currentX;
+          const threshold = isFastSwipe ? slider.offsetWidth * 0.1 : slider.offsetWidth * 0.2; // Lower threshold for fast swipes
+          
+          if (Math.abs(diffX) > threshold) {
+            if (diffX > 0 && currentIndex < pujaTabs.length - 1) {
+              // Swipe left -> next slide
+              updateSliderPosition(currentIndex + 1);
+            } else if (diffX < 0 && currentIndex > 0) {
+              // Swipe right -> previous slide
+              updateSliderPosition(currentIndex - 1);
+            } else {
+              // Return to current slide
+              updateSliderPosition(currentIndex);
+            }
+          } else {
+            // Return to current slide if swipe wasn't strong enough
+            updateSliderPosition(currentIndex);
+          }
+        }, { passive: true });
+        
+        // Handle edge cases
+        slider.addEventListener("touchcancel", () => {
+          if (isDragging) {
+            isDragging = false;
+            updateSliderPosition(currentIndex);
+          }
+        }, { passive: true });
+        
+        // Add keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            updateSliderPosition(currentIndex - 1);
+          } else if (e.key === "ArrowRight") {
+            updateSliderPosition(currentIndex + 1);
+          }
+        });
+        
+        // Initialize the slider
+        updateSliderPosition(0, false);
+        
+        // Auto-hide navigation arrows on mobile after a delay
+        const hideArrowsTimeout = setTimeout(() => {
+          prevArrow.style.opacity = "0";
+          nextArrow.style.opacity = "0";
+        }, 2000);
+        
+        // Show arrows when touching the slider
+        slider.addEventListener("touchstart", () => {
+          clearTimeout(hideArrowsTimeout);
+          prevArrow.style.opacity = currentIndex === 0 ? "0.5" : "1";
+          nextArrow.style.opacity = currentIndex === pujaTabs.length - 1 ? "0.5" : "1";
+        }, { passive: true });
+      });
+    </script>
+
+        
+<!-- बारे में खंड -->
+<div id="about" class="bg-white py-6">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="order-2 md:order-1">
+        <img
+        src="../images/panditji.jpg"
+          alt="Traditional Vedic Puja Ceremony"
+          class="rounded-lg shadow-lg w-full h-auto"
+        />
+      </div>
+      <div class="order-1 md:order-2">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">
+          वैदिक परंपरा में पूजा को समझना
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          मृत्युंजय महादेव को रोगों का नाश करने वाला और उत्तम स्वास्थ्य प्रदान करने वाला माना जाता है। मंदिर में बच्चों के नाम और गोत्र से की गई विशेष प्रार्थना उनके शरीर को बीमारियों से लड़ने की शक्ति प्रदान करती है और उन्हें स्वस्थ जीवन का आशीर्वाद देती है।
+        </p>
+        <ul class="mt-4 space-y-3 text-gray-600">
+          <li class="flex items-center gap-2">
+            <i class="fas fa-om text-orange-500 text-xs"></i>
+            <span
+              >यह पूजा बच्चों की एकाग्रता, स्मरण शक्ति और सीखने की क्षमता को बढ़ाने में सहायक मानी जाती है। मृत्युंजय महादेव की आराधना से बच्चों का मन शांत और स्थिर होता है, जिससे वे पढ़ाई में बेहतर प्रदर्शन कर पाते हैं।</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-om text-orange-500 text-xs"></i>
+            <span
+              >महामृत्युंजय महादेव को मृत्यु के विजेता के रूप में पूजा जाता है। इस मंदिर में बच्चों के लिए की गई प्रार्थना उनकी आयु को लम्बा करने और उन्हें अकाल मृत्यु से बचाने में सहायक मानी जाती है।</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-om text-orange-500 text-xs"></i>
+            <span
+              >बच्चे अक्सर बुरी नजर और नकारात्मक ऊर्जाओं के प्रति अधिक संवेदनशील होते हैं। मृत्युंजय महादेव की पूजा उन्हें सभी प्रकार की नकारात्मक शक्तियों और प्रभावों से बचाने के लिए एक शक्तिशाली सुरक्षा कवच का काम करती है।</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- मंदिर की जानकारी -->
+    <div id="about" class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">मंदिर की जानकारी</h2>
+                    <p class="text-gray-600 leading-relaxed">काशी (वाराणसी) की पवित्र भूमि पर स्थित, महामृत्युंजय महादेव मंदिर भगवान शिव का एक विशिष्ट मंदिर है। यह असामयिक मृत्यु, बीमारियों और अप्रत्याशित आपदाओं से भक्तों की रक्षा के लिए प्रसिद्ध है। यह प्राचीन मंदिर दिव्य औषधीय शक्तियों से युक्त माना जाता है, जो आयुर्वेद के देवता भगवान धन्वंतरि के आशीर्वाद से प्राप्त हुई हैं।</p>
+                    <p class="text-gray-600 leading-relaxed mt-4">मंदिर में भगवान शिव अपने आठ भुजाओं वाले महामृत्युंजय रूप में विराजमान हैं, साथ ही माँ बगलामुखी भी हैं, जो भक्तों को सुरक्षा और शक्ति प्रदान करती हैं। हजारों भक्त अपनी परेशानियों से मुक्ति पाने और शांति, स्वास्थ्य और दीर्घायु प्राप्त करने के लिए इस मंदिर में आते हैं।</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-orange-500"></i>
+                            <span class="text-gray-600">काशी, वाराणसी</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-orange-500"></i>
+                            <span class="text-gray-600">24/7 खुला</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img class="w-full h-[400px] object-cover hover:scale-105 transition duration-300" src="https://optimatravels.com/images/varanasi-images/mrityunjaya-mahadev-temple-head.jpg" alt="मृत्युंजय महादेव मंदिर">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- पूजा प्रक्रिया खंड -->
+    <section class="py-5 md:py-5 bg-white opacity-0 transition-opacity duration-700" id="pujaProcessSection">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-center gap-4 md:gap-6 mb-12">
+                <img src="https://cdn-icons-png.freepik.com/512/17729/17729027.png" alt="स्वस्तिक" class="h-8 md:h-12">
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600">पूजा प्रक्रिया</h2>
+                <img src="https://cdn-icons-png.freepik.com/512/17729/17729027.png" alt="स्वस्तिक" class="h-8 md:h-12">
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+                <!-- प्रगति रेखा (केवल डेस्कटॉप) -->
+                <div class="hidden md:block absolute top-8 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gray-200">
+                    <div id="progressLine" class="h-full bg-orange-500 w-0 transition-all duration-1000"></div>
+                </div>
+
+                <!-- मोबाइल प्रगति रेखा (पंक्तियों के बीच) -->
+                <div class="block md:hidden absolute top-1/2 left-1/4 right-1/4 h-1 bg-gray-200">
+                    <div id="mobileProgressLine" class="h-full bg-orange-500 w-0 transition-all duration-1000"></div>
+                </div>
+
+                <div class="text-center relative">
+                    <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                        <img src="../assets/img/landing-page/icon1.png" alt="पैकेज चुनें" class="h-16 mx-auto mb-4 process-icon transition-all duration-500">
+                    </div>
+                    <p class="text-gray-700 text-sm md:text-base">पैकेज में से<br>चयन करें</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                        <img src="../assets/img/landing-page/icon2.png" alt="विवरण दर्ज करें" class="h-16 mx-auto mb-4 process-icon transition-all duration-500">
+                    </div>
+                    <p class="text-gray-700 text-sm md:text-base">नाम और<br>गोत्र दर्ज करें</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                        <img src="../assets/img/landing-page/icon3.png" alt="संकल्प देखें" class="h-16 mx-auto mb-4 process-icon transition-all duration-500">
+                    </div>
+                    <p class="text-gray-700 text-sm md:text-base">हिंदू मंदिर पूजा प्लेटफॉर्म पर<br>अपना संकल्प देखें</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                        <img src="../assets/img/landing-page/icon4.png" alt="प्रसाद प्राप्त करें" class="h-16 mx-auto mb-4 process-icon transition-all duration-500">
+                    </div>
+                    <p class="text-gray-700 text-sm md:text-base">पूजा वीडियो और<br>प्रसाद वितरण</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- अक्सर पूछे जाने वाले प्रश्न -->
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">अक्सर पूछे जाने वाले प्रश्न</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
+                        यह बाल सुरक्षा पूजाएँ क्या हैं?
+                    </button>
+                    <div class="px-6 py-4 bg-gray-50 text-gray-600">
+                        यह विशेष पूजाएँ बच्चों को अच्छे स्वास्थ्य, बुद्धि, लम्बी आयु और नकारात्मक प्रभावों से बचाने के उद्देश्य से की जाती हैं। हम काशी के पवित्र मृत्युंजय महादेव मंदिर में आपके बच्चे के नाम और गोत्र से भगवान शिव की प्रार्थना करते हैं।
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
+                        पूजा कहाँ की जाती है?
+                    </button>
+                    <div class="px-6 py-4 bg-gray-50 text-gray-600">
+                        पूजा काशी (वाराणसी) के प्रसिद्ध और पवित्र मृत्युंजय महादेव मंदिर में अनुभवी पंडितों द्वारा संपन्न की जाती हैं।
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
+                        क्या हमें पूजा में शामिल होने की आवश्यकता है?
+                    </button>
+                    <div class="px-6 py-4 bg-gray-50 text-gray-600">
+                        आपको शारीरिक रूप से पूजा में उपस्थित होने की आवश्यकता नहीं है। हम आपके बच्चे के नाम और गोत्र से यहाँ पूजा संपन्न करवाएंगे।
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
+                        मुझे कैसे पता चलेगा कि पूजा मेरे नाम से की गई?
+                    </button>
+                    <div class="px-6 py-4 bg-gray-50 text-gray-600">
+                        हाँ, आप वीडियो कॉल के माध्यम से पूजा देख सकते हैं, और पूजा पूरी होने के बाद वीडियो आपको व्हाट्सएप पर भेज दिया जाएगा, साथ ही प्रसाद आपके दिए गए पते पर भेज दिया जाएगा।
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
+                        क्या मुझे पूजा का वीडियो मिलेगा?
+                    </button>
+                    <div class="px-6 py-4 bg-gray-50 text-gray-600">
+                        हाँ, पूजा पूरी होने के बाद वीडियो आपको व्हाट्सएप पर साझा किया जाएगा।
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition">
+                        पूजा के लिए मुझे क्या तैयारी करनी होगी?
+                    </button>
+                    <div class="px-6 py-4 bg-gray-50 text-gray-600">
+                        पूजा के लिए किसी विशेष तैयारी की आवश्यकता नहीं है; पुजारी आपको सभी अनुष्ठानों के माध्यम से मार्गदर्शन करेंगे।
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- भक्त कॉर्नर -->
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-center gap-4 mb-8 md:mb-12">
+                <img src="../assets/img/lotus.png" alt="भक्त आइकन" class="h-6 sm:h-8 md:h-12"/>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600">खुश भक्त कॉर्नर</h2>
+                <img src="../assets/img/lotus.png" alt="दायाँ आइकन" class="h-6 sm:h-8 md:h-12"/>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <div class="testimonial-slider flex flex-nowrap p-2 sm:p-4 animate-scroll">
+                    <!-- एनिमेटेड टेस्टिमोनियल कार्ड -->
+                    <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4">
+                        <div class="mb-4 sm:mb-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">महामृत्युंजय यंत्र</h3>
+                            <p class="text-sm sm:text-base text-gray-600">मेरे पिता का स्वास्थ्य बिगड़ रहा था जब तक हमने हिंदू मंदिर पूजा महामृत्युंजय यंत्र उनके बिस्तर के पास नहीं रखा, जिससे उनकी स्थिति स्थिर हो गई।</p>
+                        </div>
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <img src="../assets/img/testimonials/testimonials-1.jpg" alt="निशा कोठारी" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"/>
+                            <div>
+                                <div class="text-orange-500 text-sm sm:text-base">⭐⭐⭐⭐⭐</div>
+                                <p class="font-medium text-gray-800 text-sm sm:text-base">निशा कोठारी</p>
+                                <p class="text-xs sm:text-sm text-gray-500">व्हाट्सएप के माध्यम से</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- एनिमेटेड टेस्टिमोनियल कार्ड -->
+                    <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4">
+                        <div class="mb-4 sm:mb-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">प्रसाद वितरण</h3>
+                            <p class="text-sm sm:text-base text-gray-600">प्रसाद वितरण सेवा अद्भुत है। मुझे काशी विश्वनाथ मंदिर से पवित्र प्रसाद 3 दिनों के भीतर प्राप्त हुआ। सेवा से बहुत संतुष्ट हूं।</p>
+                        </div>
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <img src="../assets/img/testimonials/testimonials-2.jpg" alt="राजेश कुमार" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"/>
+                            <div>
+                                <div class="text-orange-500 text-sm sm:text-base">⭐⭐⭐⭐⭐</div>
+                                <p class="font-medium text-gray-800 text-sm sm:text-base">राजेश कुमार</p>
+                                <p class="text-xs sm:text-sm text-gray-500">गूगल के माध्यम से</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- एनिमेटेड टेस्टिमोनियल कार्ड -->
+                    <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4">
+                        <div class="mb-4 sm:mb-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">ऑनलाइन पूजा</h3>
+                            <p class="text-sm sm:text-base text-gray-600">भारत से दूर रहते हुए, ऑनलाइन पूजा सेवा ने मुझे हमारी परंपराओं से जुड़े रहने में मदद की। लाइव स्ट्रीमिंग बिल्कुल स्पष्ट थी।</p>
+                        </div>
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <img src="../assets/img/testimonials/testimonials-3.jpg" alt="प्रिया शर्मा" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"/>
+                            <div>
+                                <div class="text-orange-500 text-sm sm:text-base">⭐⭐⭐⭐⭐</div>
+                                <p class="font-medium text-gray-800 text-sm sm:text-base">प्रिया शर्मा</p>
+                                <p class="text-xs sm:text-sm text-gray-500">फेसबुक के माध्यम से</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- एनिमेटेड टेस्टिमोनियल कार्ड -->
+                    <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4">
+                        <div class="mb-4 sm:mb-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">महामृत्युंजय यंत्र</h3>
+                            <p class="text-sm sm:text-base text-gray-600">मेरे पिता का स्वास्थ्य बिगड़ रहा था जब तक हमने हिंदू मंदिर पूजा महामृत्युंजय यंत्र उनके बिस्तर के पास नहीं रखा, जिससे उनकी स्थिति स्थिर हो गई।</p>
+                        </div>
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <img src="../assets/img/testimonials/testimonials-1.jpg" alt="निशा कोठारी" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"/>
+                            <div>
+                                <div class="text-orange-500 text-sm sm:text-base">⭐⭐⭐⭐⭐</div>
+                                <p class="font-medium text-gray-800 text-sm sm:text-base">निशा कोठारी</p>
+                                <p class="text-xs sm:text-sm text-gray-500">व्हाट्सएप के माध्यम से</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .animate-scroll {
+                    animation: scroll 30s linear infinite;
+                }
+
+                @media (max-width: 640px) {
+                    .animate-scroll {
+                        animation-duration: 20s;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- फुटर -->
+    <footer class="bg-[#FEF7ED] text-black pt-16 pb-6">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex justify-center items-center gap-2">
+                        <img src="../assets/img/Hindu Mandir Puja logo (2).png" alt="हिंदू मंदिर पूजा लोगो" class="h-16"/>
+                        <h2 class="text-xl font-bold">हिंदू मंदिर पूजा</h2>
+                    </div>
+                    <p class="text-gray-900">Hindu Mandir Puja is a devotional platform that connects you with temples, pandits, and pilgrimage sites in India.</p>
+                    <p class="text-gray-900">Made with 🙏 in India</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hindu Mandir Puja</h3>
+                    <div class="space-y-2">
+                        <a href="../poojaBooking.html" class="block text-gray-900 hover:text-black transition">Pooja</a>
+                        <a href="../chadhawa.html" class="block text-gray-900 hover:text-black transition">chadhavas</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <div class="space-y-2">
+                        <a href="../PrivacyPolicy.html" class="block text-gray-900 hover:text-black transition">Privacy Policy</a>
+                        <a href="../TermsandCondition.html" class="block text-gray-900 hover:text-black transition">Terms & Conditions</a>
+                        <a href="../ReturnPolicy.html" class="block text-gray-900 hover:text-black transition">Return & Refund Policy</a>
+                        <a href="../Shipingpolicy.html" class="block text-gray-900 hover:text-black transition">Shipping Policy</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex gap-4 mb-6">
+                        <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-youtube text-xl"></i></a>
+                        <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-meta text-xl"></i></a>
+                        <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-x-twitter text-xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <div class="space-y-2 text-gray-900">
+                        <p>वाराणसी U.P  221001</p>
+                        <p>मोबाइल नंबर 8009018678</p>
+                        <p>📧 hindumandirpuja@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-900">
+                &copy; 2024 Hindu Mandir Puja Private Limited
+            </div>
+        </div>
+    </footer>
+     <!--Popup-->
+     <div
+     id="popup"
+     class="fixed bottom-10 left-4 right-4 md:bottom-10 md:left-auto md:right-4 bg-white rounded-lg shadow-xl border border-gray-100 p-4 md:w-[320px] animate-slide-up"
+   >
+     <div class="flex items-center justify-between">
+       <div class="flex items-center gap-3">
+         <div class="shrink-0 bg-orange-50 rounded-full p-2">
+           <i class="fas fa-bell text-orange-500 text-lg"></i>
+         </div>
+         <div>
+           <p class="text-sm text-gray-600">
+             <span id="person-name" class="font-semibold text-gray-800"></span>
+             <br class="md:hidden" />
+             just booked
+             <span id="package-name" class="font-semibold text-orange-500"></span>
+             package!
+           </p>
+         </div>
+       </div>
+       <button
+         onclick="closePopup()"
+         class="p-1 hover:bg-gray-100 rounded-full transition-colors"
+         aria-label="Close notification"
+       >
+         <i class="fas fa-times text-gray-400 hover:text-gray-600"></i>
+       </button>
+     </div>
+   </div>
+
+   <script>
+     document.addEventListener("DOMContentLoaded", function () {
+       const popup = document.getElementById("popup");
+       const packageNames = [
+         "Quick Marriage",
+         "Mangal Dosha Removal", 
+         "Kumkum Archana"
+       ];
+       const names = [
+         "Rahul S",
+         "Priya P",
+         "Amit K",
+         "Neha S",
+         "Raj M",
+         "Anjali G",
+         "Deepak V", 
+         "Pooja R",
+         "Sanjay M",
+         "Meera K"
+       ];
+
+       function showNotification() {
+         const randomPackage = packageNames[Math.floor(Math.random() * packageNames.length)];
+         const randomName = names[Math.floor(Math.random() * names.length)];
+         
+         document.getElementById("package-name").innerText = randomPackage;
+         document.getElementById("person-name").innerText = randomName;
+         
+         popup.classList.remove("hidden");
+         popup.classList.add("animate-slide-up");
+
+         setTimeout(() => {
+           popup.classList.add("animate-slide-down");
+           setTimeout(() => {
+             popup.classList.add("hidden");
+             popup.classList.remove("animate-slide-down");
+           }, 300);
+         }, 5000);
+       }
+
+       // Show first notification after 5 seconds
+       setTimeout(() => {
+         showNotification();
+         // Then show notifications every 30 seconds
+         setInterval(showNotification, 30000);
+       }, 5000);
+
+       window.closePopup = function() {
+         popup.classList.add("animate-slide-down");
+         setTimeout(() => {
+           popup.classList.add("hidden");
+           popup.classList.remove("animate-slide-down");
+         }, 300);
+       };
+     });
+   </script>
+
+   <style>
+     @keyframes slideUp {
+       from {
+         transform: translateY(100%);
+         opacity: 0;
+       }
+       to {
+         transform: translateY(0);
+         opacity: 1;
+       }
+     }
+
+     @keyframes slideDown {
+       from {
+         transform: translateY(0);
+         opacity: 1;
+       }
+       to {
+         transform: translateY(100%);
+         opacity: 0;
+       }
+     }
+
+     .animate-slide-up {
+       animation: slideUp 0.3s ease-out forwards;
+     }
+
+     .animate-slide-down {
+       animation: slideDown 0.3s ease-out forwards;
+     }
+   </style>
+    <script>
+        // JavaScript remains unchanged
+        function startCountdown() {
+            const targetDate = new Date("June 10, 2025 00:00:00").getTime();
+            
+            setInterval(() => {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+
+                if (timeLeft > 0) {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                    document.getElementById("countdown-timer").innerText = 
+                        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                } else {
+                    // document.getElementById("countdown-timer").innerText = "EXPIRED";
+                }
+            }, 1000);
+        }
+
+        startCountdown();
+
+        // function redirectToAddToCart(amount, image) {
+        //     const title = document.getElementById("mandir-heading").textContent;
+        //     const description = document.getElementById("mandir-description").textContent;
+        //     const location = "Mangala Gauri Temple, Kashi";
+        //     const date = new Date().toLocaleDateString();
+        //     const referrer = window.location.href;
+        //     const uniqueCacheBuster = new Date().getTime();
+        
+        //     const url = `./AddToCartMrityu-Hin.html?amount=${encodeURIComponent(amount)}&image=${encodeURIComponent(image + '?cache=' + uniqueCacheBuster)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}&date=${encodeURIComponent(date)}&referrer=${encodeURIComponent(referrer)}`;
+        //     window.location.href = url;
+        // }
+    </script>
+    <script>
+        // JavaScript remains unchanged
+        
+  
+        function redirectToAddToCart(amount, event) {
+          localStorage.setItem('pujaPackageName', event)
+          localStorage.setItem('pujaAmount', amount);
+          window.location.href = `AddToCartMrityu-Hin.html`;
+        }
+      </script>
+      <script>
+        const processSection = document.getElementById('pujaProcessSection');
+        const progressLine = document.getElementById('progressLine');
+        const mobileProgressLine = document.getElementById('mobileProgressLine');
+        const icons = document.querySelectorAll('.process-icon');
+        let lineAnimationStarted = false;
+        let sectionAnimated = false;
+    
+        function handleScroll() {
+            const sectionTop = processSection.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight * 0.7;
+    
+            if (sectionTop <= triggerPoint && !sectionAnimated) {
+                // Animate section appearance
+                processSection.style.opacity = '1';
+                sectionAnimated = true;
+    
+                // Start icon animations
+                icons.forEach((icon, index) => {
+                    setTimeout(() => {
+                        icon.style.transform = 'scale(1.5)';
+                        icon.style.filter = 'brightness(1.2)';
+                    }, index * 500);
+                });
+    
+                // Animate progress lines
+                lineAnimationStarted = true;
+                progressLine.style.width = '100%';
+                mobileProgressLine.style.width = '100%';
+            }
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+    </script>
+    <script src="../assets/js/puja.js"></script>
+</body>
+
+</html>

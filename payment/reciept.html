@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Receipt</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '495269903249950');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=495269903249950&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "nsotq330nv");
+</script>
+  
+    <style>
+      /* General styling */
+      body {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+      }
+
+      /* Receipt container styling */
+      .receipt-container {
+        position: relative;
+        width: 400px; /* Increased width for better readability */
+        padding: 30px; /* Increased padding for better spacing */
+        border-radius: 15px; /* Increased border radius for a smoother look */
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Adjusted shadow for a softer look */
+        text-align: left;
+        overflow: hidden;
+      }
+      .receipt-container img {
+        margin-top: 30px; /* Adjusted margin for better spacing */
+        opacity: 0.4; /* Set opacity for lighter watermark */
+      }
+
+      /* Watermark image styling */
+      .watermark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1; /* Set opacity for lighter watermark */
+        z-index: 0;
+        pointer-events: none; /* Prevent interaction */
+      }
+
+      .receipt-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      h2 {
+        color: #a52a2a;
+        text-align: center;
+        font-size: 24px; /* Increased font size for better readability */
+        margin-bottom: 30px; /* Adjusted margin for better spacing */
+      }
+
+      .receipt-details {
+        border: 1px solid #ddd;
+        padding: 15px; /* Adjusted padding for better spacing */
+        border-radius: 10px;
+      }
+
+      .receipt-details p {
+        font-size: 18px; /* Increased font size for better readability */
+        margin: 10px 0; /* Adjusted margin for better spacing */
+        color: #333;
+      }
+
+      .receipt-details p strong {
+        font-weight: bold;
+      }
+
+      /* Print button styling */
+      .print-button {
+        display: block;
+        width: 100%;
+        padding: 15px; /* Adjusted padding for better spacing */
+        margin-top: 30px; /* Adjusted margin for better spacing */
+        background-color: #a52a2a;
+        color: #fff;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px; /* Increased font size for better readability */
+        cursor: pointer;
+      }
+
+      .print-button:hover {
+        background-color: #a52a2a;
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: none;
+        }
+
+        .print-button {
+          display: none; /* Hide print button */
+        }
+
+        .receipt-container {
+          box-shadow: none; /* Remove shadow for cleaner printing */
+        }
+
+        .receipt-details {
+          border: 1px solid #333; /* Darker border for printing */
+          padding: 20px; /* Adjusted padding for better spacing */
+        }
+
+        h2 {
+          font-size: 28px; /* Increased font size for printing */
+        }
+
+        .receipt-details p {
+          font-size: 20px; /* Increased font size for printing */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="receipt-container">
+      <!-- Watermark Image -->
+      <img src="assets/img/Hindu Mandir Puja logo (2).png" alt="Watermark" class="watermark" />
+
+      <div class="receipt-content">
+        <h2>Payment Receipt</h2>
+        <div class="receipt-details">
+          <p><strong>Event Name:</strong> <span id="eventName"></span></p>
+          <p><strong>Name:</strong> <span id="receiptName"></span></p>
+          <p><strong>Phone:</strong> <span id="receiptPhone"></span></p>
+          <p><strong>Address:</strong> <span id="receiptAddress"></span></p>
+          <p><strong>Amount:</strong> ₹<span id="receiptAmount"></span></p>
+          <p><strong>Payment ID:</strong> <span id="paymentId"></span></p>
+          <p><strong>Date:</strong> <span id="paymentDate"></span></p>
+        </div>
+        <button class="print-button" onclick="window.print()">
+          Download Receipt
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Populate receipt with URL parameters
+      document.getElementById("eventName").innerText = localStorage.getItem('eventName');
+      document.getElementById("receiptName").innerText = localStorage.getItem('name');
+      document.getElementById("receiptPhone").innerText = localStorage.getItem('phone');
+      document.getElementById("receiptAmount").innerText = localStorage.getItem('amount');
+      document.getElementById("paymentId").innerText = localStorage.getItem('payment_id');
+      document.getElementById("paymentDate").innerText = localStorage.getItem('date');
+    </script>
+  </body>
+</html>

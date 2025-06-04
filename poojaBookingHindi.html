@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Pujas</title>
+    <link rel="stylesheet" href="assets/css/poojaBooking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "nsotq330nv");
+    </script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-YR17GX23FH');
+  </script>
+  <script>
+    function trackEvent(eventName) {
+        // Get the clicked element's parent puja card
+        const pujaCard = event.target.closest('.puja-card');
+        
+        // Extract details from data attributes
+        const mandirId = pujaCard.getAttribute('data-mandir-id');
+        const mandirName = pujaCard.getAttribute('data-mandir');
+        const pageUrl = pujaCard.getAttribute('data-page-url');
+        const pujaName = pujaCard.querySelector('h2').textContent;
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: 'select_item',
+            ecommerce: {
+                items: [
+                    {
+                        item_name: pujaName,
+                        item_id: mandirId, 
+                        mandir_name: mandirName,
+                        category: 'Temple',
+                        destination_url: pageUrl
+                    }
+                ]
+            },
+            button_name: 'Book Puja'
+        });
+
+        // Log for debugging
+        console.log('Tracked puja selection:', {
+            pujaName,
+            mandirId,
+            mandirName,
+            pageUrl
+        });
+    }
+
+    // Optional: Log for debugging
+    console.log('select_item event fired:', { eventName });
+ 
+
+  </script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+<!-- End Google Tag Manager -->
+<script>
+      function trackEvent(eventName) {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          event: "event",
+          eventName: eventName,
+        });
+        console.log("Event tracked:", eventName);
+
+        window.dataLayer.push({
+          event: "page_view",
+          page_path: window.location.pathname,
+        });
+        console.log("Page view tracked:", window.location.pathname);
+
+        
+
+        window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+          event: "viewpuja_item",
+          ecommerce: {
+            items: [
+              {
+                item_name: "Maa Mangala Gauri Mandir",
+                item_id: document.querySelector("[data-mandir-id]")?.getAttribute("data-mandir-id") || null,
+                mandir_name: document.querySelector("[data-mandir]")?.getAttribute("data-mandir") || null,
+                category: "Temple",
+                destination_url: document.querySelector("[data-page-url]")?.getAttribute("data-page-url") || null,
+              },
+            ],
+          },
+        });
+        console.log("Data layer pushed:", {
+          item_name: "Maa Mangala Gauri Mandir",
+          item_id: document.querySelector("[data-mandir-id]")?.getAttribute("data-mandir-id") || null,
+          mandir_name: document.querySelector("[data-mandir]")?.getAttribute("data-mandir") || null,
+          category: "Temple",
+          destination_url: document.querySelector("[data-page-url]")?.getAttribute("data-page-url") || null,
+        });
+      }
+  </script>
+</head>
+<style>
+
+    body {
+        
+        background: #faf5eb;
+        overflow-x: hidden;
+        padding-top: 80px;
+    }
+
+    .nav-gradient {
+        background: linear-gradient(to right, #ff9933, #ff5733);
+    }
+
+    nav {
+        z-index: 1000;
+    }
+
+    
+</style>
+<body class="bg-[#FEF7ED] to-white min-h-screen">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Navigation Bar -->
+<nav class="fixed w-full h-16 md:h-20 bg-white shadow-lg top-0">
+    <div class="container mx-auto px-4 md:px-6 py-2 md:py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center  md:gap-4">
+                <a href="./index.html">
+                <img src="./assets/img/Hindu Mandir Puja logo (2).png" alt="Om Logo" class="h-16 lg:h-16 md:h-12">
+                </a>
+                <a href="./index.html">
+                <div>
+                    <h1 class="text-sm md:text-xl font-bold text-orange-600">हिंदू मंदिर पूजा</h1>
+                    <p class="text-xs md:text-base text-gray-600">आपकी श्रद्धा और हमारी सेवा</p>
+                </div>
+                </a>
+                <a href="./poojaBooking.html">
+                <button class="lg:hidden bg-gradient-to-r from-orange-500 to-orange-600 text-white px-1 mx-5 text-xs md:px-6 py-2 md:py-2.5 rounded-full hover:shadow-lg transition">
+                    In English
+                </button>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/index.html" class="text-gray-700 hover:text-orange-500 transition">होम</a>
+                <a href="#" class="text-gray-700 hover:text-orange-500 transition">पूजा</a>
+                <a href="/chadhawa.html" class="text-gray-700 hover:text-orange-500 transition">प्रसाद</a>
+                <a href="Blogs/blog.html" class="text-gray-700 hover:text-orange-500 transition">ब्लॉग</a>
+                <a href="./poojaBooking.html">
+                
+                </a>
+                <a href="./poojaBookingHindi.html">
+                    <button class=" bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 text-md md:px-6 py-2 md:py-2.5 rounded-full hover:shadow-lg transition">
+                        In Hindi
+                    </button>
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobileMenuBtn" class="text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg">
+            <div class="flex flex-col space-y-4 p-4">
+                <a href="index.html" class="text-gray-700 hover:text-orange-500 transition">होम</a>
+                <a href="poojaBooking.html" class="text-orange-500 hover:text-orange-500 transition">पूजा</a>
+                <a href="/chadhawa.html" class="text-gray-700 hover:text-orange-500 transition">प्रसाद</a>
+                <a href="Blogs/blog.html " class="text-gray-700 hover:text-orange-500 transition">ब्लॉग</a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let isMenuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        
+        // Toggle menu visibility
+        mobileMenu.classList.toggle('hidden');
+        
+        // Toggle icon between bars and times
+        const menuIcon = mobileMenuBtn.querySelector('i');
+        menuIcon.classList.remove(isMenuOpen ? 'fa-bars' : 'fa-times');
+        menuIcon.classList.add(isMenuOpen ? 'fa-times' : 'fa-bars');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target) && !isMenuOpen) {
+            mobileMenu.classList.add('hidden');
+            const menuIcon = mobileMenuBtn.querySelector('i');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            isMenuOpen = false;
+        }
+    });
+</script>
+
+
+<!-- Bottom Navigation Bar with Upcoming Puja Timer -->
+<div class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-orange-100 z-50">
+   
+
+    <!-- Bottom Navigation -->
+    <div class="container mx-auto px-4 py-1 md:hidden">
+        <div class="flex items-center justify-between">
+            <a href="index.html" class="flex flex-col items-center  transition">
+                <i class="fas fa-home text-md"></i>
+                <span class="text-[10px] mt-0.5">होम</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-orange-500 hover:text-orange-500 transition">
+                <i class="fas fa-om text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5">पूजा</span>
+            </a>
+            <a href="/chadhawa.html" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-gift text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5">चढ़ावा</span>
+            </a>
+            <!-- <a href="/Temples" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-gopuram text-md"></i>
+                <span class="text-[10px] mt-0.5">Temples</span>
+            </a> -->
+            <!-- <a href="#" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-book text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5">Library</span>
+            </a> -->
+            <a href="./Blogs/blog1.html" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-blog text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5">ब्लॉग</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="puja-header text-center  mt-[8px]">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">पूजा बुक करें</h1>
+    <div class="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+</div>
+<!-- Search Bar for Mobile/Tablet -->
+<!-- <div class="md:hidden px-4 mt-6">
+    <div class="relative">
+        <input 
+            type="text" 
+            id="templeSearch"
+            placeholder="Search temples..." 
+            class="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-orange-500 pl-12 text-gray-700 bg-white shadow-sm"
+        >
+        <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+            <i class="fas fa-search text-gray-400"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Search functionality
+    const searchInput = document.getElementById('templeSearch');
+    const pujaCards = document.querySelectorAll('.puja-card');
+
+    // List of all mandirs/temples
+    const mandirs = [
+        "Mangala Gauri Mandir Kashi",
+        "Santaneshwar Mahadev",
+        "Kaal Bhairav Mandir", 
+        "Durga Kund Mandir",
+        "Sankat Mochan Mandir",
+        "Vishwanath Temple",
+        "Annapurna Temple",
+        "Maa Kali Temple",
+        "Hanuman Temple"
+    ];
+
+    // Create datalist for autocomplete
+    const datalist = document.createElement('datalist');
+    datalist.id = 'mandir-list';
+    mandirs.forEach(mandir => {
+        const option = document.createElement('option');
+        option.value = mandir;
+        datalist.appendChild(option);
+    });
+    document.body.appendChild(datalist);
+    searchInput.setAttribute('list', 'mandir-list');
+
+    searchInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        let foundMatch = false;
+        
+        pujaCards.forEach(card => {
+            const templeName = card.querySelector('h2').textContent.toLowerCase();
+            
+            if (searchTerm === '') {
+                // Show all cards if search is empty
+                card.style.display = '';
+                foundMatch = true;
+            } else if (templeName.includes(searchTerm)) {
+                card.style.display = '';
+                foundMatch = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Show "no results" message if no matches found
+        const existingMsg = document.getElementById('noResults');
+        if (!foundMatch && searchTerm !== '') {
+            if (!existingMsg) {
+                const msg = document.createElement('div');
+                msg.id = 'noResults';
+                msg.className = 'text-center py-8 text-gray-500';
+                msg.textContent = 'No temples found matching your search';
+                document.querySelector('.puja-cards').appendChild(msg);
+            }
+        } else if (existingMsg) {
+            existingMsg.remove();
+        }
+    });
+</script> -->
+
+
+
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<!-- Puja Card -->
+<div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-transform hover:scale-[1.02]">
+  
+  <!-- Image Section -->
+  <div class="relative">
+    <img 
+      src="assets/img/Mandir-img/manglagori4.jpg" 
+      loading="lazy" 
+      alt="Mangala Gauri Mandir Kashi" 
+      class="w-full h-64 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="p-6 space-y-4">
+    
+    <!-- Title -->
+    <h2 class="text-xl font-bold text-gray-800">
+      मंगला गौरी मंदिर काशी - विवाह के लिए पूजा
+    </h2>
+
+    <!-- Details -->
+    <div class="flex items-center text-sm text-gray-600 gap-2">
+      <!-- Location Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-500" fill="currentColor" viewBox="0 0 384 512">
+        <path d="M168 0C75.1 0 0 75.1 0 168c0 87.3 135.5 250.6 160.6 278.5a24 24 0 0 0 34.8 0C248.5 418.6 384 255.3 384 168 384 75.1 308.9 0 216 0h-48zm0 240a72 72 0 1 1 0-144 72 72 0 0 1 0 144z"/>
+      </svg>
+      <span>मंगला गौरी मंदिर, काशी</span>
+    </div>
+
+    <!-- CTA Button -->
+    <a 
+      href="./MangalaGauriMandir/ManglaGori-Eng.html" 
+      onclick="trackEvent('Maa Mangala Gauri Mandir', 'Maa Mangala Gauri Mandir', 'Temple', './MangalaGauriMandir/ManglaGori-Eng.html')"
+      class="block">
+      <button 
+        class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+        भाग लें
+      </button>
+    </a>
+
+  </div>
+</div>
+
+  <!-- Template Card Start -->
+  <!-- Add more cards by duplicating this block and changing content -->
+  <div data-mandir-id="2" data-mandir="Santaneshwar Mahadev" data-page-url="/SanteshwarMandir/SanteshwarMandir-Eng.html" class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="./assets/img/landing-page/landing page santaneshwar Mandir Puja Kashi.png" alt="Santaneshwar Mahadev Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">संतानेश्वर महादेव रुद्राभिषेक पूजा</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>संतानेश्वर महादेव, काशी</span>
+      </div>
+      <a href="./SanteshwarMandir/SanteshwarMandir-Hin.html">
+        <button onclick="trackEvent('Santaneshwar Mahadev', 'Santaneshwar Mahadev', 'Temple', './SanteshwarMandir/SanteshwarMandir-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- Template Card End -->
+
+  <!-- Repeat for other temples -->
+
+  <!-- Mahamrityunjaya Card -->
+  <div data-mandir-id="3" data-mandir="Mrityunjay Mahadev Mandir" data-page-url="/MrityunjayMandir/MrityuMahadev-Eng.html" class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="./assets/img/landing-page/landing page Mrityunjay  Mahadev Mandir, Kashi (1)-min_11zon (1).png" alt="Mrityunjay Mahadev Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">महामृत्युंजय मंत्र चांटिंग और रुद्राभिषेक</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>मृत्यु महादेव मंदिर, वाराणसी</span>
+      </div>
+      <a href="./MrityunjayMandir/MrityuMahadev-Hin.html">
+        <button onclick="trackEvent('Mrityunjay Mahadev', 'Mrityunjay Mahadev', 'Temple', './MrityunjayMandir/MrityuMahadev-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Rinmukteshwar Card -->
+  <div class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="./assets/img/Mandir-img/Rinmukteshwar Mahadev Mandir Puja.png" alt="Rinamukteshwar Mahadev Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">रिणमुक्तेश्वर महादेव मंदिर पूजा</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>रिणमुक्तेश्वर महादेव मंदिर, काशी</span>
+      </div>
+      <a href="./RinmukteshwarMandir/RinMukhteshawarMandir-Hin.html">
+        <button onclick="trackEvent('Rinmukteshwar Mahadev', 'Rinmukteshwar Mahadev', 'Temple', './RinmukteshwarMandir/RinMukhteshawarMandir-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Batuk Bhairav / Kamakhya Card -->
+  <div class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="https://kashiarchan.com/Upload/Temple638514761963806056Batuk%20Bhairav%20Temple%20Kashi%2001.jpg" alt="Kamakhya Devi Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">माँ कामाख्या देवी मंदिर</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>माँ कामाख्या देवी मंदिर, काशी</span>
+      </div>
+      <a href="./MaaKamakhyaMandir/MaakamakhyaMandir-Hin.html">
+        <button onclick="trackEvent('Maa Kamakhya Mandir', 'Maa Kamakhya Mandir', 'Temple', './MaaKamakhyaMandir/MaakamakhyaMandir-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Chintamani Ganesh Card -->
+  <div class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="https://content3.jdmagicbox.com/comp/ujjain/c9/9999px734.x734.110226194531.l6c9/catalogue/shree-chintaman-ganesh-temple-ujjain-city-ujjain-temples-04uzij6sar.jpg" alt="Chintamani Ganesh Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">चिंतामणि गणेश मंदिर पूजा</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>चिंतामणि गणेश मंदिर, काशी</span>
+      </div>
+      <a href="./ChintaamaniGaneshMandir/ChinamaniGaneshMandir-Hin.html">
+        <button onclick="trackEvent('Chintamani Ganesh Mandir', 'Chintamani Ganesh Mandir', 'Temple', './ChintaamaniGaneshMandir/ChinamaniGaneshMandir-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Batuk Bhairav / Kamakhya Card -->
+  <div class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="https://kashiarchan.com/Upload/Temple638514761963806056Batuk%20Bhairav%20Temple%20Kashi%2001.jpg" alt="Kamakhya Devi Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">बटुक भैरव मंदिर पूजा</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>बटुक भैरव मंदिर, काशी</span>
+      </div>
+      <a href="BatuknathMandir/Batuknath-Hin.html">
+        <button onclick="trackEvent('Maa Kamakhya Mandir', 'Maa Kamakhya Mandir', 'Temple', 'BatuknathMandir/Batuknath-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Gauri Kedar Mahadev -->
+  <div data-mandir="GauriKedareshwar Mahadev" class="puja-card bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+    <div class="relative">
+      <img src="./assets/img/landing-page/landing page santaneshwar Mandir Puja Kashi.png" alt="Gauri Kedar Mahadev Temple" class="w-full h-64 object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800 mb-3">गौरीकेदारेश्वर महादेव रुद्राभिषेक पूजा</h2>
+      <div class="flex items-center text-gray-600 mb-4">
+        <i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>
+        <span>गौरीकेदारेश्वर महादेव मंदिर, काशी</span>
+      </div>
+      <a href="./GauriKedarMandir/GuariKedarMandir%20-Hin.html">
+        <button onclick="trackEvent('Gauri Kedar Mandir', 'Gauri Kedar Mandir', 'Temple', './GauriKedarMandir/GuariKedarMandir%20-Eng.html')" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-colors shadow-lg hover:shadow-xl">
+          भाग लें
+        </button>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-[#FEF7ED] text-black pt-16 pb-6">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex justify-center items-center ">
+                    <img src="assets/img/Hindu Mandir Puja logo (2).png" alt="Hindu Mandir Puja Logo" class="h-16"/>
+                    <h2 class="text-xl font-bold">Hindu Mandir Puja</h2>
+                </div>
+                <p class="text-gray-900">Hindu Mandir Puja is a Devotional Platform to connect you with Temples, Pandits, and Tirth Kshetras in Bharat.</p>
+                <p class="text-gray-900">Made with 🙏 in Bharat</p>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-4">Hindu Mandir Puja</h3>
+                <div class="space-y-2">
+                    <a href="./poojaBooking.html" class="block text-gray-900 hover:text-black transition">Pooja</a>
+                    <a href="./chadhawa.html" class="block text-gray-900 hover:text-black transition">Chadhawa</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Legal</h3>
+                <div class="space-y-2">
+                    <a href="./PrivacyPolicy.html" class="block text-gray-900 hover:text-black transition">Privacy Policy</a>
+                    <a href="./TermsandCondition.html" class="block text-gray-900 hover:text-black transition">Terms and Conditions</a>
+                    <a href="./ReturnPolicy.html" class="block text-gray-900 hover:text-black transition">Return and Refund Policy</a>
+                    <a href="./Shipingpolicy.html" class="block text-gray-900 hover:text-black transition">Shipping Policy</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Follow us on</h3>
+                <div class="flex gap-4 mb-6">
+                    <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-youtube text-xl"></i></a>
+                    <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-meta text-xl"></i></a>
+                    <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-900 hover:text-black transition"><i class="fab fa-x-twitter text-xl"></i></a>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <div class="space-y-2 text-gray-900">
+                    <p>Varanasi U.P  221001</p>
+                    <p>📞 8009018678</p>
+                    <p>📧 hindumandirpuja@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-900">
+            &copy; 2024 Hindu Mandir Puja Pvt Ltd.
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devotional Platform</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/Hindu Mandir Puja logo (2).png"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Swiper CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "808518914545478");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+  <!-- End Google Tag Manager -->
+    <!-- End Meta Pixel Code -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "nsotq330nv");
+    </script>
+    <meta name="google-site-verification" content="Q4EY1lRrBj7IpLx8J81EhAf2w7A09bPJ_YQfp0PQTyI" />
+
+    <!-- google search console home page header -->
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YR17GX23FH");
+    </script>
+
+    <script>
+      function trackEvent(eventName) {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          event: "event",
+          eventName: eventName,
+        });
+        console.log("Event tracked:", eventName);
+
+        window.dataLayer.push({
+          event: "page_view",
+          page_path: window.location.pathname,
+        });
+        console.log("Page view tracked:", window.location.pathname);
+
+        
+
+        window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+          event: "viewpuja_item",
+          ecommerce: {
+            items: [
+              {
+                item_name: "Maa Mangala Gauri Mandir",
+                item_id: document.querySelector("[data-mandir-id]")?.getAttribute("data-mandir-id") || null,
+                mandir_name: document.querySelector("[data-mandir]")?.getAttribute("data-mandir") || null,
+                category: "Temple",
+                destination_url: document.querySelector("[data-page-url]")?.getAttribute("data-page-url") || null,
+              },
+            ],
+          },
+        });
+        console.log("Data layer pushed:", {
+          item_name: "Maa Mangala Gauri Mandir",
+          item_id: document.querySelector("[data-mandir-id]")?.getAttribute("data-mandir-id") || null,
+          mandir_name: document.querySelector("[data-mandir]")?.getAttribute("data-mandir") || null,
+          category: "Temple",
+          destination_url: document.querySelector("[data-page-url]")?.getAttribute("data-page-url") || null,
+        });
+      }
+  function viewMandirListEvent() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "view_mandir_list",
+      category: "Puja Booking",
+      action: "Clicked Book Pujas",
+      label: "Homepage - View Mandir List"
+    });
+
+    console.log("✅ Data Layer Event Pushed: view_mandir_list");
+  }
+
+
+  function bookChadhavasEvent() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "book_chadhavas",
+      category: "Chadhavas",
+      action: "Clicked Book Chadhavas",
+      label: "Homepage - Book Chadhavas"
+    });
+
+    console.log("✅ Data Layer Event Pushed: book_chadhavas");
+  }
+
+
+    </script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #faf5eb;
+        overflow-x: hidden;
+      }
+
+      .nav-gradient {
+        background: linear-gradient(to right, #ff9933, #ff5733);
+      }
+
+      .temple-card {
+        background: #fff9f0;
+        border: 1px solid #ffdab3;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px) {
+        .temple-card {
+          max-width: 90%;
+        }
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+      }
+
+      @media (min-width: 768px) {
+        .swiper {
+          height: 500px;
+        }
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .section-heading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        background: url("./assets/img/mandala-bg.png") center no-repeat;
+        padding: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: 768px) {
+        .section-heading-container {
+          gap: 1.5rem;
+          margin-bottom: 3rem;
+          padding: 2rem 0;
+        }
+      }
+
+      .side-image {
+        height: 2.5rem;
+        width: auto;
+      }
+
+      @media (min-width: 768px) {
+        .side-image {
+          height: 3rem;
+        }
+      }
+
+      .section-heading {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ff5733;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .section-heading {
+          font-size: 2.5rem;
+        }
+      }
+
+      .puja-cards,
+      .chadhawa-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .puja-cards,
+        .chadhawa-cards {
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 2.5rem;
+          padding: 1.5rem;
+        }
+      }
+
+      .puja-card,
+      .chadhawa-card {
+        background: #fff9f0;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(255, 153, 51, 0.1);
+        position: relative;
+        transition: all 0.3s ease;
+        border: 1px solid #ffdab3;
+        width: 100%;
+      }
+
+      .puja-card:hover,
+      .chadhawa-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(255, 153, 51, 0.2);
+      }
+
+      .puja-card img,
+      .chadhawa-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        .puja-card img,
+        .chadhawa-card img {
+          height: 250px;
+        }
+      }
+
+      .timer {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background: rgba(255, 87, 51, 0.9);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 1.5rem;
+        font-size: 0.8rem;
+      }
+
+      @media (min-width: 768px) {
+        .timer {
+          top: 1rem;
+          left: 1rem;
+          padding: 0.6rem 1.2rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      .share {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 0.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (min-width: 768px) {
+        .share {
+          top: 1rem;
+          right: 1rem;
+          padding: 0.6rem;
+        }
+      }
+
+      .details {
+        padding: 1.5rem;
+        background: linear-gradient(to bottom, #fff9f0, #fff);
+      }
+
+      @media (min-width: 768px) {
+        .details {
+          padding: 2rem;
+        }
+      }
+
+      .details h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.6rem;
+      }
+
+      @media (min-width: 768px) {
+        .details h3 {
+          font-size: 1.4rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      .details p {
+        color: #666;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: 768px) {
+        .details p {
+          margin-bottom: 1.2rem;
+          line-height: 1.6;
+          font-size: 1rem;
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        padding: 0.6rem 0;
+        border-top: 1px solid #ffdab3;
+        border-bottom: 1px solid #ffdab3;
+      }
+
+      @media (min-width: 768px) {
+        .info {
+          font-size: 0.95rem;
+          margin-bottom: 1.2rem;
+          padding: 0.8rem 0;
+        }
+      }
+
+      .participate-btn {
+        display: block;
+        background: linear-gradient(45deg, #ff5733, #ff9933);
+        color: white;
+        text-align: center;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+        margin: 0 1rem 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: 768px) {
+        .participate-btn {
+          padding: 1rem;
+          margin: 0 1.5rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+
+      .participate-btn:hover {
+        background: linear-gradient(45deg, #ff4719, #ff8919);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 87, 51, 0.3);
+      }
+
+      .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-top: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .slider-dots {
+          gap: 0.8rem;
+          margin-top: 3rem;
+        }
+      }
+
+      .slider-dot {
+        width: 0.8rem;
+        height: 0.8rem;
+        background: #ffdab3;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      @media (min-width: 768px) {
+        .slider-dot {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
+      .slider-dot:hover,
+      .slider-dot.active {
+        background: #ff5733;
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- Navbar -->
+    <nav class="fixed w-full h-16 md:h-20 z-50 bg-white">
+      <div class="container mx-auto px-4 md:px-6 py-2 md:py-4">
+        <div class="flex items-center justify-between">
+          <a href="./index.html">
+            <div class="flex items-center gap-2 md:gap-4">
+              <img
+                src="./assets/img/Hindu Mandir Puja logo (2).png"
+                alt="Om Logo"
+                class="h-12 scale-150 md:h-16"
+              />
+              <div>
+                <h1 class="text-xl md:text-2xl font-bold text-orange-600">
+                  Hindu Mandir Puja
+                </h1>
+                <p class="text-xs md:text-sm text-gray-600">
+                  Your faith & our service
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+              >Home</a
+            >
+            <a
+              href="/poojaBooking.html"
+              class="text-gray-700 hover:text-orange-500 transition"
+              >Pujas</a
+            >
+            <a
+              href="/chadhawa.html"
+              class="text-gray-700 hover:text-orange-500 transition"
+              >Prasad</a
+            >
+            <a
+              href="./Blogs/blog1.html"
+              class="text-gray-700 hover:text-orange-500 transition"
+              >Blogs</a
+            >
+            <a href="./poojaBooking.html">
+              <button
+                class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+              >
+                Book Pujas
+              </button>
+            </a>
+          </div>
+
+          <div class="md:hidden">
+            <button id="mobileMenuBtn" class="text-gray-700">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+        >
+          <div class="flex flex-col space-y-4 p-4">
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+              >Home</a
+            >
+            <a
+              href="/poojaBooking.html"
+              class="text-gray-700 hover:text-orange-500 transition"
+              >Pujas</a
+            >
+            <a
+              href="/chadhawa.html"
+              class="text-gray-700 hover:text-orange-500 transition"
+              >Prasad</a
+            >
+            <a
+              href="./Blogs/blog1.html"
+              class="text-gray-700 hover:text-orange-500 transition"
+              >Blogs</a
+            >
+            <a href="/poojaBooking.html">
+              <button
+                class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+              >
+                Book Pujas
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script>
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      let isMenuOpen = false;
+
+      mobileMenuBtn.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+
+        // Toggle menu visibility
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle icon between bars and times
+        const menuIcon = mobileMenuBtn.querySelector("i");
+        menuIcon.classList.remove(isMenuOpen ? "fa-bars" : "fa-times");
+        menuIcon.classList.add(isMenuOpen ? "fa-times" : "fa-bars");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenuBtn.contains(e.target) &&
+          !mobileMenu.contains(e.target) &&
+          !isMenuOpen
+        ) {
+          mobileMenu.classList.add("hidden");
+          const menuIcon = mobileMenuBtn.querySelector("i");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+          isMenuOpen = false;
+        }
+      });
+    </script>
+
+    <!-- Bottom Navigation Bar with Upcoming Puja Timer -->
+    <div
+      class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-orange-100 z-50"
+    >
+      <!-- Bottom Navigation -->
+      <div class="container mx-auto px-4 py-1 md:hidden">
+        <div class="flex items-center justify-between">
+          <a
+            href="#"
+            class="flex flex-col items-center text-orange-500 transition"
+          >
+            <i class="fas fa-home text-md"></i>
+            <span class="text-[10px] mt-0.5">Home</span>
+          </a>
+          <a
+            href="/poojaBooking.html"
+            class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+          >
+            <i class="fas fa-om text-md"></i>
+            <span class="text-[10px] active:text-orange-500 mt-0.5">Pujas</span>
+          </a>
+          <a
+            href="/chadhawa.html"
+            class="flex flex-col items-center hover:text-orange-500 transition"
+          >
+            <i class="fas fa-gift text-md"></i>
+            <span class="text-[10px] active:text-orange-500 mt-0.5"
+              >Chadhavas</span
+            >
+          </a>
+          <!-- <a href="/Temples" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-gopuram text-md"></i>
+                <span class="text-[10px] mt-0.5">Temples</span>
+            </a> -->
+          <!-- <a href="#" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-book text-md"></i>
+                <span class="text-[10px] active:text-orange-500 mt-0.5">Library</span>
+            </a> -->
+          <a
+            href="./Blogs/blog1.html"
+            class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+          >
+            <i class="fas fa-blog text-md"></i>
+            <span class="text-[10px] active:text-orange-500 mt-0.5">Blogs</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-24 md:pt-28 pb-12 md:pb-16 bg-gradient-to-b from-orange-50 to-white"
+    >
+      <div class="container mx-auto px-4 md:px-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"
+        >
+          <div class="w-full md:w-1/2 order-2 md:order-1">
+            <div class="mb-4 md:mb-6 flex items-center gap-3 md:gap-4">
+              <img
+                src="./assets/img/om1.png"
+                alt="Om Symbol"
+                class="h-5 sm:h-8 md:h-10 lg:h-12"
+              />
+              <h2 class="text-lg md:text-2xl font-bold text-gray-900">
+                Om is the sound of the universe
+              </h2>
+              <audio
+                id="omSound"
+                src="./assets/audio/aum_02_528hz-22432.mp3"
+                preload="auto"
+              ></audio>
+              <button
+                id="omSoundBtn"
+                class="w-8 h-8 md:w-12 md:h-12 bg-orange-100 hover:bg-orange-200 rounded-full flex items-center justify-center transition-colors"
+              >
+                <i
+                  id="omSoundIcon"
+                  class="fas fa-volume-up text-orange-600"
+                ></i>
+              </button>
+            </div>
+
+            <h1
+              class="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6"
+            >
+              <span class="text-orange-600">Hindu Mandir Puja</span><br />
+              <span class="text-base mt-2 md:mt-4 md:text-2xl font-normal block"
+                >A Trusted Spiritual Platform for Offering</span
+              >
+              <span class="text-base md:text-2xl font-normal block"
+                >Puja and Chadhavas at India's</span
+              >
+              <span class="text-base md:text-2xl font-normal block"
+                >Most Famous Mandir</span
+              >
+            </h1>
+            <p class="text-gray-600 mb-6 md:mb-8 text-sm md:text-lg">
+              Experience live darshan, participate in online pujas, and receive
+              sacred prasad from India's most revered temples
+            </p>
+          </div>
+          <div class="w-full md:w-1/2 order-1 md:order-2">
+            <div class="relative h-[250px] md:h-[500px]">
+              <img
+                src="./images/family-sits-table-with-sign-that-says-god-min (1).jpg"
+                alt="Temple"
+                class="w-full h-full object-cover rounded-2xl shadow-2xl"
+              />
+              <div
+                class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white rounded-xl shadow-lg"
+              >
+                <video class="h-14 md:h-24 rounded-xl" autoplay loop muted>
+                  <source src="./assets/video/video (1).mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:mt-[-80px] gap-3 px-4 sm:px-0">
+          <a href="poojaBooking.html" class="w-full sm:w-auto">
+           <button
+  class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 sm:px-6 sm:py-2 md:px-8 md:py-4 rounded-full hover:shadow-lg transition text-sm md:text-lg w-full"
+  onclick="viewMandirListEvent()"
+>
+  Book Pujas
+</button>
+          </a>
+          <a href="/chadhawa.html" class="w-full sm:w-auto">
+            <button
+  class="bg-gray-900 text-white px-4 py-3 sm:px-6 sm:py-2 md:px-8 md:py-4 rounded-full hover:shadow-lg transition text-sm md:text-lg w-full"
+  onclick="bookChadhavasEvent()"
+>
+  Book Chadhavas
+</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Temples -->
+    <section class="py-5 md:py-5 bg-gradient-to-b from-white to-orange-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div
+          class="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16"
+        >
+          <img
+            src="./assets/img/temple.jpg"
+            alt="Temple Icon"
+            class="h-8 md:h-12"
+          />
+          <h2
+            class="text-2xl md:text-4xl font-bold text-orange-600 text-center"
+          >
+            Sacred Temples
+          </h2>
+          <img
+            src="./assets/img/temple.jpg"
+            alt="Temple Icon"
+            class="h-8 md:h-12"
+          />
+        </div>
+        <div class="relative">
+          <div
+            class="temple-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          >
+            <!-- Temple Card 1 -->
+            <div data-mandir-id="1" data-mandir="Maa Mangala Gauri Mandir" data-page-url="/MaaMangalaGauriMandir/ManglaGori-Eng.html" class="temple-card rounded-2xl overflow-hidden shadow-lg">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Home MAA magala Mandir, Kashi.png"
+                  alt="Temple 1"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple1.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute top-2 right-2 bg-orange-500 px-3 py-1 rounded-full text-white text-sm font-medium animate-pulse"
+                >
+                  Book Now
+                </div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Maa Mangala Gauri Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 190+ Devotees
+                </p>
+                <a href="./MangalaGauriMandir/ManglaGori-Eng.html">
+                  <button
+                    onclick="trackEvent('Maa Mangala Gauri Mandir')"
+                    class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    <i class="fas fa-pray"></i>
+                    Book Puja
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Temple Card 2 -->
+            <div data-mandir-id="2" data-mandir="Santaneshwar Mahadev Mandir" data-page-url="/SanteshwarMandir/SanteshwarMandir-Eng.html" class="temple-card rounded-2xl overflow-hidden shadow-lg">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Home santaneshwar mahadev Mandir, Kashi (1).png"
+                  alt="Temple 2"
+                  class="w-full h-full hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <!-- <video class="w-full h-full object-cover" loop muted>
+                            <source src="./assets/videos/temple2.mp4" type="video/mp4">
+                        </video> -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute top-2 right-2 bg-orange-500 px-3 py-1 rounded-full text-white text-sm font-medium animate-pulse"
+                >
+                  Book Now
+                </div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Santaneshwar Mahadev Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 170+ Devotees
+                </p>
+                <a href="/SanteshwarMandir/SanteshwarMandir-Eng.html">
+                  <button
+                    onclick="trackEvent('Santeshwar Mahadev Mandir')"
+                    class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    <i class="fas fa-pray"></i>
+                    Book Puja
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Temple Card 3 -->
+            <div data-mandir-id="3" data-mandir="Mrityunjay Mahadev Mandir" data-page-url="/MrityunjayMandir/MrityuMahadev-Eng.html" class="temple-card rounded-2xl overflow-hidden shadow-lg">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Home Mahamrityunjaya Mantra Chanting & Rudrabhishek.png"
+                  alt="Temple 3"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple3.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute top-2 right-2 bg-orange-500 px-3 py-1 rounded-full text-white text-sm font-medium animate-pulse"
+                >
+                  Book Now
+                </div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Mrityunjay Mahadev Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 150+ Devotees
+                </p>
+                <a href="/MrityunjayMandir/MrityuMahadev-Eng.html">
+                  <button
+                    onclick="trackEvent('Mrityunjay Mahadev Mandir')"
+                    class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    <i class="fas fa-pray"></i>
+                    Book Puja
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Temple Card 4 -->
+            <div data-mandir-id="4" data-mandir="Rinmukteshwar Mahadev Mandir" data-page-url="/RinmukteshwarMandir/RinMukhteshawarMandir-Eng.html" class="temple-card rounded-2xl overflow-hidden shadow-lg hidden">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Rinmukteshwar Mahadev Mandir Puja.png"
+                  alt="Temple 1"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple1.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute top-2 right-2 bg-orange-500 px-3 py-1 rounded-full text-white text-sm font-medium animate-pulse"
+                >
+                  Book Now
+                </div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Rinamukteshwar Mahadev Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 125+ Devotees
+                </p>
+                <a href="/RinmukteshwarMandir/RinMukhteshawarMandir-Eng.html">
+                  <button
+                    onclick="trackEvent('Rinmukteshwar Mahadev Mandir')"
+                    class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    <i class="fas fa-pray"></i>
+                    Book Puja
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Temple Card 5 -->
+            <div data-mandir-id="5" data-mandir="Durga Kund Mandir" data-page-url="/DurgaKundMandir/DurgaKundMandir-Eng.html" class="temple-card rounded-2xl overflow-hidden shadow-lg hidden">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Durga  Kund Mandir, Kashi.png"
+                  alt="Temple 2"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple2.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute top-2 right-2 bg-orange-500 px-3 py-1 rounded-full text-white text-sm font-medium animate-pulse"
+                >
+                  Book Now
+                </div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Maa Kamakhya Devi Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 8,900+ Devotees
+                </p>
+                <a href="./MaaKamakhyaMandir/MaakamakhyaMandir-Eng.html">
+                  <button
+                    onclick="trackEvent('Maa Kamakhya Devi Mandir')"
+                    class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    <i class="fas fa-pray"></i>
+                    Book Puja
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Temple Card 6 -->
+            <div data-mandir-id="6" data-mandir="Chintaamani Ganesh Mandir" data-page-url="/ChintaamaniGaneshMandir/ChinamaniGaneshMandir-Eng.html" class="temple-card rounded-2xl overflow-hidden shadow-lg hidden">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Book Your Chadhawa Sankat Mochan Hanuman .png"
+                  alt="Temple 3"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple3.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute top-2 right-2 bg-orange-500 px-3 py-1 rounded-full text-white text-sm font-medium animate-pulse"
+                >
+                  Book Now
+                </div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Chintaamani Ganesh Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 152+ Devotees
+                </p>
+                <a
+                  href="/ChintaamaniGaneshMandir/ChinamaniGaneshMandir-Eng.html"
+                >
+                  <button
+                    onclick="trackEvent('Chintaamani Ganesh Mandir')"
+                    class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                  >
+                    <i class="fas fa-pray"></i>
+                    Book Puja
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Three Dot Button -->
+          <div class="flex justify-center gap-2 mt-8">
+            <button
+              class="dot w-3 h-3 rounded-full bg-orange-500"
+              onclick="showCards(0)"
+            ></button>
+            <button
+              class="dot w-3 h-3 rounded-full bg-orange-200"
+              onclick="showCards(1)"
+            ></button>
+          </div>
+          <h2 class="text-center text-2xl font-bold text-gray-800 mt-8">
+            Click for more temples
+          </h2>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const cards = document.querySelectorAll(".temple-card");
+          const dots = document.querySelectorAll(".dot");
+          const cardsPerPage = 3;
+
+          function showCards(pageIndex) {
+            cards.forEach((card, index) => {
+              if (
+                index >= pageIndex * cardsPerPage &&
+                index < (pageIndex + 1) * cardsPerPage
+              ) {
+                card.classList.remove("hidden");
+              } else {
+                card.classList.add("hidden");
+              }
+            });
+
+            dots.forEach((dot, index) => {
+              if (index === pageIndex) {
+                dot.classList.add("bg-orange-500");
+                dot.classList.remove("bg-orange-200");
+              } else {
+                dot.classList.remove("bg-orange-500");
+                dot.classList.add("bg-orange-200");
+              }
+            });
+          }
+
+          // Add click event listeners to dots
+          dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => showCards(index));
+          });
+
+          // Show first page initially
+          showCards(0);
+        });
+      </script>
+    </section>
+
+    <!-- Book Your Chadhawa Section -->
+    <section class="py-5 md:py-5 bg-gradient-to-b from-white to-orange-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div
+          class="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16"
+        >
+          <img
+            src="assets/img/tikka.png"
+            alt="Temple Icon"
+            class="h-12 md:h-12"
+          />
+          <h2
+            class="text-2xl md:text-4xl font-bold text-orange-600 text-center"
+          >
+            Chadhavas
+          </h2>
+          <img
+            src="assets/img/tikka.png"
+            alt="Temple Icon"
+            class="h-12 md:h-12"
+          />
+        </div>
+        <div class="relative">
+          <div
+            class="temple-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          >
+            <!-- Temple Card 1 -->
+            <div class="temple-card1 rounded-2xl overflow-hidden shadow-lg">
+              <a href="./chadhawaspageEng/DurgaDevimandir.html">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Durga  Kund Mandir, Kashi.png"
+                  alt="Temple 1"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple1.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Durga Kund Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 190+ Devotees
+                </p>
+                <button
+                  class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Book Chadhavas
+                </button>
+              </div>
+              </a>
+            </div>
+
+            <!-- Temple Card 2 -->
+            <div class="temple-card1 rounded-2xl overflow-hidden shadow-lg">
+              <a href="./chadhawaspageEng/kaalbhairavEng.html">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img//Kaal  Bhairav Mandir, Kashi.png"
+                  alt="Temple 2"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple2.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Kaal Bhairav Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 90+ Devotees
+                </p>
+                <button
+                  class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Book Chadhavas
+                </button>
+              </div>
+              </a>
+            </div>
+
+            <!-- Temple Card 3 -->
+            <div class="temple-card1 rounded-2xl overflow-hidden shadow-lg">
+              <a href="./chadhawaspageEng/SankatMochanMandirEnd.html">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="https://cdn.pixabay.com/photo/2024/05/29/21/14/hunuman-8797246_640.jpg"
+                  alt="Temple 3"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple3.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Sankat Mochan Hanuman Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 152+ Devotees
+                </p>
+                <button
+                  class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                    Book Chadhavas
+                </button>
+              </div>
+              </a>
+            </div>
+
+            <!-- Temple Card 4 -->
+            <div
+              class="temple-card1 rounded-2xl overflow-hidden shadow-lg hidden"
+            >
+              <a href="./chadhawaspageEng/ShriChintamani.html">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Santaneshwar  Mahadev Mandir, Kashi.png"
+                  alt="Temple 1"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple1.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Shir Chinnamasta Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 125+ Devotees
+                </p>
+                <button
+                  class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                    Book Chadhavas
+                </button>
+              </div>
+              </a>
+            </div>
+
+            <!-- Temple Card 5 -->
+            <div
+              class="temple-card1 rounded-2xl overflow-hidden shadow-lg hidden"
+            >
+              <a href="./chadhawaspageEng/MahaLaxmimandir.html">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Rinamukteshwar Mahadev Mandir, Kashi.png"
+                  alt="Temple 2"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple2.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Maha Laxmi Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 8,900+ Devotees
+                </p>
+                <button
+                  class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Book Chadhavas
+                </button>
+              </div>
+              </a>
+            </div>
+
+            <!-- Temple Card 6 -->
+            <div
+              class="temple-card1 rounded-2xl overflow-hidden shadow-lg hidden"
+            >
+              <a href="#">
+              <div class="relative h-48 md:h-64 overflow-hidden">
+                <img
+                  src="./assets/img/Mandir-img/Mrityunjay  Mahadev Mandir, Kashi.png"
+                  alt="Temple 3"
+                  class="w-full h-full object-cover hover:opacity-0 transition-opacity absolute top-0 left-0"
+                />
+                <video class="w-full h-full object-cover" loop muted>
+                  <source src="./assets/videos/temple3.mp4" type="video/mp4" />
+                </video>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+              </div>
+              <div class="p-4 md:p-6 bg-white">
+                <div class="flex items-center justify-between mb-3 md:mb-4">
+                  <h3 class="text-base md:text-xl font-semibold text-gray-800">
+                    Mrityunjay Mahadev Mandir
+                  </h3>
+                  <div class="text-orange-500">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+                <p
+                  class="text-gray-600 mb-2 flex items-center gap-2 text-xs md:text-base"
+                >
+                  <i class="fas fa-map-marker-alt text-orange-400"></i>
+                  Kashi, India • 15,200+ Devotees
+                </p>
+                <button
+                  class="w-full bg-orange-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 text-sm md:text-base"
+                >
+                  <i class="fas fa-hand-holding-heart"></i>
+                  Book Chadhavas
+                </button>
+              </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Three Dot Button -->
+          <div class="flex justify-center gap-2 mt-8">
+            <button
+              class="dot1 w-3 h-3 rounded-full bg-orange-500"
+              onclick="showCards(0)"
+            ></button>
+            <button
+              class="dot1 w-3 h-3 rounded-full bg-orange-200"
+              onclick="showCards(1)"
+            ></button>
+          </div>
+          <h2 class="text-center text-2xl font-bold text-gray-800 mt-8">
+            Click for more temples
+          </h2>
+        </div>
+      </div>
+      <script>
+        const cards1 = document.querySelectorAll(".temple-card1");
+        const dots1 = document.querySelectorAll(".dot1");
+        const cardsPerPage1 = 3;
+
+        function showCards(pageIndex) {
+          cards1.forEach((card, index) => {
+            if (
+              index >= pageIndex * cardsPerPage1 &&
+              index < (pageIndex + 1) * cardsPerPage1
+            ) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+
+          dots1.forEach((dot, index) => {
+            if (index === pageIndex) {
+              dot.classList.add("bg-orange-500");
+              dot.classList.remove("bg-orange-200");
+            } else {
+              dot.classList.remove("bg-orange-500");
+              dot.classList.add("bg-orange-200");
+            }
+          });
+        }
+
+        // Show first page initially
+        showCards(0);
+      </script>
+    </section>
+
+    <!-- Features Section -->
+    <section
+      class="py-5 md:py-5 bg-white opacity-0 transition-opacity duration-700"
+      id="pujaProcessSection"
+    >
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-4 md:gap-6 mb-12">
+          <img
+            src="https://cdn-icons-png.freepik.com/512/17729/17729027.png"
+            alt="Swastik"
+            class="h-8 md:h-12"
+          />
+          <h2
+            class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600"
+          >
+            Puja Process
+          </h2>
+          <img
+            src="https://cdn-icons-png.freepik.com/512/17729/17729027.png"
+            alt="Swastik"
+            class="h-8 md:h-12"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+          <!-- Progress Line (visible only on desktop) -->
+          <div
+            class="hidden md:block absolute top-8 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gray-200"
+          >
+            <div
+              id="progressLine"
+              class="h-full bg-orange-500 w-0 transition-all duration-1000"
+            ></div>
+          </div>
+
+          <!-- Mobile Progress Line (between rows) -->
+          <div
+            class="block md:hidden absolute top-1/2 left-1/4 right-1/4 h-1 bg-gray-200"
+          >
+            <div
+              id="mobileProgressLine"
+              class="h-full bg-orange-500 w-0 transition-all duration-1000"
+            ></div>
+          </div>
+
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="assets/img/landing-page/icon1.png"
+                alt="Select Package"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Select from<br />Packages
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="assets/img/landing-page/icon2.png"
+                alt="Enter Details"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Enter Name and<br />Gotra
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="assets/img/landing-page/icon3.png"
+                alt="Watch Sankalp"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Watch Your Sankalp on<br />Hindumandir Puja Platforms
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="assets/img/landing-page/icon4.png"
+                alt="Receive Prasad"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Puja Video and Prashad<br />Delivery
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Trusted Section -->
+    <section class="py-5 md:py-5 bg-gradient-to-b from-white to-orange-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-md md:text-4xl font-bold text-orange-600 mb-4">
+            <span class="text-md">🙏</span> Where Faith and Service Meet
+            <span class="text-md">🙏</span>
+          </h2>
+          <p class="text-xl text-orange-600 font-medium">
+            Highest Rated Devotional Platform
+          </p>
+        </div>
+
+        <div class="flex flex-row overflow-x-auto md:grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-w-[300px] md:min-w-0"
+          >
+            <img
+              src="https://iskconcongregation.com/wp-content/uploads/2019/04/Srila-Prabhupada-31.jpg"
+              alt="Prasad Icon"
+              class="h-48 w-full mx-auto mb-4"
+            />
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              Faith Of Thousands Devotees
+            </h4>
+            <p class="text-gray-600">
+              With over 5,000 pujas successfully performed, we have been honored
+              to support the spiritual journeys of thousands, helping devotees
+              deepen their connection to faith.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-w-[300px] md:min-w-0"
+          >
+            <img
+              src="../images/indian-family2.jpg"
+              alt="Mantra Icon"
+              class="h-48 w-full mx-auto mb-4"
+            />
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              Prasad Delivery Across India
+            </h4>
+            <p class="text-gray-600">
+              We've delivered over 1,500 sacred prasad packets nationwide,
+              bringing divine blessings and spiritual nourishment directly to
+              homes across India.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow min-w-[300px] md:min-w-0"
+          >
+            <img
+              src="https://images.hindustantimes.com/rf/image_size_640x362/HT/p1/2015/04/16/Incoming/Pictures/1337815_Wallpaper2.jpg"
+              alt="Feeding Icon"
+              class="h-48 w-full mx-auto mb-4"
+            />
+            <h4 class="text-xl font-bold text-gray-800 mb-3">
+              Cow Seva in Kashi Kshetra
+            </h4>
+            <p class="text-gray-600">
+              As part of our service, we care for more than 50 cows in the holy
+              region of Kashi, upholding the spirit of compassion and service
+              through this sacred act.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-wrap justify-center gap-6 mb-12">
+          <a
+            href="https://facebook.com/Hindu Mandir Puja"
+            target="_blank"
+            class="flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full hover:bg-gray-200 transition"
+          >
+            <img
+              src="assets/img/landing-page/facebook.png"
+              alt="Facebook Icon"
+              class="h-6 w-6"
+            />
+            <span class="font-medium">250K+</span>
+          </a>
+          <a
+            href="https://youtube.com/@hindumandirpuja"
+            target="_blank"
+            class="flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full hover:bg-gray-200 transition"
+          >
+            <img
+              src="assets/img/landing-page/youtube.png"
+              alt="YouTube Icon"
+              class="h-6 w-6"
+            />
+            <span class="font-medium">20K+</span>
+          </a>
+          <a
+            href="https://www.instagram.com/hindumandirpuja"
+            target="_blank"
+            class="flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full hover:bg-gray-200 transition"
+          >
+            <img
+              src="assets/img/landing-page/instagram.jpeg"
+              alt="Instagram Icon"
+              class="h-6 w-6"
+            />
+            <span class="font-medium">16K+</span>
+          </a>
+        </div>
+
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            📲 Join Hindu Mandir Puja WhatsApp
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Join Hindu Mandir Puja for daily Darshan, LIVE Puja updates, and
+            receive blessings directly on WhatsApp.
+          </p>
+          <a
+            href="https://chat.whatsapp.com/EgQBMHpqhQJ9yTXTDdaIrD"
+            class="inline-block bg-green-500 text-white px-8 py-4 rounded-full hover:bg-green-600 transition"
+          >
+            Join Hindu Mandir Puja 💬
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
+      <div class="container mx-auto md:px-6">
+        <div class="flex items-center justify-center gap-4 mb-8 md:mb-12">
+          <img
+            src="assets/img/lotus.png"
+            alt="Devotees Icon"
+            class="h-6 sm:h-8 md:h-12"
+          />
+          <h2 class="text-md sm:text-3xl md:text-4xl font-bold text-orange-600">
+            Happy Devotees Corner
+          </h2>
+          <img
+            src="assets/img/lotus.png"
+            alt="Right Icon"
+            class="h-6 sm:h-8 md:h-12"
+          />
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div
+            class="testimonial-slider flex flex-nowrap p-2 sm:p-4 animate-scroll"
+          >
+            <!-- Testimonial Card 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <div class="flex justify-between items-center gap-2">
+                  <h3
+                    class="text-md sm:text-xl md:text-lg font-bold text-gray-800 mb-2 sm:mb-3"
+                  >
+                    Mahamrityunjaya Yantra
+                  </h3>
+                  <img
+                    src="https://static-00.iconduck.com/assets.00/google-icon-1024x1024-ilkrdfcp.png"
+                    alt="Google Icon"
+                    class="h-8 sm:h-12 md:h-12"
+                  />
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">
+                  My father's health was deteriorating until we placed the Hindu
+                  Mandir Puja Mahamrityunjaya Yantra near his bed, which helped
+                  stabilize his condition.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="assets/img/testimonials/testimonials-1.jpg"
+                  alt="Nisha Kothari"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Nisha Kothari
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <div class="flex justify-between items-center gap-2">
+                  <h3
+                    class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                  >
+                    Prasad Delivery
+                  </h3>
+                  <img
+                    src="https://static-00.iconduck.com/assets.00/google-icon-1024x1024-ilkrdfcp.png"
+                    alt="Google Icon"
+                    class="h-8 sm:h-12 md:h-12"
+                  />
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">
+                  The prasad delivery service is amazing. I received the sacred
+                  prasad from Kashi Vishwanath temple within 3 days. Very
+                  satisfied with the service.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="assets/img/testimonials/testimonials-2.jpg"
+                  alt="Rajesh Kumar"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Rajesh Kumar
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">Via @ Google</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <div class="flex justify-between items-center gap-2">
+                  <h3
+                    class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                  >
+                    Online Puja
+                  </h3>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR86kDWkquaiBSCj1nHaJTsCTNlVPH0GR4H2w&s"
+                    alt="Google Icon"
+                    class="h-8 sm:h-12 md:h-12"
+                  />
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">
+                  Being away from India, the online puja service helped me stay
+                  connected with our traditions. The live streaming was crystal
+                  clear.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="assets/img/testimonials/testimonials-3.jpg"
+                  alt="Priya Sharma"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Priya Sharma
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">Via @ Facebook</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate cards for continuous scroll -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <div class="flex justify-between items-center gap-2">
+                  <h3
+                    class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                  >
+                    Mahamrityunjaya Yantra
+                  </h3>
+                  <img
+                    src="https://img.icons8.com/?size=512&id=30448&format=png"
+                    alt="Google Icon"
+                    class="h-8 sm:h-12 md:h-12"
+                  />
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">
+                  My father's health was deteriorating until we placed the Hindu
+                  Mandir Puja Mahamrityunjaya Yantra near his bed, which helped
+                  stabilize his condition.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Nisha Kothari
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+
+          @media (max-width: 640px) {
+            .animate-scroll {
+              animation-duration: 20s;
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#FEF7ED] text-black pt-16 pb-6">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <div class="flex justify-center items-center">
+              <img
+                src="assets/img/Hindu Mandir Puja logo (2).png"
+                alt="Hindu Mandir Puja Logo"
+                class="h-16"
+              />
+              <h2 class="text-xl font-bold">Hindu Mandir Puja</h2>
+            </div>
+            <p class="text-gray-900">
+              Hindu Mandir Puja is a Devotional Platform to connect you with
+              Temples, Pandits, and Tirth Kshetras in Bharat.
+            </p>
+            <p class="text-gray-900">Made with 🙏 in Bharat</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Hindu Mandir Puja</h3>
+            <div class="space-y-2">
+              <a
+                href="./poojaBooking.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Pooja</a
+              >
+              <a
+                href="./chadhawa.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Chadhawa</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Legal</h3>
+            <div class="space-y-2">
+              <a
+                href="./PrivacyPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Privacy Policy</a
+              >
+              <a
+                href="./TermsandCondition.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Terms and Conditions</a
+              >
+              <a
+                href="./ReturnPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Return and Refund Policy</a
+              >
+              <a
+                href="./Shipingpolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Shipping Policy</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow us on</h3>
+            <div class="flex gap-4 mb-6">
+              <a
+                href="https://www.youtube.com/@hindumandirpuja"
+                class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-youtube text-xl"></i
+              ></a>
+              <a
+                href="https://m.facebook.com/p/Hindumandirpuja-61560055623213/"
+                class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-meta text-xl"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/hindumandirpuja/?hl=en"
+                class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-instagram text-xl"></i
+              ></a>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Contact</h3>
+            <div class="space-y-2 text-gray-900">
+              <p>Varanasi U.P  221001</p>
+              <p>Mobile number 8009018678</p>
+              <p>📧 hindumandirpuja@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-900"
+        >
+          &copy; 2024 Hindu Mandir Puja Pvt Ltd.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Animations and Line Animations -->
+    <script>
+      const processSection = document.getElementById("pujaProcessSection");
+      const progressLine = document.getElementById("progressLine");
+      const mobileProgressLine = document.getElementById("mobileProgressLine");
+      const icons = document.querySelectorAll(".process-icon");
+      let lineAnimationStarted = false;
+      let sectionAnimated = false;
+
+      function handleScroll() {
+        const sectionTop = processSection.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.7;
+
+        if (sectionTop <= triggerPoint && !sectionAnimated) {
+          // Animate section appearance
+          processSection.style.opacity = "1";
+          sectionAnimated = true;
+
+          // Start icon animations
+          icons.forEach((icon, index) => {
+            setTimeout(() => {
+              icon.style.transform = "scale(1.5)";
+              icon.style.filter = "brightness(1.2)";
+            }, index * 500);
+          });
+
+          // Animate progress lines
+          lineAnimationStarted = true;
+          progressLine.style.width = "100%";
+          mobileProgressLine.style.width = "100%";
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Initial check
+    </script>
+
+    <script>
+      // Navbar Scroll Effect
+      const nav = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          nav.classList.add("shadow-lg", "backdrop-blur-lg", "bg-white/90");
+        } else {
+          nav.classList.remove("shadow-lg", "backdrop-blur-lg", "bg-white/90");
+        }
+      });
+
+      function setchadhavaslide(index) {
+        const dots = document.querySelectorAll(".chadhawa-section .slider-dot");
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+    </script>
+
+    <script>
+      document
+        .getElementById("omSoundBtn")
+        .addEventListener("click", function () {
+          var audio = document.getElementById("omSound");
+          var icon = document.getElementById("omSoundIcon");
+          if (audio.paused) {
+            audio.play();
+            icon.classList.remove("fa-volume-up");
+            icon.classList.add("fa-volume-mute");
+          } else {
+            audio.pause();
+            icon.classList.remove("fa-volume-mute");
+            icon.classList.add("fa-volume-up");
+          }
+        });
+    </script>
+  </body>
+</html>

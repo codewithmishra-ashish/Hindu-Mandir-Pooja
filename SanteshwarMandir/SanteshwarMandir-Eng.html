@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santeshwar Mandir English</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Meta Pixel Code -->
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '808518914545478');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '8086467024717947');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=8086467024717947&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  
+    <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '842929453838115');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=842929453838115&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+  <!-- End Google Tag Manager -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "nsotq330nv");
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+</script>
+<script>
+  
+  async function sendEventToWebhook(eventName, customData = {}, userData = {}) {
+  const WEBHOOK_URL = "https://hook.eu2.make.com/w4q6m5jrjoy7dwh5g6qcaec8dw2jss8u"; // Your Webhook URL
+
+  const eventData = {
+    event_name: eventName,
+    event_time: Math.floor(Date.now() / 1000), // Current timestamp in seconds
+    event_source_url: window.location.href, // Current page URL
+    user_data: {
+      em: userData.email ? sha256(userData.email) : null, // SHA256 hashed email
+      ph: userData.phone ? sha256(userData.phone) : null, // SHA256 hashed phone
+      client_ip_address: userData.ip || null, // Optionally capture IP
+    },
+    custom_data: customData,
+  };
+
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventData),
+    });
+
+    if (response.ok) {
+      console.log(`${eventName} event sent successfully`);
+    } else {
+      console.error(`Failed to send ${eventName} event`, response.statusText);
+    }
+  } catch (error) {
+    console.error(`Error sending ${eventName} event:`, error);
+  }
+}
+
+// SHA256 hash function
+function sha256(data) {
+  const encoder = new TextEncoder();
+  const dataBuffer = encoder.encode(data);
+
+  return crypto.subtle.digest("SHA-256", dataBuffer).then((hashBuffer) => {
+    return Array.from(new Uint8Array(hashBuffer))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+  });
+}
+</script>
+
+<script>
+  function scrolltoPuja(eventName) {
+      dataLayer.push({
+          'event': 'event',
+          'eventName': eventName
+      });
+      console.log('Event tracked:', eventName);
+      window.addEventListener("load", () => {
+  sendEventToWebhook("PageView", {}, { email: "user@example.com" });
+});
+
+  }
+  function AddToCart(eventName) {
+    const pujaCard = document.getElementById('package1');
+    const pujaName = pujaCard.getAttribute('data-pujatype');
+    const pujaPrice = pujaCard.getAttribute('data-price');
+    const pujaLocation = pujaCard.getAttribute('data-location');
+    const pujaId = pujaCard.getAttribute('data-id');
+      dataLayer.push({
+          'event': 'add_to_cart',
+          'add_to_cart': {
+            'id': pujaId,
+            'item_name': eventName,
+            'pujatype': pujaName,
+            'price': pujaPrice,
+            'location': pujaLocation,
+            'currency': 'INR'
+          }
+      });
+      console.log('Tracked puja selection:', {
+            item_name: eventName,
+            pujatype: pujaName,
+            price: pujaPrice,
+            location: pujaLocation,
+            currency: 'INR'
+        });  }
+
+        sendEventToWebhook(
+    "AddToCart",
+    {
+      value: 1500, // Product price in INR
+      currency: "INR", // Currency set to INR
+      content_ids: [pujaId], // Product ID
+      content_type: "product",
+    },
+    { email: "user@example.com" }
+  );
+
+  document.querySelector("#addToCartButton").addEventListener("click", (e) => {
+  const button = e.target;
+  const addToCartData = {
+    value: parseFloat(button.getAttribute("data-product-price")), // Single product price
+    currency: "INR",
+    content_ids: [pujaId],
+    content_category: button.getAttribute("data-product-category"),
+    content_name: button.getAttribute("data-product-name"),
+    contents: [
+      {
+        id: button.getAttribute("data-product-id"),
+        quantity: 1,
+        item_price: parseFloat(button.getAttribute("data-product-price")),
+      },
+    ],
+    user_email: "user@example.com", // User's email
+  };
+
+  trackAddToCart(addToCartData);
+});
+
+
+
+</script>
+
+  </head>
+  <body class="bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+    <!-- Header Section -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+      <nav class="fixed w-full h-18 md:h-20 z-50 bg-white">
+        <div class="container mx-auto px-4 md:px-6 py-2 md:py-4">
+          <div class="flex items-center justify-between">
+            <a href="../index.html">
+            <div class="flex items-center gap-2 sm:gap-3 md:gap-4">
+              <img
+                src="../assets/img/Hindu Mandir Puja logo (2).png"
+                alt="Om Logo"
+                class="h-8 sm:h-10 md:h-12 lg:h-16 scale-125 sm:scale-150"
+              />
+              <div>
+                <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-orange-600 leading-tight">
+                  Hindu Mandir Puja
+                </h1>
+                <p class="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600">
+                  Your faith & our service
+                </p>
+              </div>
+            </div>
+            </a>
+
+            <div class="hidden md:hidden lg:flex items-center space-x-8">
+              <a href="../index.html" class="text-gray-700 hover:text-orange-500 transition"
+                >Home</a
+              >
+              <a
+                href="../poojaBooking.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Pujas</a
+              >
+              <a
+                href="../chadhawa.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >chadhavas</a
+              >
+              <a
+                href="./Blogs/blog1.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Blogs</a
+              >
+            
+              <a href="./SanteshwarMandir-Hindi.html">
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+                >
+                  In Hindi
+                </button>
+              </a>
+              
+            </div>
+
+            <div class="flex items-center gap-4 lg:hidden">
+              <a href="./SanteshwarMandir-Hindi.html">
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-2 text-[10px] rounded-full hover:shadow-lg transition"
+                >
+                  In Hindi
+                </button>
+              </a>
+              <button id="mobileMenuBtn" class="text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div
+            id="mobileMenu"
+            class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+          >
+            <div class="flex flex-col space-y-4 p-4">
+              <a href="../index.html" class="text-gray-700 hover:text-orange-500 transition"
+                >Home</a
+              >
+              <a
+                href="../poojaBooking.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Pujas</a
+              >
+              <a
+                href="../chadhawa.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >chadhavas</a
+              >
+              <a
+                href="./Blogs/blog1.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Blogs</a
+              >
+              
+             
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener("click", () => {
+          isMenuOpen = !isMenuOpen;
+
+          // Toggle menu visibility
+          mobileMenu.classList.toggle("hidden");
+
+          // Toggle icon between bars and times
+          const menuIcon = mobileMenuBtn.querySelector("i");
+          menuIcon.classList.remove(isMenuOpen ? "fa-bars" : "fa-times");
+          menuIcon.classList.add(isMenuOpen ? "fa-times" : "fa-bars");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            !mobileMenuBtn.contains(e.target) &&
+            !mobileMenu.contains(e.target) &&
+            !isMenuOpen
+          ) {
+            mobileMenu.classList.add("hidden");
+            const menuIcon = mobileMenuBtn.querySelector("i");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+            isMenuOpen = false;
+          }
+        });
+      </script>
+      <!-- Bottom Navigation Bar with Scroll to Book Puja Button -->
+      <div
+        class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-orange-100 z-10"
+      >
+      <!-- Scroll to Book Puja Button -->
+      <div
+      id="scrollToBookBtn"
+      class="fixed sm:hidden block bottom-20 right-4 z-50 opacity-0 transition-opacity duration-300"
+    >
+      <button
+        onclick="document.getElementById('Puja-section').scrollIntoView({behavior: 'smooth'})"
+        class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+      >
+        <i class="fas fa-om"></i>
+        <span>Book Puja</span>
+      </button>
+    </div>
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollBtn = document.getElementById("scrollToBookBtn");
+        const scrollPercentage =
+          (window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight)) *
+          100;
+
+        if (scrollPercentage > 50) {
+          scrollBtn.style.opacity = "1";
+        } else {
+          scrollBtn.style.opacity = "0";
+        }
+      });
+    </script>
+        <!-- Bottom Navigation -->
+        <div class="container mx-auto px-4 py-1 md:hidden">
+          <div class="flex items-center justify-between">
+            <a
+              href="../index.html"
+              class="flex flex-col items-center transition"
+            >
+              <i class="fas fa-home text-md"></i>
+              <span class="text-[10px] mt-0.5">Home</span>
+            </a>
+            <a
+              href="../poojaBooking.html"
+              class="flex flex-col items-center text-orange-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-om text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >Pujas</span
+              >
+            </a>
+            <a
+              href="../chadhawa.html"
+              class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-gift text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >chadhavas</span
+              >
+            </a>
+            
+            <!-- <a
+              href="#"
+              class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-book text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >Library</span
+              >
+            </a> -->
+            <a
+              href="./Blogs/blog1.html"
+              class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-blog text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >Blogs</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="mt-20 container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Image Section -->
+        <div class="rounded-lg h-[250px] md:h-[400px] overflow-hidden shadow-xl">
+          <img
+            src="../assets/img/landing-page/landing page santaneshwar Mandir Puja Kashi2.png"
+            alt="Santeshwar Mandir Image"
+            class="w-full h-full "
+          />
+        </div>
+
+        <!-- Details Section -->
+        <div class="space-y-6">
+          <h1
+            id="mandir-heading"
+            class="text-2xl md:text-4xl font-bold text-gray-800"
+          >
+            Santaneshwar Mahadev Rudrabhishek Puja
+          </h1>
+         
+
+          <div class="flex text-gray-700">
+            <img
+              src="https://img.icons8.com/material-outlined/24/000000/place-marker.png"
+              alt="Location Icon"
+              class="w-5 h-5"
+            />
+            <strong class="text-[15px]">Location:</strong>
+            <span class="text-orange-600 text-[18px]"
+              >Santaneshwar Mahadev Temple, Kashi</span
+            >
+          </div>
+
+          <div class="countdown bg-orange-100 p-4 rounded-lg">
+            <div class="flex items-center space-x-2">
+              <img
+                src="https://img.icons8.com/material-outlined/24/000000/calendar.png"
+                alt="Calendar Icon"
+              />
+              <span id="countdown-timer" class="text-orange-600 font-semibold"
+                >Calculating...</span
+              >
+            </div>
+          </div>
+
+          <p class="devotee-count text-green-600 font-medium">
+            200+ Devotees already booked this Puja
+          </p>
+
+            <button
+              onclick="scrollToSection(); scrolltoPuja('Santeshwar Mahadev Mandir')"
+              class="bg-orange-500 text-center text-white px-16 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 "
+            >
+              Select Puja Package
+            </button>
+            <script>
+              function scrollToSection() {
+                if (window.innerWidth <= 768) {
+                  document.getElementById('Puja-section').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  document.getElementById('participate-section').scrollIntoView({ behavior: 'smooth' });
+                }
+              }
+            </script>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold text-center mb-8 text-gray-800">
+        Importance of Santaneshwar Mahadev Temple
+      </h2>
+      <p id="mandir-description" class="text-gray-600">
+        At the Santaneshwar Mahadev Temple, the Shivling is worshipped, especially by couples wishing for children. It is believed that performing rituals and abhishek here can bring Lord Shiva’s blessings for parenthood. This temple is a unique place where devotees pray to fulfill their desires.
+      </p>
+    </div>
+
+    <!--Benefits of Santeshwar Puja-->
+    <div class="container mx-auto px-4 py-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Benefits of the Puja
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-6">
+          <div
+            class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-baby text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Blessing for Parenthood
+              </h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Have you been longing for a child but faced disappointment? This puja can grant you the blessing of parenthood.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-home text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Family Happiness
+              </h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Does your family feel incomplete without a child? The arrival of a child brings joy and completeness to a family.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-6">
+          <div
+            class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-road text-2xl text-orange-500"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Removal of Obstacles
+              </h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Are you facing repeated challenges in having children? Worshipping Santaneshwar Mahadev can help overcome these difficulties.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Puja Packages Section -->
+    <div id="participate-section" class="bg-white py-12 hidden md:block">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Debt Relief Puja -->
+          <div data-id="1" data-pujatype="Debt Relief Puja" data-price="851" data-location="Rinamukteshwar Mahadev Temple, Kashi" id="debt-relief-puja" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                Debt Relief Puja
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹851</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Seek gradual relief from debt with Lord Shiva’s blessings.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Eliminate mental stress and anxiety, gaining peace and positive energy.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Priest will chant your name and gotra during the Sankalp (prayer intention).</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Join the puja live via video call.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Receive the puja video on WhatsApp.</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('851','Debt Relief Puja');"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-[27vh] text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              Participate Now
+            </button>
+            <h2
+              class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+            >
+              400+ Devotees already booked this Puja
+            </h2>
+          </div>
+
+          <!-- Career Success Puja -->
+          <div data-id="2" data-pujatype="Career Success Puja" data-price="1251" data-location="Rinamukteshwar Mahadev Temple, Kashi" id="career-success-puja" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                Special Rinmukti Puja
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹1251</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >
+At the beginning of the puja, the chanting will be taken by Panditji by taking your name, gotra details. This puja is helpful in reducing the burden of financial problems and debt from your life.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >This chanting will be done especially by the learned Brahmins of Kashi.</span
+                >
+              </li>
+              
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >
+Live video calls and recorded videos of the puja will be available. Fruits, sweets, and dried fruits will be offered, and offerings will be sent to your provided address.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Receive the puja recorded video on WhatsApp.</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="redirectToAddToCart('1251','Special Rinmukti Puja');"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-[27vh] text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              Participate Now
+            </button>
+            <h2
+              class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+            >
+              350+ Devotees already booked this Puja
+            </h2>
+          </div>
+
+          <!-- Business Success Puja -->
+          <div data-id="3" data-pujatype="Business Success Puja" data-price="1251" data-location="Rinamukteshwar Mahadev Temple, Kashi" id="business-success-puja" class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-800">
+                Mahashakti Rinmukti Puja
+              </h3>
+              <p class="text-xl font-semibold text-orange-600">₹1251</p>
+            </div>
+            <hr class="border-t-2 border-orange-500 my-4" />
+            <ul class="space-y-3 mb-6 text-gray-600">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Are you troubled by rising debt and financial constraints? All the earnings go to repay the loan, but the situation is not changing? Even after millions of efforts, economic improvement is not happening and tension is increasing</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >It is a divine superpower Rinmukti Puja, which is especially performed for freedom from debt, financial problems and prosperity. By the grace of Mahadev, this puja will bring financial stability, mental peace, and prosperity in your life.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Eliminate mental stress and anxiety, gaining peace and positive energy.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Priest will chant your name and gotra during the Sankalp.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span class="text-sm md:text-base lg:text-lg"
+                  >Join the puja live via video call.Receive the puja video on WhatsApp.</span
+                >
+              </li>
+            
+            </ul>
+            <button
+              onclick="redirectToAddToCart('1551','Mahashakti Rinmukti Puja');"
+              class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-[17vh] text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-pray"></i>
+              Participate Now
+            </button>
+            <h2
+              class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+            >
+              250+ Devotees already booked this Puja
+            </h2>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    <style>
+      @media (max-width: 768px) {
+        #participate-section .grid {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+        }
+        #participate-section .grid > div {
+          flex: 0 0 80%;
+          scroll-snap-align: start;
+          margin-right: 1rem;
+        }
+      }
+    </style>
+
+    <style>
+      @media (max-width: 768px) {
+        #participate-section .grid {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+        }
+        #participate-section .grid > div {
+          flex: 0 0 80%;
+          scroll-snap-align: start;
+          margin-right: 1rem;
+        }
+        
+        /* Mobile tab improvements */
+        .tabs-container {
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scroll-snap-type: x mandatory;
+          padding: 0 5px;
+        }
+        
+        .tabs-container .grid {
+          display: flex;
+          min-width: 100%;
+        }
+        
+        .puja-tab {
+          flex: 0 0 33.333%;
+          scroll-snap-align: start;
+          padding: 0 2px;
+        }
+        
+        #slideLeft, #slideRight {
+          width: 30px;
+          height: 30px;
+          background-color: rgba(255, 255, 255, 0.9);
+          z-index: 20;
+        }
+      }
+    </style>
+
+
+
+    <!-- Mobile Puja Packages Section -->
+    <div id="Puja-section" class="md:hidden block pt-12">
+      <div class="container mx-auto px-4">
+        <!-- Package Tabs -->
+        <div class="grid grid-cols-3 gap-2 mb-4">
+          <!-- Tab 1 -->
+          <div data-id="1" data-pujatype="Quick Marriage Puja" data-price="851" data-location="Mangala Gauri Mandir, Kashi" class="relative puja-tab active" data-puja="quick-marriage">
+            <h4 class="text-center text-[10px] font-bold text-gray-600">
+            Mahadev Rudrabhishek Pooja for Success
+            </h4>
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+            >
+              <img
+                src="../assets/img/icons/rudraabhishek2.png"
+                alt="Rudrabhishek Puja"
+                class="w-full h-[80%] mb-4 object-contain"
+              />
+              <span
+                class="absolute bottom-1 text-[14px] font-bold text-[#F68D1C]"
+                >₹951</span
+              >
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div data-id="2" data-pujatype="Success in Job and Life" data-price="1251" data-location="Rinamukteshwar Mahadev Temple, Kashi" class="relative puja-tab" data-puja="mangal-dosha">
+            <h4 class="text-center text-[10px] font-bold text-gray-600">
+              Child Birth Maharudrabhishek pooja 
+            </h4>
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+            >
+              <img
+                    src="../assets/img/icons/couplebabyimage2.png"
+                alt="Santan Prapti Maharudrabhishek"
+                class="w-full h-[80%] mb-4 object-contain"
+              />
+              <span
+                class="absolute bottom-1 text-[14px] font-bold text-[#3564E2]"
+                >₹1251</span
+              >
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div data-id="3" data-pujatype="Love Marriage" data-price="1251" data-location="Mangala Gauri Mandir, Kashi" class="relative puja-tab" data-puja="kumkum">
+            <h4 class="text-center text-[10px] font-bold text-gray-600">
+              Child Happiness / Health Growth Pooja
+            </h4>
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+            >
+              <img
+                src="../assets/img/icons/healthimage2.png"
+                alt="Santan Sukh and Health Growth Puja"
+                class="w-full h-[80%] mb-4 object-contain"
+              />
+              <span
+                class="absolute bottom-1 text-[14px] font-bold text-[#FF3201]"
+                >₹1551</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Package Details with Swiper -->
+        <div class="border border-[#430ABD] rounded-lg pb-3">
+          <div class="puja-slider overflow-hidden">
+            <div class="puja-slider-wrapper flex transition-transform duration-300">
+              <!-- Quick Marriage Puja Details -->
+              <div data-id="1" data-pujatype="Quick Marriage Puja" data-price="851" data-location="Mangala Gauri Mandir, Kashi" id="quick-marriage-details" class="puja-details w-full flex-shrink-0">
+                <div
+                  class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+                >
+                  <div class="text-center px-3 mt-2">
+                    <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                      Rudrabhishek Puja
+                    </h3>
+                    <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                      ></span
+                    >
+                  </div>
+                </div>
+
+              <hr class="mx-3" />
+
+            <div class="px-4">
+              <div class="space-y-4 mt-4">
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >For problems during pregnancy, a special Putra Rudrabhishek Puja is performed for relief and blessings of a healthy child.</span
+                  >
+                </div>
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >The priest will chant your name and gotra during the Sankalp.</span
+                  >
+                </div>
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Opportunity to participate in the puja via live video call.The recorded video of the complete puja will be shared on WhatsApp.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <hr class="mx-4 mt-3" />
+
+            <div class="px-4 pt-3">
+              <button
+                onclick="redirectToAddToCart('951', 'Rudrabhishek Puja')"
+                class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold pr-2"
+                  >Participate</span
+                >
+              </button>
+            </div>
+          </div>
+
+             <!-- Mangal Dosha Removal Puja Details -->
+              <div data-id="2" data-pujatype="Special Puja for Child Birth" data-price="1251" data-location="santan Mandir, Kashi" id="mangal-dosha-details" class="puja-details w-full flex-shrink-0">
+                <div
+                  class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+                >
+                  <div class="text-center px-3 mt-2">
+                    <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                      Special Puja for Child Birth
+                    </h3>
+                    <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                      ></span
+                    >
+                  </div>
+                </div>
+
+                 <hr class="mx-3" />
+
+            <div class="px-4">
+              <div class="space-y-4 mt-4">
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >This special Puja is for couples who have been waiting for a child for years. It can fulfill your wish for a healthy baby  and soon, your arms may be filled with joy.</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Prasad of fruits, sweets, and dry fruits will be offered with flower offerings at the end of puja.</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Join puja through live video call and receive the video.</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Prasad of fruits, sweets and dry fruits will be offered with flower offerings at the end of puja. And holy prasad will be sent to your provided address.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <hr class="mx-4 mt-3" />
+
+            <div class="px-4 pt-3">
+              <button
+                onclick="redirectToAddToCart('1251', 'Special Puja for Child Birth')"
+                class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold pr-2"
+                  >Participate</span
+                >
+              </button>
+            </div>
+          </div>
+
+              <!-- Love Marriage Archana Details -->
+              <div data-id="3" data-pujatype="Love Marriage" data-price="1251" data-location="Mangala Gauri Mandir, Kashi" id="kumkum-details" class="puja-details w-full flex-shrink-0">
+                <div
+                  class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+                >
+                  <div class="text-center px-3 mt-2">
+                    <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                       Child Happiness and Health Growth Puja
+                    </h3>
+                    <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                      ></span
+                    >
+                  </div>
+                </div>
+
+               <hr class="mx-3" />
+
+            <div class="px-4">
+              <div class="space-y-4 mt-4">
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >If you are facing continuous problems during pregnancy or the baby is born weak again and again, then this Puja can help fulfill your wish for a healthy child — and soon, your arms may be blessed with joy.</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Prasad of fruits, sweets and dry fruits will be offered with flower offerings at the end of puja. And holy prasad will be sent to your provided address.</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Your name and gotra will be chanted during the puja</span
+                  >
+                </div>
+
+                <div class="flex items-start gap-2">
+                  <img
+                    src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                    width="24"
+                    height="24"
+                    alt="check"
+                  />
+                  <span
+                    >Participate in live puja and receive puja video.</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <hr class="mx-4 mt-3" />
+
+            <div class="px-4 pt-3">
+              <button
+                onclick="redirectToAddToCart('1551', 'Child Happiness and Health Growth Puja')"
+                class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold pr-2"
+                  >Participate</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+          <!-- Slider Pagination Dots -->
+          <div class="slider-pagination flex justify-center gap-2 mt-4">
+            <span class="pagination-dot active" data-index="0"></span>
+            <span class="pagination-dot" data-index="1"></span>
+            <span class="pagination-dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Slider Styles */
+      .puja-slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .puja-slider-wrapper {
+        display: flex;
+        transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        will-change: transform;
+      }
+      
+      .puja-details {
+        width: 100%;
+        flex-shrink: 0;
+      }
+      
+      /* Tab Styles */
+      .puja-tab {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .puja-tab.active div {
+        border: 2px solid #430ABD;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Pagination Dots */
+      .slider-pagination {
+        margin-top: 12px;
+      }
+      
+      .pagination-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #D1D5DB;
+        display: inline-block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .pagination-dot.active {
+        width: 24px;
+        border-radius: 4px;
+        background-color: #430ABD;
+      }
+      
+      /* Touch Styles */
+      .puja-slider {
+        touch-action: pan-x;
+      }
+      
+      /* Navigation Arrows */
+      .slider-nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      
+      .slider-nav-arrow:hover {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      
+      .slider-nav-prev {
+        left: 5px;
+      }
+      
+      .slider-nav-next {
+        right: 5px;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements
+        const pujaTabs = document.querySelectorAll(".puja-tab");
+        const sliderWrapper = document.querySelector(".puja-slider-wrapper");
+        const paginationDots = document.querySelectorAll(".pagination-dot");
+        const slider = document.querySelector(".puja-slider");
+        
+        // Add navigation arrows
+        const prevArrow = document.createElement("div");
+        prevArrow.className = "slider-nav-arrow slider-nav-prev";
+        prevArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
+        
+        const nextArrow = document.createElement("div");
+        nextArrow.className = "slider-nav-arrow slider-nav-next";
+        nextArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
+        
+        slider.appendChild(prevArrow);
+        slider.appendChild(nextArrow);
+        
+        // Current slide index
+        let currentIndex = 0;
+        
+        // Slide width (100% of container)
+        const slideWidth = 100;
+        
+        // Touch variables
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+        let initialTransform = 0;
+        let lastTouchTime = 0;
+        let isFastSwipe = false;
+        
+        // Function to update the slider position
+        function updateSliderPosition(index, animate = true) {
+          // Ensure index is within bounds
+          if (index < 0) index = 0;
+          if (index >= pujaTabs.length) index = pujaTabs.length - 1;
+          
+          if (animate) {
+            sliderWrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)";
+          } else {
+            sliderWrapper.style.transition = "none";
+          }
+          
+          sliderWrapper.style.transform = `translateX(-${index * slideWidth}%)`;
+          
+          // Update active tab with smooth animation
+          pujaTabs.forEach((tab, i) => {
+            if (i === index) {
+              tab.classList.add("active");
+              tab.querySelector("div").style.border = "2px solid #430ABD";
+              tab.querySelector("div").style.transform = "translateY(-2px)";
+              tab.querySelector("div").style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            } else {
+              tab.classList.remove("active");
+              tab.querySelector("div").style.border = "none";
+              tab.querySelector("div").style.transform = "translateY(0)";
+              tab.querySelector("div").style.boxShadow = "none";
+            }
+          });
+          
+          // Update pagination dots with smooth animation
+          paginationDots.forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.add("active");
+            } else {
+              dot.classList.remove("active");
+            }
+          });
+          
+          // Update navigation arrows visibility
+          if (index === 0) {
+            prevArrow.style.opacity = "0.5";
+            prevArrow.style.pointerEvents = "none";
+          } else {
+            prevArrow.style.opacity = "1";
+            prevArrow.style.pointerEvents = "auto";
+          }
+          
+          if (index === pujaTabs.length - 1) {
+            nextArrow.style.opacity = "0.5";
+            nextArrow.style.pointerEvents = "none";
+          } else {
+            nextArrow.style.opacity = "1";
+            nextArrow.style.pointerEvents = "auto";
+          }
+          
+          currentIndex = index;
+        }
+        
+        // Add click event listener to each tab
+        pujaTabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            updateSliderPosition(index);
+          });
+        });
+        
+        // Add click event listener to pagination dots
+        paginationDots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            updateSliderPosition(index);
+          });
+        });
+        
+        // Add click event listeners to navigation arrows
+        prevArrow.addEventListener("click", () => {
+          updateSliderPosition(currentIndex - 1);
+        });
+        
+        nextArrow.addEventListener("click", () => {
+          updateSliderPosition(currentIndex + 1);
+        });
+        
+        // Touch events for slider with improved physics
+        slider.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+          initialTransform = currentIndex * slideWidth;
+          sliderWrapper.style.transition = "none";
+          lastTouchTime = Date.now();
+          isFastSwipe = false;
+        }, { passive: true });
+        
+        slider.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          
+          currentX = e.touches[0].clientX;
+          const diffX = startX - currentX;
+          const translateX = -initialTransform + (-diffX / slider.offsetWidth * 100);
+          
+          // Add resistance at the edges for better UX
+          let finalTranslateX = translateX;
+          
+          if (translateX > 0) {
+            finalTranslateX = translateX * 0.3; // Add resistance when trying to drag past first slide
+          } else if (translateX < -((pujaTabs.length - 1) * slideWidth)) {
+            const overscroll = translateX + ((pujaTabs.length - 1) * slideWidth);
+            finalTranslateX = -((pujaTabs.length - 1) * slideWidth) + (overscroll * 0.3); // Add resistance when trying to drag past last slide
+          }
+          
+          sliderWrapper.style.transform = `translateX(${finalTranslateX}%)`;
+          
+          // Calculate swipe speed for momentum effect
+          const touchDuration = Date.now() - lastTouchTime;
+          isFastSwipe = touchDuration < 200 && Math.abs(diffX) > 30;
+        }, { passive: true });
+        
+        slider.addEventListener("touchend", (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+          
+          // Re-enable transitions
+          sliderWrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)";
+          
+          const diffX = startX - currentX;
+          const threshold = isFastSwipe ? slider.offsetWidth * 0.1 : slider.offsetWidth * 0.2; // Lower threshold for fast swipes
+          
+          if (Math.abs(diffX) > threshold) {
+            if (diffX > 0 && currentIndex < pujaTabs.length - 1) {
+              // Swipe left -> next slide
+              updateSliderPosition(currentIndex + 1);
+            } else if (diffX < 0 && currentIndex > 0) {
+              // Swipe right -> previous slide
+              updateSliderPosition(currentIndex - 1);
+            } else {
+              // Return to current slide
+              updateSliderPosition(currentIndex);
+            }
+          } else {
+            // Return to current slide if swipe wasn't strong enough
+            updateSliderPosition(currentIndex);
+          }
+        }, { passive: true });
+        
+        // Handle edge cases
+        slider.addEventListener("touchcancel", () => {
+          if (isDragging) {
+            isDragging = false;
+            updateSliderPosition(currentIndex);
+          }
+        }, { passive: true });
+        
+        // Add keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            updateSliderPosition(currentIndex - 1);
+          } else if (e.key === "ArrowRight") {
+            updateSliderPosition(currentIndex + 1);
+          }
+        });
+        
+        // Initialize the slider
+        updateSliderPosition(0, false);
+        
+        // Auto-hide navigation arrows on mobile after a delay
+        const hideArrowsTimeout = setTimeout(() => {
+          prevArrow.style.opacity = "0";
+          nextArrow.style.opacity = "0";
+        }, 2000);
+        
+        // Show arrows when touching the slider
+        slider.addEventListener("touchstart", () => {
+          clearTimeout(hideArrowsTimeout);
+          prevArrow.style.opacity = currentIndex === 0 ? "0.5" : "1";
+          nextArrow.style.opacity = currentIndex === pujaTabs.length - 1 ? "0.5" : "1";
+        }, { passive: true });
+      });
+    </script>
+
+    <!-- About Section -->
+    <div id="about" class="bg-white py-6">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <img
+            src="../images/manwoman.jpg"
+              alt="Traditional Vedic Puja Ceremony"
+              class="rounded-lg shadow-lg w-full h-auto"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+              Understanding Puja in Vedic Tradition
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              According to our ancient Vedas, Puja is a sacred act of showing
+              reverence to the divine through ritual worship. The word 'Puja'
+              originates from Sanskrit, meaning 'worship' or 'adoration'. It is
+              described in the Vedas as one of the most powerful means to
+              connect with the divine consciousness.
+            </p>
+            <ul class="mt-4 space-y-3 text-gray-600">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-om text-orange-500 text-xs"></i>
+                <span
+                  >Puja involves the offering of devotion (bhakti) through
+                  mantras, flowers, incense, and other sacred items</span
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-om text-orange-500 text-xs"></i>
+                <span
+                  >It is described in the Upanishads as a means to purify one's
+                  mind and attain spiritual elevation</span
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-om text-orange-500 text-xs"></i>
+                <span
+                  >The Vedas emphasize that sincere devotion during puja can
+                  fulfill both material and spiritual aspirations</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Temple Information -->
+    <div id="about" class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+              Temple Information
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              Located in the holy city of Kashi (Varanasi), Santaneshwar Mahadev Temple is a revered shrine for Lord Shiva’s devotees, especially couples wishing for the joy of parenthood.
+            </p>
+            <div class="mt-6 flex items-center gap-4">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-orange-500"></i>
+                <span class="text-gray-600">Kashi, Varanasi</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-clock text-orange-500"></i>
+                <span class="text-gray-600">Open 24/7</span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="../assets//img/about/santaneshwarmandir.png"
+                alt="Santaneshwar Mahadev Temple"
+                class="w-full h-[400px]  hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it Works -->
+    <section
+      class="py-5 md:py-5 bg-white opacity-0 transition-opacity duration-700"
+      id="pujaProcessSection"
+    >
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-4 md:gap-6 mb-12">
+          <img
+            src="https://cdn-icons-png.freepik.com/512/17729/17729027.png"
+            alt="Swastik"
+            class="h-8 md:h-12"
+          />
+          <h2
+            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600"
+          >
+            Puja Process
+          </h2>
+          <img
+            src="https://cdn-icons-png.freepik.com/512/17729/17729027.png"
+            alt="Swastik"
+            class="h-8 md:h-12"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+          <!-- Progress Line (visible only on desktop) -->
+          <div
+            class="hidden md:block absolute top-8 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gray-200"
+          >
+            <div
+              id="progressLine"
+              class="h-full bg-orange-500 w-0 transition-all duration-1000"
+            ></div>
+          </div>
+
+          <!-- Mobile Progress Line (between rows) -->
+          <div
+            class="block md:hidden absolute top-1/2 left-1/4 right-1/4 h-1 bg-gray-200"
+          >
+            <div
+              id="mobileProgressLine"
+              class="h-full bg-orange-500 w-0 transition-all duration-1000"
+            ></div>
+          </div>
+
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon1.png"
+                alt="Select Package"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Select from<br />Packages
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon2.png"
+                alt="Enter Details"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Enter Name and<br />Gotra
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon3.png"
+                alt="Watch Sankalp"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Watch Your Sankalp on<br />Hindumandir Puja Platforms
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon4.png"
+                alt="Receive Prasad"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              Puja Video and Prashad<br />Delivery
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Frequently Asked Questions
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              How to book a puja service?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              Easily book a puja by visiting our website. Simply fill in your
+              name and Gotra, make the payment, and the puja service will be
+              booked.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              What if I don't know my Gotra?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              If you don't know your Gotra, please enter "Kashyap" as your Gotra
+              while booking the puja.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              How to make a payment?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              Making a payment is very simple. You can easily pay online through
+              the secure payment options available on our website. Use options
+              like Debit card, Credit card, or UPI as per your convenience, and
+              book the puja service instantly.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              How will I know the puja has been performed in my name?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              Yes, you will be able to watch the puja through a video call, and
+              after the puja is completed, a video of the puja will be sent to
+              you on WhatsApp, along with the prasad delivered to your provided
+              address.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              Will I receive a video of the puja?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              Yes, once the puja is completed, a video of the puja will be
+              shared with you on WhatsApp.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              What do I need to prepare for the puja?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              No special preparation is needed for the puja; the priest will
+              guide you through all the rituals.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devotee Corner -->
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-4 mb-8 md:mb-12">
+          <img
+            src="../assets/img/lotu.png"
+            alt="Devotees Icon"
+            class="h-6 sm:h-8 md:h-12"
+          />
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600"
+          >
+            Happy Devotees Corner
+          </h2>
+          <img
+            src="../assets/img/lotus.png"
+            alt="Right Icon"
+            class="h-6 sm:h-8 md:h-12"
+          />
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div
+            class="testimonial-slider flex flex-nowrap p-2 sm:p-4 animate-scroll"
+          >
+            <!-- Testimonial Card 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  Mahamrityunjaya Yantra
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  My father's health was deteriorating until we placed the Hindu
+                  Mandir Puja Mahamrityunjaya Yantra near his bed, which helped
+                  stabilize his condition.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-1.jpg"
+                  alt="Nisha Kothari"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Nisha Kothari
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">Via @ WhatsApp</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  Prasad Delivery
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  The prasad delivery service is amazing. I received the sacred
+                  prasad from Kashi Vishwanath temple within 3 days. Very
+                  satisfied with the service.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-2.jpg"
+                  alt="Rajesh Kumar"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Rajesh Kumar
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">Via @ Google</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  Online Puja
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  Being away from India, the online puja service helped me stay
+                  connected with our traditions. The live streaming was crystal
+                  clear.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-3.jpg"
+                  alt="Priya Sharma"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Priya Sharma
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">Via @ Facebook</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate cards for continuous scroll -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  Mahamrityunjaya Yantra
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  My father's health was deteriorating until we placed the Hindu
+                  Mandir Puja Mahamrityunjaya Yantra near his bed, which helped
+                  stabilize his condition.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-1.jpg"
+                  alt="Nisha Kothari"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    Nisha Kothari
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">Via @ WhatsApp</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+
+          @media (max-width: 640px) {
+            .animate-scroll {
+              animation-duration: 20s;
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#FEF7ED] text-black pt-16 pb-6">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <div class="flex justify-center items-center gap-2">
+              <img
+                src="../assets/img/Hindu Mandir Puja logo (2).png"
+                alt="Hindu Mandir Puja Logo"
+                class="h-16"
+              />
+              <h2 class="text-xl font-bold">Hindu Mandir Puja</h2>
+            </div>
+            <p class="text-gray-900">
+              Hindu Mandir Puja is a Devotional Platform to connect you with
+              Temples, Pandits, and Tirth Kshetras in Bharat.
+            </p>
+            <p class="text-gray-900">Made with 🙏 in Bharat</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Hindu Mandir Puja</h3>
+            <div class="space-y-2">
+              <a
+                href="../poojaBookingEng.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Pooja</a
+              >
+              <a
+                href="#"
+                class="block text-gray-900 hover:text-black transition"
+                >Chadhawa</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Legal</h3>
+            <div class="space-y-2">
+              <a
+                href="../PrivacyPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Privacy Policy</a
+              >
+              <a
+                href="../TermsandCondition.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Terms and Conditions</a
+              >
+              <a
+                href="../ReturnPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Return and Refund Policy</a
+              >
+              <a
+                href="../ShipingPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >Shipping Policy</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow us on</h3>
+            <div class="flex gap-4 mb-6">
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-youtube text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-meta text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-instagram text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-x-twitter text-xl"></i
+              ></a>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Contact</h3>
+            <div class="space-y-2 text-gray-900">
+                <p>Varanasi U.P  221001</p>
+                <p>📞 8009018678</p>
+              <p>📧 hindumandirpuja@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-900"
+        >
+          &copy; 2024 Hindu Mandir Puja Pvt Ltd.
+        </div>
+      </div>
+    </footer>
+    <!--Popup-->
+    <div
+      id="popup"
+      class="fixed bottom-10 left-4 right-4 md:bottom-10 md:left-auto md:right-4 bg-white rounded-lg shadow-xl border border-gray-100 p-4 md:w-[320px] animate-slide-up"
+    >
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 bg-orange-50 rounded-full p-2">
+            <i class="fas fa-bell text-orange-500 text-lg"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">
+              <span id="person-name" class="font-semibold text-gray-800"></span>
+              <br class="md:hidden" />
+              just booked
+              <span id="package-name" class="font-semibold text-orange-500"></span>
+              package!
+            </p>
+          </div>
+        </div>
+        <button
+          onclick="closePopup()"
+          class="p-1 hover:bg-gray-100 rounded-full transition-colors"
+          aria-label="Close notification"
+        >
+          <i class="fas fa-times text-gray-400 hover:text-gray-600"></i>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("popup");
+        const packageNames = [
+          "Rudrabhishek",
+          "Santan Prapti Maharudrabhishek", 
+          "Santan sukh and health"
+        ];
+        const names = [
+          "Rahul S",
+          "Priya P",
+          "Amit K",
+          "Neha S",
+          "Raj M",
+          "Anjali G",
+          "Deepak V", 
+          "Pooja R",
+          "Sanjay M",
+          "Meera K"
+        ];
+
+        function showNotification() {
+          const randomPackage = packageNames[Math.floor(Math.random() * packageNames.length)];
+          const randomName = names[Math.floor(Math.random() * names.length)];
+          
+          document.getElementById("package-name").innerText = randomPackage;
+          document.getElementById("person-name").innerText = randomName;
+          
+          popup.classList.remove("hidden");
+          popup.classList.add("animate-slide-up");
+
+          setTimeout(() => {
+            popup.classList.add("animate-slide-down");
+            setTimeout(() => {
+              popup.classList.add("hidden");
+              popup.classList.remove("animate-slide-down");
+            }, 300);
+          }, 7000);
+        }
+
+        // Show first notification after 5 seconds
+        setTimeout(() => {
+          showNotification();
+          // Then show notifications every 30 seconds
+          setInterval(showNotification,40000);
+        }, 4000);
+
+        window.closePopup = function() {
+          popup.classList.add("animate-slide-down");
+          setTimeout(() => {
+            popup.classList.add("hidden");
+            popup.classList.remove("animate-slide-down");
+          }, 300);
+        };
+      });
+    </script>
+
+    <style>
+      @keyframes slideUp {
+        from {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.3s ease-out forwards;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.3s ease-out forwards;
+      }
+    </style>
+
+    <!--How to Book Progress Bar-->
+    <script>
+      const processSection = document.getElementById("pujaProcessSection");
+      const progressLine = document.getElementById("progressLine");
+      const mobileProgressLine = document.getElementById("mobileProgressLine");
+      const icons = document.querySelectorAll(".process-icon");
+      let lineAnimationStarted = false;
+      let sectionAnimated = false;
+
+      function handleScroll() {
+        const sectionTop = processSection.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.7;
+
+        if (sectionTop <= triggerPoint && !sectionAnimated) {
+          // Animate section appearance
+          processSection.style.opacity = "1";
+          sectionAnimated = true;
+
+          // Start icon animations
+          icons.forEach((icon, index) => {
+            setTimeout(() => {
+              icon.style.transform = "scale(1.5)";
+              icon.style.filter = "brightness(1.2)";
+            }, index * 500);
+          });
+
+          // Animate progress lines
+          lineAnimationStarted = true;
+          progressLine.style.width = "100%";
+          mobileProgressLine.style.width = "100%";
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Initial check
+    </script>
+    <!--Countdown Timer-->
+    <script>
+      // JavaScript remains unchanged
+      function startCountdown() {
+        const targetDate = new Date("June 10, 2025 00:00:00").getTime();
+
+        setInterval(() => {
+          const now = new Date().getTime();
+          const timeLeft = targetDate - now;
+
+          if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+              (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+              (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById(
+              "countdown-timer"
+            ).innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          } else {
+            document.getElementById("countdown-timer").innerText = "EXPIRED";
+          }
+        }, 1000);
+      }
+
+      startCountdown();
+
+        function redirectToAddToCart(amount, event) {
+          localStorage.setItem('pujaPackageName', event)
+          localStorage.setItem('pujaAmount', amount);
+          window.location.href = `AddToCartSanteshwar-Eng.html`;
+        }
+    </script>
+    <script src="../assets/js/puja.js"></script>
+  </body>
+</html>

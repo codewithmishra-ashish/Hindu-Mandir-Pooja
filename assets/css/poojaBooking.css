@@ -1,0 +1,486 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nirmala UI";
+}
+
+/* Body and Background */
+body {
+  background-color: #f7f3e9;
+  color: #333;
+  padding: 0px;
+  background-image: url("assets/img/image.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a52a2a;
+  padding: 10px 20px;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #a52a2a;
+  font-weight: bold;
+}
+
+.navbar-navlinks {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 75px;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #a52a2a;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.navbar-navlinks.active {
+  display: flex;
+}
+
+.navbar-navlinks a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  text-align: right;
+  padding: 5px 10px;
+}
+
+.navbar-navlinks a:hover {
+  color: black;
+}
+
+/* Filter Buttons - Always in a Row */
+.navbar-buttons {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  margin-bottom: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.filter-option {
+  background-color: white;
+  color: #a52a2a;
+  border: 2px solid #a52a2a;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-option:hover {
+  background-color: #a52a2a;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    background-color: #f8f8f8;
+  }
+
+  .navbar-title {
+    font-size: 18px;
+    padding-top: 6px;
+  }
+
+  .navbar-title img {
+    width: 75px;
+    height: 55px;
+    margin-left: -20px;
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+  }
+
+  .navbar-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .navbar-navlinks {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    flex-direction: column;
+    padding: 0; /* Remove internal padding */
+  }
+
+  .navbar-navlinks.active {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-navlinks a {
+    display: block;
+    width: 100%; /* Full width for each link */
+    padding: 15px 0; /* Space above and below each link */
+    color: #333;
+    font-weight: bold;
+    text-align: center; /* Center-align the text */
+    border-bottom: 1px solid #ddd; /* Bottom border for each link */
+    text-decoration: none;
+  }
+
+  .navbar-navlinks a:last-child {
+    border-bottom: none; /* Remove border on the last link */
+  }
+
+  .navbar-navlinks a:hover {
+    background-color: #f7f7f7; /* Light hover effect */
+  }
+
+  .filter-option {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Header Section */
+.puja-header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Card Container */
+.puja-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  justify-content: start;
+}
+
+/* Individual Puja Card */
+.puja-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  .puja-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  }
+
+/* Card Image */
+.puja-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.puja-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.puja-card:hover .puja-card-image img {
+  transform: scale(1.05);
+}
+/* Tag for Urgency */
+.tag-end-soon {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.puja-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.puja-card-content h2 {
+  font-size: 19px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.puja-card-content hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+
+.puja-card-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+
+.puja-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Style for the horizontal line */
+.puja-details hr {
+  border: none;
+  border-top: 2px solid black;
+  width: 100%; /* Ensures the line spans the entire width */
+  margin: 5px 0; /* Adjusts spacing above and below the line */
+}
+
+/* Hide hr lines when puja-card is hidden */
+.puja-card[style*="display: none"] .puja-card-content hr {
+  display: none;
+}
+
+.puja-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.puja-location i,
+.puja-date i {
+  font-size: 16px;
+  color: #555;
+}
+/* Button Styling */
+.puja-details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 548;
+}
+.puja-details {
+  display: flex;
+  flex-direction: column; /* Makes date and location display on different lines */
+  align-items: start; /* Aligns to the start of the container */
+  font-size: 14px;
+  color: #555;
+  gap: 5px; 
+}
+
+.puja-details span i {
+  font-size: 16px;
+    color: #555;
+    margin-right: 5px;
+    font-weight: bolder;
+}
+
+/* Action button styling */
+.join-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.join-button {
+  position: relative; /* Position relative to contain the pseudo-el overflow: hidden; /* Hide any overflow from the shine effect */
+  background: linear-gradient(135deg, #9d0404, #d58279);
+  color: white;
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  transition: transform 0.2s ease;
+  max-width: 214px;
+  width: 100%;
+  margin-bottom: 17px;
+    margin-top: -14px;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  height: 47px;
+}
+
+.join-button:hover {
+  transform: scale(1.05);
+}
+
+/* Shiny slider effect */
+.join-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 150%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(25deg);
+  transition: 0.5s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Shiny animation */
+.upgrade1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start position of shine effect */
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  animation: shine 2s linear infinite; /* Infinite loop for continuous effect */
+}
+/* Define the animation */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .navbar {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  .navbar img {
+    margin-left: -20px;
+    margin-top: 20px;
+    height: 70px;
+    width: auto;
+  }
+
+  .navbar-title {
+    font-size: 26px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .navbar-buttons {
+    flex-grow: 1;
+    gap: 18px;
+  }
+
+  .navbar-navlinks {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    position: static;
+    box-shadow: none;
+  }
+
+  .navbar-navlinks a {
+    font-size: 15px;
+    color: white;
+    padding: 5px 10px;
+  }
+
+  .navbar-navlinks a:hover {
+    color: black;
+  }
+}
+/* .abc{
+border: 1px solid black;
+width: 100%;
+border-radius: 10px;
+} */

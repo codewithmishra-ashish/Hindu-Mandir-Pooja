@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+  window.dataLayer = window.dataLayer || [];
+
+  // Example: Dynamic selection of value based on an item's price
+  var selectedItem = {
+    item_name: "Mangala Gauri Puja",
+    item_id: "MMG001",
+    price: 1551, // Adjust dynamically based on user selection
+    quantity: 1
+  };
+
+  var transaction_id = "TXN12345"; // Replace with dynamic transaction ID if available
+  var total_value = selectedItem.price * selectedItem.quantity; // Calculate total value
+
+  // Push event to Data Layer for GA4
+  window.dataLayer.push({
+    event: "purchase",
+    ecommerce: {
+      transaction_id: transaction_id,
+      value: total_value,
+      currency: "INR",
+      items: [
+        {
+          item_name: selectedItem.item_name,
+          item_id: selectedItem.item_id,
+          price: selectedItem.price,
+          quantity: selectedItem.quantity
+        }
+      ]
+    }
+  });
+
+  // Trigger Facebook Pixel Purchase event with Mandir name
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Purchase', {
+      value: total_value,
+      currency: "INR",
+      contents: [
+        {
+          id: selectedItem.item_id,
+          quantity: selectedItem.quantity,
+          item_price: selectedItem.price
+        }
+      ],
+      content_type: 'product',
+      mandir_name: "Mangala_Gori_Mandir" // Custom parameter for tracking
+    });
+  } else {
+    console.warn("Facebook Pixel (fbq) is not initialized.");
+  }
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+<!-- End Google Tag Manager -->
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '808518914545478');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "nsotq330nv");
+</script>
+  
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 40px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .success-icon {
+        color: orangered;
+        font-size: 80px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        background: linear-gradient(to right, lightorange, darkorange);
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .button {
+        background-color: orangered;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        display: inline-block;
+        margin: 10px;
+      }
+      .button:hover {
+        background-color: orangered;
+      }
+      .message {
+        font-style: italic;
+        color: #555;
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #f8f4ff;
+      }
+
+      /* Tablet Styles */
+      @media (max-width: 768px) {
+        .container {
+          padding: 30px;
+        }
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .success-icon {
+          font-size: 60px;
+        }
+        .button {
+          padding: 10px 25px;
+          font-size: 14px;
+        }
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 480px) {
+        .container {
+          padding: 20px;
+          width: 95%;
+        }
+        h1 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .success-icon {
+          font-size: 50px;
+          margin-bottom: 15px;
+        }
+        .button {
+          padding: 8px 20px;
+          font-size: 13px;
+          margin: 5px;
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .message {
+          padding: 10px;
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+    <div class="container">
+      <div class="success-icon">✓</div>
+      <h1>Thank You for Booking Your Online Puja with Us!</h1>
+      <p>Your booking with <span style="color: orangered;">Hindu Mandir Puja</span> is confirmed.</p>
+      <div class="message">
+        We are honored to assist you in this spiritual experience. Our experienced priests will perform all rituals with care and devotion to ensure a meaningful and divine connection.
+        <br><br>
+        You will receive an email with all the necessary details and instructions to join the online puja. Our team will guide you through the process and help with any preparations needed. On the day of the puja, simply join the live session to be part of the sacred rituals from the comfort of your home.
+        <br><br>
+        If you have any questions or need support, feel free to contact us at
+         <a href="tel:8009018678" class="phone" style="color: orangered;">8009018678</a>.
+         
+      </div>
+      <a href="/" class="button">Return to Homepage</a>
+      <button  id="printReceiptButton" class="button">Print Receipt</button>
+    </div>
+
+    <script>
+      
+      function getQueryParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      document.getElementById("printReceiptButton").onclick = function() {
+        const eventName = getQueryParameter("event");
+        const userName = getQueryParameter("name"); 
+        const userPhone = getQueryParameter("phone");
+        const userEmail = getQueryParameter("email");
+        const gotra = getQueryParameter("gotra");
+        const address = getQueryParameter("address"); 
+        const paymentId = getQueryParameter("paymentId");
+        const amount = getQueryParameter("amount");
+        const paymentDate = getQueryParameter("date");
+        const receiptUrl = `receipt.html?event=${encodeURIComponent(eventName)}&name=${encodeURIComponent(userName)}&phone=${encodeURIComponent(userPhone)}&email=${encodeURIComponent(userEmail)}&paymentId=${encodeURIComponent(paymentId)}&amount=${amount}&date=${paymentDate}&address=${encodeURIComponent(address)}&gotra=${encodeURIComponent(gotra)}`;
+        window.open(receiptUrl, "_blank");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,673 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  }
+  
+  body {
+    background-color: white;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    background-image: url('../img/Mandir-img/Untitled\ design\ \(3\).png');
+    
+  }
+  #about {
+    position: relative;
+    overflow: hidden; /* Ensures the background fits within the container */
+  }
+  
+  #about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img//landing-page//d3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3; /* Adjust opacity here */
+    z-index: -1; /* Places the background behind the content */
+  }
+  
+  
+  
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 83px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    color: #ffb03b;
+    font-weight: bold;
+  }
+  
+  .navbar-brand a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background 0.3s;
+  }
+  
+  .navbar-menu li a:hover {
+    background-color: #c24619;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Section */
+  .left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #f9f9f9; */
+    padding: 8px;
+    border-radius: 10px;
+  }
+  
+  .left-section img {
+    width: 100%;
+    max-width: 690px;
+    border-radius: 8px;
+    margin-bottom: -6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .left-section h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .left-section p {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  /* Right Section */
+  .right-section {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .donation-pack,
+  .donation-item,
+  .order-summary {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .price-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #a52a2a;
+  }
+  
+  .add-button {
+    position: relative;
+    background: linear-gradient(135deg, #9d0404, #d58279);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    overflow: hidden;
+    transition: background 0.3s ease;
+  }
+  
+  .add-button:hover {
+    background: linear-gradient(135deg, #c24619, #a52a2a);
+  }
+  
+  /* Shine effect */
+  .add-button {
+    position: relative;
+    background: linear-gradient(135deg, #9d0404, #d58279);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  
+  /* Continuous shine effect */
+  
+  .upgrade1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start position of shine effect */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    animation: shine 2s linear infinite; /* Infinite loop for continuous effect */
+  }
+  /* Define the animation */
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  
+  
+  .custom-amount-input {
+    width: 60%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .predefined-amounts {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pay-button {
+    background-color: #a52a2a;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .package-box {
+    width: 100%;
+    padding: 15px;
+    background-color: #edebeb;
+    border: 2px solid #373838;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .package-box p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .package-box h3 {
+    text-align: left;
+  }
+  
+  .event-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .event-info i {
+    margin-right: 8px; /* Adds spacing between icon and text */
+    font-size: 1.2em;  /* Adjust icon size as needed */
+    color: #333;       /* Icon color */
+  }
+  
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .increment, .decrement {
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .quantity {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  /* Hidden by default, but visible when toggled */
+  .plus-minus-container {
+    display: none; /* Hidden by default */
+    align-items: center;
+    gap: 5px; /* Space between buttons */
+  }
+  
+  
+  
+  
+  
+  #order-summary {
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .item-name {
+    font-weight: bold;
+  }
+  
+  .item-quantity,
+  .item-price {
+    color: #555;
+  }
+  
+  #order-total {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  
+  
+  
+  
+  
+  @media (max-width: 480px) {
+
+
+    
+
+    .donation-item {
+      padding: 10px;
+  }
+  .additional-content {
+      display: none; /* Hide by default on small screens */
+  }
+  .read-more-button {
+    cursor: pointer;
+    font-size: 15px;
+    color: #9d0404,;
+    padding-left: 5px;
+    margin-right: 6px;
+    margin-top: -12px;
+}
+
+.donation-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .right-section .price {
+      font-size: 18px;
+      padding-top: 3px;
+  }
+    .right-section p {
+      font-size: 15px;
+  }
+    .right-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+  }
+  
+    .left-section h2 {
+      font-size: 18px;
+  
+  }
+    
+    .navbar-brand {
+      font-size: 1.2em;
+    }
+  
+    .container {
+      gap: 10px;
+    }
+  
+    .left-section h2 {
+      font-size: 24px;
+    }
+  
+    /* Further decrease for extra small screens */
+    .right-section h3 {
+      font-size: 15px; /* Even smaller heading size */
+      margin-bottom: 7px;
+    }
+  
+    .right-section p {
+      font-size: 0.8em; /* Even smaller paragraph content size */
+    }
+  
+    .price-add {
+      font-size: 0.9em;
+      margin-top: 3px;
+    }
+  
+    .pay-button {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+    .left-section .event-info {
+      font-size: 0.8em; /* Further adjust for location and date on extra small screens */
+    }
+
+    .left-section img {
+        display: none;
+    }
+    
+  
+  }  
+  
+  /* Small Screens (Max width 768px) */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+      max-width: none;
+      margin-top: 8px;
+        padding-top: 0px;
+    }
+  
+    
+  
+    
+  
+    
+  
+    .price-add {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .price {
+      font-size:15px;
+    }
+  
+    .add-button {
+      margin-left: auto;
+      font-size: 0.9em;
+    }
+  
+    .predefined-amounts {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 230px;
+      gap: 1px;
+    }
+  
+    .left-section .event-info {
+      font-size: 0.9em;
+    }
+  
+    .pay-button {
+      padding: 10px;
+      font-size: 1em;
+    }
+  }
+  
+  /* Medium Screens (Between 769px and 1120px) */
+  @media (min-width: 769px) and (max-width: 1120px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .left-section h2 {
+      font-size: 1.9em;
+    }
+  
+    .right-section h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  
+    .right-section p {
+      font-size: 1.3em;
+    }
+  
+    .price-add {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .price {
+      font-size: 1.1em;
+    }
+  
+    .add-button {
+      margin-left: auto;
+      font-size: 1em;
+    }
+  
+    .predefined-amounts {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 230px;
+      gap: 1px;
+    }
+  
+    .left-section .event-info {
+      font-size: 1.1em;
+    }
+  
+    .pay-button {
+      padding: 10px;
+      font-size: 1em;
+    }
+  }
+  
+  /* Large Screens (Above 1120px) */
+  @media (min-width: 1121px) {
+    .container {
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .left-section, .right-section {
+      width: 65%; /* Increased width of left section */
+      max-width: none;
+    }
+  
+    .left-section h2 {
+      font-size: 1.9em; /* Increased font size */
+    }
+  
+    .left-section .event-image {
+      width: 100%; /* Make the image width take up the full section */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .right-section h3 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+    }
+  
+    .right-section p {
+      font-size: 1.3em;
+    }
+  
+    .predefined-amounts {
+      gap: 10px;
+    }
+  
+    .left-section .event-info {
+      font-size: 1.3em; /* Slight increase for better readability */
+    }
+  
+    .pay-button {
+      padding: 15px;
+      font-size: 1.1em;
+      width: 600px;
+    }
+  }
+  
+  
+  
+  /* Container for heading and right-aligned button */
+  .donation-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Right-aligned add button */
+  .add-button-right {
+    background: linear-gradient(135deg, #9d0404, #d58279);
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: bold;
+      margin-top: -9px;
+  }
+  
+  /* "Read More" button styles */
+  /* Inline "Read More" link styling */
+  /* Flex container for the price and Read More button */
+  .price-readmore-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* Optional, to add space between the price and button */
+  }
+  
+  .price {
+    font-size: 16px; /* Adjust as needed */
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  /* Additional content hidden by default */
+  .additional-content {
+    display: none;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
+  /* Price styling within additional content */
+  .additional-content .price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #a52a2a;
+    margin-top: 10px;
+  }
+  
+  
+  /* Quantity controls styling */
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .decrement, .increment {
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .quantity {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  

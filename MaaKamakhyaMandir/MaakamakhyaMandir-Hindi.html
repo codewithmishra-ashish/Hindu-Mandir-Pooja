@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maa Kamakhya Visesh Tantra Siddhi Puja</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '808518914545478');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  
+  <!-- End Meta Pixel Code -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "nsotq330nv");
+</script>
+
+<script>
+  
+  async function sendEventToWebhook(eventName, customData = {}, userData = {}) {
+  const WEBHOOK_URL = "https://hook.eu2.make.com/w4q6m5jrjoy7dwh5g6qcaec8dw2jss8u"; // Your Webhook URL
+
+  const eventData = {
+    event_name: eventName,
+    event_time: Math.floor(Date.now() / 1000), // Current timestamp in seconds
+    event_source_url: window.location.href, // Current page URL
+    user_data: {
+      em: userData.email ? sha256(userData.email) : null, // SHA256 hashed email
+      ph: userData.phone ? sha256(userData.phone) : null, // SHA256 hashed phone
+      client_ip_address: userData.ip || null, // Optionally capture IP
+    },
+    custom_data: customData,
+  };
+
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventData),
+    });
+
+    if (response.ok) {
+      console.log(`${eventName} event sent successfully`);
+    } else {
+      console.error(`Failed to send ${eventName} event`, response.statusText);
+    }
+  } catch (error) {
+    console.error(`Error sending ${eventName} event:`, error);
+  }
+}
+
+// SHA256 hash function
+function sha256(data) {
+  const encoder = new TextEncoder();
+  const dataBuffer = encoder.encode(data);
+
+  return crypto.subtle.digest("SHA-256", dataBuffer).then((hashBuffer) => {
+    return Array.from(new Uint8Array(hashBuffer))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+  });
+}
+</script>
+
+<script>
+  function scrolltoPuja(eventName) {
+      dataLayer.push({
+          'event': 'event',
+          'eventName': eventName
+      });
+      console.log('Event tracked:', eventName);
+      window.addEventListener("load", () => {
+  sendEventToWebhook("PageView", {}, { email: "user@example.com" });
+});
+
+  }
+  function AddToCart(eventName) {
+    const pujaCard = document.getElementById('package1');
+    const pujaName = pujaCard.getAttribute('data-pujatype');
+    const pujaPrice = pujaCard.getAttribute('data-price');
+    const pujaLocation = pujaCard.getAttribute('data-location');
+    const pujaId = pujaCard.getAttribute('data-id');
+      dataLayer.push({
+          'event': 'add_to_cart',
+          'add_to_cart': {
+            'id': pujaId,
+            'item_name': eventName,
+            'pujatype': pujaName,
+            'price': pujaPrice,
+            'location': pujaLocation,
+            'currency': 'INR'
+          }
+      });
+      console.log('Tracked puja selection:', {
+            item_name: eventName,
+            pujatype: pujaName,
+            price: pujaPrice,
+            location: pujaLocation,
+            currency: 'INR'
+        });  }
+
+        sendEventToWebhook(
+    "AddToCart",
+    {
+      value: 1500, // Product price in INR
+      currency: "INR", // Currency set to INR
+      content_ids: [pujaId], // Product ID
+      content_type: "product",
+    },
+    { email: "user@example.com" }
+  );
+
+  document.querySelector("#addToCartButton").addEventListener("click", (e) => {
+  const button = e.target;
+  const addToCartData = {
+    value: parseFloat(button.getAttribute("data-product-price")), // Single product price
+    currency: "INR",
+    content_ids: [pujaId],
+    content_category: button.getAttribute("data-product-category"),
+    content_name: button.getAttribute("data-product-name"),
+    contents: [
+      {
+        id: button.getAttribute("data-product-id"),
+        quantity: 1,
+        item_price: parseFloat(button.getAttribute("data-product-price")),
+      },
+    ],
+    user_email: "user@example.com", // User's email
+  };
+
+  trackAddToCart(addToCartData);
+});
+
+
+
+</script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+      <nav class="fixed w-full h-18 md:h-20 z-50 bg-white">
+        <div class="container mx-auto px-4 md:px-6 py-2 md:py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 sm:gap-3 md:gap-4">
+              <img
+                src="../assets/img/Hindu Mandir Puja logo (2).png"
+                alt="Om Logo"
+                class="h-8 sm:h-10 md:h-12 lg:h-16 scale-125 sm:scale-150"
+              />
+              <div>
+                <h1
+                  class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-orange-600 leading-tight"
+                >
+                  Hindu Mandir Puja
+                </h1>
+                <p
+                  class="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600"
+                >
+                  Your faith & our service
+                </p>
+              </div>
+            </div>
+
+            <div class="hidden md:hidden lg:flex items-center space-x-8">
+              <a
+                href="../index.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Home</a
+              >
+              <a
+                href="../poojaBooking.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Pujas</a
+              >
+              <a
+                href="../chadhawa.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Chadhawas</a
+              >
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >Blogs</a
+              >
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >Library</a
+              >
+              <a href="./MaakamakhyaMandir-Eng.html">
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition"
+                >
+                  In English
+                </button>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-4 lg:hidden">
+                <a href="./MaakamakhyaMandir-Eng.html">
+                <button
+                  class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-2 text-[8px] rounded-full hover:shadow-lg transition"
+                >
+                  In English
+                </button>
+              </a>
+              <button id="mobileMenuBtn" class="text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div
+            id="mobileMenu"
+            class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+          >
+            <div class="flex flex-col space-y-4 p-4">
+              <a
+                href="../index.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Home</a
+              >
+              <a
+                href="../poojaBooking.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Pujas</a
+              >
+              <a
+                href="../chadhawa.html"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Chadhawas</a
+              >
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >Blogs</a
+              >
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >Library</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener("click", () => {
+          isMenuOpen = !isMenuOpen;
+
+          // Toggle menu visibility
+          mobileMenu.classList.toggle("hidden");
+
+          // Toggle icon between bars and times
+          const menuIcon = mobileMenuBtn.querySelector("i");
+          menuIcon.classList.remove(isMenuOpen ? "fa-bars" : "fa-times");
+          menuIcon.classList.add(isMenuOpen ? "fa-times" : "fa-bars");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            !mobileMenuBtn.contains(e.target) &&
+            !mobileMenu.contains(e.target) &&
+            !isMenuOpen
+          ) {
+            mobileMenu.classList.add("hidden");
+            const menuIcon = mobileMenuBtn.querySelector("i");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+            isMenuOpen = false;
+          }
+        });
+      </script>
+      <!-- Bottom Navigation Bar with Scroll to Book Puja Button -->
+      <div
+        class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-orange-100 z-50"
+      >
+          <!-- Scroll to Book Puja Button -->
+      <div
+      id="scrollToBookBtn"
+      class="fixed sm:hidden block bottom-20 right-4 z-50 opacity-0 transition-opacity duration-300"
+    >
+      <button
+        onclick="document.getElementById('Puja-section').scrollIntoView({behavior: 'smooth'})"
+        class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+      >
+        <i class="fas fa-om"></i>
+        <span>पूजा बुक</span>
+      </button>
+    </div>
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollBtn = document.getElementById("scrollToBookBtn");
+        const scrollPercentage =
+          (window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight)) *
+          100;
+
+        if (scrollPercentage > 50) {
+          scrollBtn.style.opacity = "1";
+        } else {
+          scrollBtn.style.opacity = "0";
+        }
+      });
+    </script>
+
+        <!-- Bottom Navigation -->
+        <div class="container mx-auto px-4 py-1 md:hidden">
+          <div class="flex items-center justify-between">
+            <a
+              href="../index.html"
+              class="flex flex-col items-center transition"
+            >
+              <i class="fas fa-home text-md"></i>
+              <span class="text-[10px] mt-0.5">घर</span>
+            </a>
+            <a
+              href="#"
+              class="flex flex-col items-center text-orange-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-om text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >पूजा</span
+              >
+            </a>
+            <a
+              href="../chadhawa.html"
+              class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-gift text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >चढ़ावा</span
+              >
+            </a>
+            <!-- <a href="/Temples" class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition">
+                <i class="fas fa-gopuram text-md"></i>
+                <span class="text-[10px] mt-0.5">Temples</span>
+            </a> -->
+            <a
+              href="#"
+              class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-book text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >पुस्तकालय</span
+              >
+            </a>
+            <a
+              href="#"
+              class="flex flex-col items-center text-gray-600 hover:text-orange-500 transition"
+            >
+              <i class="fas fa-blog text-md"></i>
+              <span class="text-[10px] active:text-orange-500 mt-0.5"
+                >ब्लॉग</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="mt-20 container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Image Section -->
+        <div class="rounded-lg h-[250px] md:h-[400px] overflow-hidden shadow-xl">
+          <img
+            src="../assets/img/landing-page/landing page image kamakhya-min.png"
+            alt="माँ कामाख्या मंदिर इमेज"
+            class="w-full h-full"
+          />
+        </div>
+
+        <!-- Details Section -->
+        <div class="space-y-6">
+          <h1
+            id="mandir-heading"
+            class="text-3xl md:text-4xl font-bold text-gray-800"
+          >
+            माँ कामाख्या विशेष तंत्र सिद्धि पूजा
+          </h1>
+          
+
+          <div class="flex items-center space-x-2 text-gray-700">
+            <img
+              src="https://img.icons8.com/material-outlined/24/000000/place-marker.png"
+              alt="स्थान निर्देशक प्रतीक"
+              class="w-5 h-5"
+            />
+            <strong>स्थान:</strong>
+            <span class="text-orange-600 text-[20px]"
+              >माँ कामाख्या मंदिर, वाराणसी</span
+            >
+          </div>
+
+          <div class="countdown bg-orange-100 p-4 rounded-lg">
+            <div class="flex items-center space-x-2">
+              <img
+                src="https://img.icons8.com/material-outlined/24/000000/calendar.png"
+                alt="कैलेंडर प्रतीक"
+              />
+              <span id="countdown-timer" class="text-orange-600 font-semibold"
+                >गणना की जा रही है...</span
+              >
+            </div>
+          </div>
+
+          
+          <button
+              onclick="scrollToSection()"
+              class="bg-orange-500 mx-auto  text-white px-24 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 "
+            >
+            पूजा पैकेज चुनें
+            </button>
+            <script>
+              function scrollToSection() {
+                if (window.innerWidth <= 768) {
+                  document.getElementById('Puja-section').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  document.getElementById('participate-section').scrollIntoView({ behavior: 'smooth' });
+                }
+              }
+            </script>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 mt-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        मंदिर का महत्व
+      </h2>
+      <p id="mandir-description" class="text-gray-600">
+        माँ कामाख्या मंदिर, वाराणसी, जो शक्ति, संतान सुख, और आध्यात्मिक ज्ञान की देवी माँ कामाख्या को समर्पित है, भारत के प्रमुख तंत्र साधना केंद्रों में से एक है। यहाँ की तंत्र साधनाएँ भक्तों को आध्यात्मिक और भौतिक समृद्धि प्राप्त करने में मदद करती हैं।
+      </p>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="container mx-auto px-4 py-6">
+        <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+          पूजा के लाभ
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Left Column -->
+          <div class="space-y-6">
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-road text-2xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">
+                  बाधाओं का निवारण
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed">
+                नकारात्मक उर्जा को दूर करता है और व्यक्तिगत या पेशेवर विकास में आने वाली रुकावटों को हल करता है।
+              </p>
+            </div>
+  
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-shield-alt text-2xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">
+                  सुरक्षा और उपचार
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed">
+                नकारात्मक प्रभावों से रक्षा करता है और शारीरिक, मानसिक और आध्यात्मिक उपचार को बढ़ावा देता है।
+              </p>
+            </div>
+  
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-praying-hands text-2xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">
+                  तंत्र और आध्यात्मिक साधना में सफलता
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed">
+                तंत्र साधकों को अपनी साधना को गहरे स्तर पर उतारने में मदद करता है और आध्यात्मिक अनुशासन को जागृत करता है।
+              </p>
+            </div>
+          </div>
+  
+          <!-- Right Column -->
+          <div class="space-y-6">
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-hand-holding-heart text-2xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">
+                  इच्छाओं की पूर्ति
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed">
+                माँ कामाख्या के आशीर्वाद से आपके लंबे समय से संजोए हुए इच्छाओं की पूर्ति होती है और समृद्धि आती है।
+              </p>
+            </div>
+  
+            <div
+              class="bg-gradient-to-r from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-balance-scale text-2xl text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">
+                  आंतरिक शांति और संतुलन
+                </h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed">
+                मानसिक स्पष्टता, भावनात्मक संतुलन और शांति को बढ़ावा देता है।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <!-- Puja Packages Section -->
+      <div id="participate-section" class="bg-white py-12 hidden md:block">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Package 1 -->
+            <div data-id="1" data-pujatype="Naam Gotra Sankalp (For 1 Devotee)" data-price="851" data-location="Maa Kamakhya Mandir, Kashi" id="package1" class="bg-white rounded-xl shadow-lg p-6">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">
+                  नाम गोत्र संकल्प (1 भक्त के लिए)
+                </h3>
+                <p class="text-xl font-semibold text-orange-600">₹851</p>
+              </div>
+              <hr class="border-t-2 border-orange-500 my-4" />
+              <ul class="space-y-3 mb-6 text-gray-600">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >पूजा संकल्प के दौरान आपके नाम और गोत्र का उच्चारण किया जाएगा।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >लाइव पूजा में वीडियो कॉल के माध्यम से भाग लें।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >पूजा की वीडियो रिकॉर्डिंग और संकल्प आपके व्हाट्सएप पर भेजी जाएगी।</span
+                  >
+                </li>
+              </ul>
+              <button
+                onclick="redirectToAddToCart('851','नाम गोत्र संकल्प (1 भक्त के लिए)');"
+                class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-[27vh] text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-pray"></i>
+                अब भागीदारी करें
+              </button>
+              <h2
+                class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+              >
+                400+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+              </h2>
+            </div>
+  
+            <!-- Package 2 -->
+            <div data-id="2" data-pujatype="Naam Gotra Sankalp (For 2 Devotees)" data-price="1251" data-location="Maa Kamakhya Mandir, Kashi" id="package2" class="bg-white rounded-xl shadow-lg p-6">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">
+                  नाम गोत्र संकल्प (2 भक्तों के लिए)
+                </h3>
+                <p class="text-xl font-semibold text-orange-600">₹1251</p>
+              </div>
+              <hr class="border-t-2 border-orange-500 my-4" />
+              <ul class="space-y-3 mb-6 text-gray-600">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >दोनों भक्तों के नाम और गोत्र का उच्चारण पूजा संकल्प के दौरान किया जाएगा।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >लाइव पूजा में वीडियो कॉल के माध्यम से भाग लें।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >पूजा की रिकॉर्डिंग और संकल्प व्हाट्सएप पर भेजी जाएगी।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >फलों, मिठाइयों, सूखे मेवों और पुष्पों का समर्पण, साथ में प्रसाद आपके पते पर भेजा जाएगा।</span
+                  >
+                </li>
+              </ul>
+              <button
+                onclick="redirectToAddToCart('1251','नाम गोत्र संकल्प (2 भक्तों के लिए)');"
+                class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-[20vh] text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-pray"></i>
+                अब भागीदारी करें
+              </button>
+              <h2
+                class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+              >
+                350+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+              </h2>
+            </div>
+  
+            <!-- Package 3 -->
+            <div data-id="3" data-pujatype="Naam Gotra Sankalp (For Family)" data-price="1551" data-location="Maa Kamakhya Mandir, Kashi" id="package3" class="bg-white rounded-xl shadow-lg p-6">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">नाम गोत्र संकल्प (परिवार के लिए)</h3>
+                <p class="text-xl font-semibold text-orange-600">₹1551</p>
+              </div>
+              <hr class="border-t-2 border-orange-500 my-4" />
+              <ul class="space-y-3 mb-6 text-gray-600">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >परिवार के नाम और गोत्र का उच्चारण पूजा संकल्प के दौरान किया जाएगा।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >परिवार के सदस्य लाइव पूजा में वीडियो कॉल के माध्यम से भाग ले सकते हैं।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >परिवार के संकल्प के साथ पूजा की वीडियो रिकॉर्डिंग व्हाट्सएप पर भेजी जाएगी।</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                  <span class="text-sm md:text-base lg:text-lg"
+                    >परिवार के लिए प्रसाद का भव्य समर्पण घर भेजा जाएगा।</span
+                  >
+                </li>
+              </ul>
+              <button
+                onclick="redirectToAddToCart('1551','नाम गोत्र संकल्प (परिवार के लिए)');"
+                class="w-full bg-orange-500 mt-4 md:mt-8 lg:mt-12 text-white py-3 rounded-lg hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-pray"></i>
+                अब भागीदारी करें
+              </button>
+              <h2
+                class="text-center text-gray-600 text-sm md:text-base lg:text-lg"
+              >
+                250+ भक्तों ने पहले ही इस पूजा को बुक कर लिया है
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        @media (max-width: 768px) {
+          #participate-section .grid {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+          }
+          #participate-section .grid > div {
+            flex: 0 0 80%;
+            scroll-snap-align: start;
+            margin-right: 1rem;
+          }
+        }
+      </style>
+  
+      <!-- Mobile Puja Packages Section -->
+      <div id="Puja-section" class="md:hidden block pt-12">
+        <div class="container mx-auto px-4">
+          <!-- पैकेज टैब्स -->
+          <div class="grid grid-cols-3 gap-2 mb-4">
+            <!-- टैब 1 -->
+            <div data-id="1" data-pujatype="Naam Gotra Sankalp (For 1 Devotee)" data-price="851" data-location="Maa Kamakhya Mandir, Kashi" class="relative puja-tab active" data-puja="quick-marriage">
+              <h4 class="text-center text-[10px] font-bold text-gray-600">
+               नाम गोत्र संकल्प (1 भक्त के लिए)
+              </h4>
+              <div
+                class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+              >
+                <img
+                  src="../assets/img/icons/gotrasankalp1.webp"
+                  alt="Rudrabhishek Puja"
+                  class="w-[95%] h-[95%] rounded-full mt-1 mb-5 object-contain"
+                />
+                <span
+                  class="absolute bottom-0 text-[14px] font-bold text-[#F68D1C]"
+                  >₹851</span
+                >
+              </div>
+            </div>
+  
+            <!-- टैब 2 -->
+            <div data-id="2" data-pujatype="Naam Gotra Sankalp (For 2 Devotees)" data-price="1251" data-location="Maa Kamakhya Mandir, Kashi" class="relative puja-tab" data-puja="mangal-dosha">
+              <h4 class="text-center text-[10px] font-bold text-gray-600">
+                नाम गोत्र संकल्प (2 भक्तों के लिए)
+              </h4>
+              <div
+                class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+              >
+                <img
+                  src="../assets/img/icons/naamsanlap2.webp"
+                  alt="Santan Prapti Maharudrabhishek"
+                  class="w-[95%] h-[95%] rounded-full mt-1 mb-5 object-contain"
+                />
+                <span
+                  class="absolute bottom-0 text-[14px] font-bold text-[#3564E2]"
+                  >₹1251</span
+                >
+              </div>
+            </div>
+  
+            <!-- टैब 3 -->
+            <div data-id="3" data-pujatype="Naam Gotra Sankalp (For Family)" data-price="1551" data-location="Maa Kamakhya Mandir, Kashi" class="relative puja-tab" data-puja="kumkum">
+              <h4 class="text-center text-[10px] font-bold text-gray-600">
+                नाम गोत्र संकल्प (परिवार के लिए)
+              </h4>
+              <div
+                class="bg-gradient-to-r from-orange-50 to-white rounded-lg p-2 h-[85px] flex items-center justify-center"
+              >
+                <img
+                  src="../assets/img/icons/gotrasankalp3.webp"
+                  alt="Santan Sukh and Health Growth Puja"
+                  class="w-[95%] h-[95%] rounded-full mt-1 mb-5 object-contain"
+                />
+                <span
+                  class="absolute bottom-0 text-[14px] font-bold text-[#FF3201]"
+                  >₹1551</span
+                >
+              </div>
+            </div>
+          </div>
+  
+          <!-- पैकेज विवरण -->
+          <div class="border border-[#430ABD] rounded-lg pb-3">
+            <!-- रुद्राभिषेक पूजा विवरण -->
+            <div data-id="1" data-pujatype="Naam Gotra Sankalp (For 1 Devotee)" data-price="851" data-location="Maa Kamakhya Mandir, Kashi"   id="quick-marriage-details" class="puja-details">
+              <div
+                class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+              >
+                <div class="text-center px-3 mt-2">
+                  <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                    नाम गोत्र संकल्प (1 भक्त के लिए)
+                  </h3>
+                  <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                    >₹851</span
+                  >
+                </div>
+              </div>
+  
+              <hr class="mx-3" />
+  
+              <div class="px-4">
+                <div class="space-y-4 mt-4">
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >पूजा संकल्प के दौरान आपके नाम और गोत्र का उच्चारण किया जाएगा।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >लाइव पूजा में वीडियो कॉल के माध्यम से भाग लें।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >पूजा की वीडियो रिकॉर्डिंग और संकल्प आपके व्हाट्सएप पर भेजी जाएगी।</span
+                    >
+                  </div>
+                </div>
+              </div>
+  
+              <hr class="mx-4 mt-3" />
+  
+              <div class="px-4 pt-3">
+                <button
+                  onclick="redirectToAddToCart('851','नाम गोत्र संकल्प (1 भक्त के लिए)');"
+                  class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+                >
+                  <span class="text-white text-sm font-bold pr-2"
+                    >भागीदारी करें</span
+                  >
+                </button>
+              </div>
+            </div>
+  
+            <!-- मंगल दोष निवारण पूजा विवरण -->
+            <div data-id="2" data-pujatype="Naam Gotra Sankalp (For 2 Devotees)" data-price="1251" data-location="Maa Kamakhya Mandir, Kashi" id="mangal-dosha-details" class="puja-details hidden">
+              <div
+                class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+              >
+                <div class="text-center px-3 mt-2">
+                  <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                    नाम गोत्र संकल्प (2 भक्तों के लिए) - ₹1251
+                  </h3>
+                  <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                    >₹1251</span
+                  >
+                </div>
+              </div>
+  
+              <hr class="mx-3" />
+  
+              <div class="px-4">
+                <div class="space-y-4 mt-4">
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >दोनों भक्तों के नाम और गोत्र का उच्चारण पूजा संकल्प के दौरान किया जाएगा।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >लाइव पूजा में वीडियो कॉल के माध्यम से भाग लें।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >पूजा की रिकॉर्डिंग और संकल्प व्हाट्सएप पर भेजी जाएगी।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >फलों, मिठाइयों, सूखे मेवों और पुष्पों का समर्पण, साथ में प्रसाद आपके पते पर भेजा जाएगा।</span
+                    >
+                  </div>
+                </div>
+              </div>
+  
+              <hr class="mx-4 mt-3" />
+  
+              <div class="px-4 pt-3">
+                  <button
+                    onclick="redirectToAddToCart('1251','नाम गोत्र संकल्प (2 भक्तों के लिए)');"
+                  class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+                >
+                  <span class="text-white text-sm font-bold pr-2"
+                    >भागीदारी करें</span
+                  >
+                </button>
+              </div>
+            </div>
+  
+            <!-- कुंकुम अर्चना विवरण -->
+            <div data-id="3" data-pujatype="Naam Gotra Sankalp (For Family)" data-price="1551" data-location="Maa Kamakhya Mandir, Kashi" id="kumkum-details" class="puja-details hidden">
+              <div
+                class="rounded-t-lg bg-gradient-to-b from-[#F7F3FE] to-white py-3"
+              >
+                <div class="text-center px-3 mt-2">
+                  <h3 class="text-[18px] font-semibold text-[#430ABD] mb-[2px]">
+                    नाम गोत्र संकल्प (परिवार के लिए)
+                  </h3>
+                  <span class="text-[16px] font-semibold text-[#1A1A1A]"
+                    >₹1551</span
+                  >
+                </div>
+              </div>
+  
+              <hr class="mx-3" />
+  
+              <div class="px-4">
+                <div class="space-y-4 mt-4">
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >परिवार के नाम और गोत्र का उच्चारण पूजा संकल्प के दौरान किया जाएगा।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >परिवार के सदस्य लाइव पूजा में वीडियो कॉल के माध्यम से भाग ले सकते हैं।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >परिवार के संकल्प के साथ पूजा की वीडियो रिकॉर्डिंग व्हाट्सएप पर भेजी जाएगी।</span
+                    >
+                  </div>
+  
+                  <div class="flex items-start gap-2">
+                    <img
+                      src="https://srm-cdn.a4b.io/yoda/1694187192682.webp"
+                      width="24"
+                      height="24"
+                      alt="check"
+                    />
+                    <span
+                      >परिवार के लिए प्रसाद का भव्य समर्पण घर भेजा जाएगा।</span
+                    >
+                  </div>
+                </div>
+              </div>
+  
+              <hr class="mx-4 mt-3" />
+  
+              <div class="px-4 pt-3">
+                <button
+                  onclick="redirectToAddToCart('1551','नाम गोत्र संकल्प (परिवार के लिए)');"
+                  class="w-full h-11 bg-orange-500 rounded-lg flex items-center justify-center"
+                >
+                  <span class="text-white text-sm font-bold pr-2"
+                    >भागीदारी करें</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get all puja tabs and details
+          const pujaTabs = document.querySelectorAll(".puja-tab");
+          const pujaDetails = document.querySelectorAll(".puja-details");
+  
+          // Add click event listener to each tab
+          pujaTabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+              // Remove active class from all tabs
+              pujaTabs.forEach((t) => t.classList.remove("active"));
+  
+              // Add active class to clicked tab
+              tab.classList.add("active");
+  
+              // Get the puja type from data attribute
+              const pujaType = tab.dataset.puja;
+  
+              // Hide all puja details
+              pujaDetails.forEach((detail) => {
+                detail.classList.add("hidden");
+              });
+  
+              // Show the selected puja details
+              const selectedDetails = document.getElementById(
+                `${pujaType}-details`
+              );
+              if (selectedDetails) {
+                selectedDetails.classList.remove("hidden");
+              }
+  
+              // Add visual feedback for active tab
+              pujaTabs.forEach((t) => {
+                t.querySelector("div").style.border = "none";
+              });
+              tab.querySelector("div").style.border = "2px solid #430ABD";
+            });
+          });
+  
+          // Set first tab as active by default
+          pujaTabs[0].click();
+        });
+      </script>
+
+    <!-- Temple Information -->
+    <div id="about" class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">
+              माँ कामाख्या मंदिर, वाराणसी के बारे में
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              माँ कामाख्या मंदिर, वाराणसी में स्थित है और यह देवी माँ कामाख्या को समर्पित है, जो शक्ति, समृद्धि, और आध्यात्मिक जागरूकता की प्रतीक हैं। यहाँ आने से भक्तों को दुःखों से मुक्ति मिलती है और देवी उनकी रक्षा करती हैं। इस मंदिर में स्थित धनंजय कूप, वाराणसी के सात पवित्र कुंओं में से एक है। कहा जाता है कि इस कूप का जल अमृत के समान है, जो भक्तों को शारीरिक और मानसिक ताकत प्रदान करता है और माँ कामाख्या के आशीर्वाद से जीवन में समृद्धि, सुख और अच्छे स्वास्थ्य का संकेत है।
+            </p>
+            <div class="mt-6 flex items-center gap-4">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-orange-500"></i>
+                <span class="text-gray-600">वाराणसी</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-clock text-orange-500"></i>
+                <span class="text-gray-600">24/7 खुला</span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="../assets//img/about/about temple image ma kamakhya mandir-min.png"
+                alt="माँ कामाख्या मंदिर"
+                class="w-full h-[400px] hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Puja Process Section -->
+    <section
+      class="py-5 md:py-5 bg-white opacity-0 transition-opacity duration-700"
+      id="pujaProcessSection"
+    >
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-4 md:gap-6 mb-12">
+          <img
+            src="https://cdn-icons-png.freepik.com/512/17729/17729027.png"
+            alt="स्वस्तिक"
+            class="h-8 md:h-12"
+          />
+          <h2
+            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600"
+          >
+            पूजा प्रक्रिया
+          </h2>
+          <img
+            src="https://cdn-icons-png.freepik.com/512/17729/17729027.png"
+            alt="स्वस्तिक"
+            class="h-8 md:h-12"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+          <!-- प्रगति रेखा (केवल डेस्कटॉप पर दिखाई देगी) -->
+          <div
+            class="hidden md:block absolute top-8 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gray-200"
+          >
+            <div
+              id="progressLine"
+              class="h-full bg-orange-500 w-0 transition-all duration-1000"
+            ></div>
+          </div>
+
+          <!-- मोबाइल प्रगति रेखा (पंक्तियों के बीच) -->
+          <div
+            class="block md:hidden absolute top-1/2 left-1/4 right-1/4 h-1 bg-gray-200"
+          >
+            <div
+              id="mobileProgressLine"
+              class="h-full bg-orange-500 w-0 transition-all duration-1000"
+            ></div>
+          </div>
+
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon1.png"
+                alt="पैकेज चुनें"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              पैकेज में से<br />चयन करें
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon2.png"
+                alt="विवरण दर्ज करें"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              नाम और<br />गोत्र दर्ज करें
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon3.png"
+                alt="संकल्प देखें"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              हिंदूमंदिर पूजा प्लेटफॉर्म पर<br />अपना संकल्प देखें
+            </p>
+          </div>
+          <div class="text-center relative">
+            <div
+              class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block"
+            >
+              <img
+                src="../assets/img/landing-page/icon4.png"
+                alt="प्रसाद प्राप्त करें"
+                class="h-16 mx-auto mb-4 process-icon transition-all duration-500"
+              />
+            </div>
+            <p class="text-gray-700 text-sm md:text-base">
+              पूजा वीडियो और प्रसाद<br />डिलीवरी
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="bg-gray-50 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          अक्सर पूछे जाने वाले प्रश्न
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              पूजा सेवा कैसे बुक करें?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              हमारी वेबसाइट पर जाकर आसानी से पूजा बुक करें। बस अपना नाम और गोत्र
+              भरें, भुगतान करें, और पूजा सेवा बुक हो जाएगी।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              अगर मुझे अपना गोत्र नहीं पता है तो?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              यदि आपको अपना गोत्र नहीं पता है, तो कृपया पूजा बुक करते समय अपना
+              गोत्र "कश्यप" दर्ज करें।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              भुगतान कैसे करें?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              भुगतान करना बहुत आसान है। आप हमारी वेबसाइट पर उपलब्ध सुरक्षित
+              भुगतान विकल्पों के माध्यम से आसानी से ऑनलाइन भुगतान कर सकते हैं।
+              अपनी सुविधा के अनुसार डेबिट कार्ड, क्रेडिट कार्ड या UPI जैसे
+              विकल्पों का उपयोग करें और तुरंत पूजा सेवा बुक करें।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              मुझे कैसे पता चलेगा कि पूजा मेरे नाम से की गई है?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              हाँ, आप वीडियो कॉल के माध्यम से पूजा देख सकेंगे, और पूजा पूरी होने
+              के बाद, पूजा का वीडियो आपको व्हाट्सएप पर भेजा जाएगा, साथ ही प्रसाद
+              आपके दिए गए पते पर भेज दिया जाएगा।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              क्या मुझे पूजा का वीडियो मिलेगा?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              हाँ, पूजा पूरी होने के बाद, पूजा का वीडियो आपको व्हाट्सएप पर साझा
+              किया जाएगा।
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <button
+              class="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+            >
+              पूजा के लिए मुझे क्या तैयारी करनी होगी?
+            </button>
+            <div class="px-6 py-4 bg-gray-50 text-gray-600">
+              पूजा के लिए किसी विशेष तैयारी की आवश्यकता नहीं है; पुजारी आपको सभी
+              अनुष्ठानों के माध्यम से मार्गदर्शन करेंगे।
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devotee Corner -->
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-4 mb-8 md:mb-12">
+          <img
+            src="../assets/img/lotus.png"
+            alt="भक्त आइकन"
+            class="h-6 sm:h-8 md:h-12"
+          />
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600"
+          >
+            प्रसन्न भक्त कॉर्नर
+          </h2>
+          <img
+            src="../assets/img/lotus.png"
+            alt="दायाँ आइकन"
+            class="h-6 sm:h-8 md:h-12"
+          />
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div
+            class="testimonial-slider flex flex-nowrap p-2 sm:p-4 animate-scroll"
+          >
+            <!-- Animated Testimonial Card -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  महामृत्युंजय यंत्र
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  मेरे पिता का स्वास्थ्य बिगड़ रहा था जब तक हमने हिंदू मंदिर
+                  पूजा महामृत्युंजय यंत्र उनके बिस्तर के पास नहीं रखा, जिससे
+                  उनकी स्थिति स्थिर हो गई।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-1.jpg"
+                  alt="निशा कोठारी"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    निशा कोठारी
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">
+                    व्हाट्सएप के माध्यम से
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Testimonial Card -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  प्रसाद वितरण
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  प्रसाद वितरण सेवा अद्भुत है। मुझे काशी विश्वनाथ मंदिर से
+                  पवित्र प्रसाद 3 दिनों के भीतर प्राप्त हुआ। सेवा से बहुत
+                  संतुष्ट हूं।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-2.jpg"
+                  alt="राजेश कुमार"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    राजेश कुमार
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">
+                    गूगल के माध्यम से
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Testimonial Card -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  ऑनलाइन पूजा
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  भारत से दूर रहते हुए, ऑनलाइन पूजा सेवा ने मुझे हमारी परंपराओं
+                  से जुड़े रहने में मदद की। लाइव स्ट्रीमिंग बिल्कुल स्पष्ट थी।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-3.jpg"
+                  alt="प्रिया शर्मा"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    प्रिया शर्मा
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">
+                    फेसबुक के माध्यम से
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Testimonial Card -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-4 sm:p-6 min-w-[280px] sm:min-w-[300px] md:min-w-[350px] mx-2 sm:mx-4"
+            >
+              <div class="mb-4 sm:mb-6">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3"
+                >
+                  महामृत्युंजय यंत्र
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600">
+                  मेरे पिता का स्वास्थ्य बिगड़ रहा था जब तक हमने हिंदू मंदिर
+                  पूजा महामृत्युंजय यंत्र उनके बिस्तर के पास नहीं रखा, जिससे
+                  उनकी स्थिति स्थिर हो गई।
+                </p>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="../assets/img/testimonials/testimonials-1.jpg"
+                  alt="निशा कोठारी"
+                  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                />
+                <div>
+                  <div class="text-orange-500 text-sm sm:text-base">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <p class="font-medium text-gray-800 text-sm sm:text-base">
+                    निशा कोठारी
+                  </p>
+                  <p class="text-xs sm:text-sm text-gray-500">
+                    व्हाट्सएप के माध्यम से
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+
+          @media (max-width: 640px) {
+            .animate-scroll {
+              animation-duration: 20s;
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#FEF7ED] text-black pt-16 pb-6">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <div class="flex justify-center items-center gap-2">
+              <img
+                src="../assets/img/Hindu Mandir Puja logo (2).png"
+                alt="हिंदू मंदिर पूजा लोगो"
+                class="h-16"
+              />
+              <h2 class="text-xl font-bold">हिंदू मंदिर पूजा</h2>
+            </div>
+            <p class="text-gray-900">
+              हिंदू मंदिर पूजा एक भक्तिमय प्लेटफॉर्म है जो आपको भारत के मंदिरों,
+              पंडितों और तीर्थ क्षेत्रों से जोड़ता है।
+            </p>
+            <p class="text-gray-900">भारत में 🙏 के साथ बनाया गया</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">हिंदू मंदिर पूजा</h3>
+            <div class="space-y-2">
+              <a
+                href="../poojaBookingHindi.html"
+                class="block text-gray-900 hover:text-black transition"
+                >पूजा</a
+              >
+              <a
+                href="../chadhawa.html"
+                class="block text-gray-900 hover:text-black transition"
+                >चढ़ाव</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">कानूनी</h3>
+            <div class="space-y-2">
+              <a
+                href="../PrivacyPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >गोपनीयता नीति</a
+              >
+              <a
+                href="../TermsandCondition.html"
+                class="block text-gray-900 hover:text-black transition"
+                >नियम और शर्तें</a
+              >
+              <a
+                href="../ReturnPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >वापसी और धनवापसी नीति</a
+              >
+              <a
+                href="../ShipingPolicy.html"
+                class="block text-gray-900 hover:text-black transition"
+                >शिपिंग नीति</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">हमें फॉलो करें</h3>
+            <div class="flex gap-4 mb-6">
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-youtube text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-meta text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-instagram text-xl"></i
+              ></a>
+              <a href="#" class="text-gray-900 hover:text-black transition"
+                ><i class="fab fa-x-twitter text-xl"></i
+              ></a>
+            </div>
+            <h3 class="text-xl font-bold mb-4">संपर्क</h3>
+            <div class="space-y-2 text-gray-900">
+              <p>वाराणसी - 221001</p>
+              <p>📞 +91 8810733829</p>
+              <p>📧 hindumandirpuja@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-900"
+        >
+          &copy; 2024 हिंदू मंदिर पूजा प्राइवेट लिमिटेड
+        </div>
+      </div>
+    </footer>
+    <!-- Countdown Timer -->
+    <script>
+      function startCountdown() {
+        const targetDate = new Date("December 29, 2024 00:00:00").getTime();
+
+        setInterval(() => {
+          const now = new Date().getTime();
+          const timeLeft = targetDate - now;
+
+          if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+              (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor(
+              (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById(
+              "countdown-timer"
+            ).innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          } else {
+            document.getElementById("countdown-timer").innerText = "EXPIRED";
+          }
+        }, 1000);
+      }
+
+      startCountdown();
+
+      function redirectToAddToCart(amount, event) {
+          localStorage.setItem('pujaPackageName', event)
+          localStorage.setItem('pujaAmount', amount);
+          window.location.href = `AddToCartMaakamakhya-Hin.html`;
+        }
+    </script>
+
+    <script>
+      const processSection = document.getElementById("pujaProcessSection");
+      const progressLine = document.getElementById("progressLine");
+      const mobileProgressLine = document.getElementById("mobileProgressLine");
+      const icons = document.querySelectorAll(".process-icon");
+      let lineAnimationStarted = false;
+      let sectionAnimated = false;
+
+      function handleScroll() {
+        const sectionTop = processSection.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.7;
+
+        if (sectionTop <= triggerPoint && !sectionAnimated) {
+          // Animate section appearance
+          processSection.style.opacity = "1";
+          sectionAnimated = true;
+
+          // Start icon animations
+          icons.forEach((icon, index) => {
+            setTimeout(() => {
+              icon.style.transform = "scale(1.5)";
+              icon.style.filter = "brightness(1.2)";
+            }, index * 500);
+          });
+
+          // Animate progress lines
+          lineAnimationStarted = true;
+          progressLine.style.width = "100%";
+          mobileProgressLine.style.width = "100%";
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Initial check
+    </script>
+    <script src="../assets/js/puja.js"></script>
+  </body>
+</html>

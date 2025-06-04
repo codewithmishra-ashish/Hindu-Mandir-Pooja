@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mahadev Rudrabhishek Puja</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "nsotq330nv");
+</script>
+        <!-- Meta Pixel Code -->
+        <script>
+          !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+              n.callMethod
+                ? n.callMethod.apply(n, arguments)
+                : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+          })(
+            window,
+            document,
+            "script",
+            "https://connect.facebook.net/en_US/fbevents.js"
+          );
+          fbq("init", "808518914545478");
+          fbq("track", "PageView");
+        </script>
+        <noscript
+          ><img
+            height="1"
+            width="1"
+            style="display: none"
+            src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+<!-- End Google Tag Manager -->
+        <script>
+          function payEvent(eventName) {
+            dataLayer.push({
+              event: "checkout",
+              eventName: eventName,
+              action: "like",
+              price: totalAmount,
+              currency: "INR",
+              location: "Mrityunjay Temple",
+            });
+            console.log("Event tracked:", {
+              eventName: eventName,
+              price: totalAmount,
+              currency: "INR",
+              location: "Mrityunjay Temple",
+            });
+          }
+        </script>
+      </head>
+<body class="bg-amber-50 min-h-screen">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->      
+    <!-- Progress Bar for Mobile -->
+    <div class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-1">
+            <div class="flex justify-center items-center">
+                <div class="w-full flex justify-between relative">
+                    <div class="absolute top-1/2 left-0 right-0 h-[2px] bg-gray-200 -z-10">
+                        <div id="mobileProgressLine" class="h-full bg-orange-500 w-0 transition-all duration-1000"></div>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                            <img src="../assets/img/landing-page/icon1.png" alt="Select" class="w-8 h-8 process-icon transition-all duration-500"/>
+                        </div>
+                        <span class="text-[10px] mt-1 text-gray-500">Puja</span>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                            <img src="../assets/img/landing-page/icon2.png" alt="Cart" class="w-8 h-8 process-icon transition-all duration-500"/>
+                        </div>
+                        <span class="text-[10px] mt-1 text-orange-500 font-medium">Package</span>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                            <img src="../assets/img/landing-page/icon3.png" alt="Register" class="w-8 h-8 process-icon transition-all duration-500"/>
+                        </div>
+                        <span class="text-[10px] mt-1 text-gray-500">Register</span>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="process-icon-container relative z-10 bg-white p-2 rounded-full inline-block">
+                            <img src="../assets/img/landing-page/icon4.png" alt="Payment" class="w-8 h-8 process-icon transition-all duration-500"/>
+                        </div>
+                        <span class="text-[10px] mt-1 text-gray-500">Payment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      const processSection = document.querySelector('.w-full.flex.justify-between');
+      const progressLine = document.getElementById('mobileProgressLine');
+      const icons = document.querySelectorAll('.process-icon');
+      function handleProgress() {
+        progressLine.style.width = '55%';
+        icons.forEach((icon, index) => {
+          if (index <= 1) {
+            setTimeout(() => {
+              icon.style.transform = 'scale(1.2)';
+              icon.style.filter = 'brightness(1.2)';
+              const textSpan = icon.closest('.text-center').querySelector('span');
+              if (index === 1) {
+                textSpan.classList.remove('text-gray-500');
+                textSpan.classList.add('text-orange-500', 'font-medium');
+              } else {
+                textSpan.classList.remove('text-gray-500'); 
+                textSpan.classList.add('text-green-500');
+                icon.closest('.process-icon-container').classList.add('bg-green-50');
+              }
+            }, index * 300);
+          }
+        });
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        handleProgress();
+      });
+    </script>
+    <div class="container mx-auto mt-16 lg:mt-0 px-4 py-8 md:px-8 mb-24" id="about">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="hidden lg:block bg-white rounded-lg shadow-lg p-4 md:p-6 sticky top-4" style="height: fit-content;">
+                <h2 id="event-title" class="text-2xl md:text-3xl font-bold text-orange-800 mb-4">Mahadev Rudrabhishek Puja</h2>
+                <img id="event-image" src="../assets/img/Mandir-img/Mrityunjay  Mahadev Mandir, Kashi.png" alt="Event Image" class="w-full h-[400px] object-cover rounded-lg shadow-md">
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="bg-white rounded-lg shadow-lg max-w-lg w-full h-[90vh] flex flex-col">
+                    <div class="md:p-4 p-2 border-b">
+                        <div class="flex justify-between items-center">
+                            <h2 class="md:text-xl text-lg font-semibold text-gray-800">Current Package:</h2>
+                            <div class="flex items-center gap-2">
+                                <span id="packageName" class="md:text-lg text-base font-semibold text-orange-600">Quick Marriage Puja</span>
+                                <span id="packageAmount" class="md:text-lg text-base font-semibold text-orange-600">₹851</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 overflow-y-auto md:p-4 p-2 space-y-4">
+                        <div class="w-full bg-white rounded-lg shadow-md md:p-4 p-2">
+                            <h3 class="md:text-lg text-base font-semibold text-gray-800">Book Prasadam</h3>
+                            <p class="md:text-sm text-xs text-gray-600">Offerings of fruits, sweets, and dry fruits will be made, and prasad will be sent to your provided address.</p>
+                            <p class="md:text-sm text-xs font-semibold text-orange-600 mt-1">₹551</p>
+                            <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                                <button id="addPrasad" class="bg-orange-500 text-white md:px-4 px-3 md:py-2 py-1 rounded-lg hover:bg-orange-600 md:text-base text-sm w-full sm:w-auto">+ Add</button>
+                                <div id="prasadQuantityControls" class="hidden flex items-center gap-2">
+                                    <button id="decreasePrasad" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">−</button>
+                                    <span id="prasadQuantity" class="md:text-lg text-base">1</span>
+                                    <button id="increasePrasad" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">+</button>
+                                    <button id="removePrasad" class="bg-red-500 text-white md:px-3 px-2 md:py-1 py-0.5 rounded-md hover:bg-red-600 md:text-sm text-xs flex items-center gap-1">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white rounded-lg shadow-md md:p-4 p-2">
+                            <h3 class="md:text-lg text-base font-semibold text-gray-800">Rudraksh Mala</h3>
+                            <p class="md:text-sm text-xs text-gray-600">A sacred Rudraksh Mala will be offered to Lord Shiva during the puja and shipped to your home afterward.</p>
+                            <p class="md:text-sm text-xs font-semibold text-orange-600 mt-1">₹551</p>
+                            <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                                <button id="addRudraksh" class="bg-orange-500 text-white md:px-4 px-3 md:py-2 py-1 rounded-lg hover:bg-orange-600 md:text-base text-sm w-full sm:w-auto">+ Add</button>
+                                <div id="rudrakshQuantityControls" class="hidden flex items-center gap-2">
+                                    <button id="decreaseRudraksh" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">−</button>
+                                    <span id="rudrakshQuantity" class="md:text-lg text-base">1</span>
+                                    <button id="increaseRudraksh" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">+</button>
+                                    <button id="removeRudraksh" class="bg-red-500 text-white md:px-3 px-2 md:py-1 py-0.5 rounded-md hover:bg-red-600 md:text-sm text-xs flex items-center gap-1">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white rounded-lg shadow-md md:p-4 p-2">
+                            <h3 class="md:text-lg text-base font-semibold text-gray-800">Dakshina for Priests</h3>
+                            <p class="md:text-sm text-xs text-gray-600">A donation to honor the priests for performing the puja, enhancing the ritual's benefits through their blessings.</p>
+                            <p class="md:text-sm text-xs font-semibold text-orange-600 mt-1">₹251</p>
+                            <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                                <button id="addDakshina" class="bg-orange-500 text-white md:px-4 px-3 md:py-2 py-1 rounded-lg hover:bg-orange-600 md:text-base text-sm w-full sm:w-auto">+ Add</button>
+                                <div id="dakshinaQuantityControls" class="hidden flex items-center gap-2">
+                                    <button id="decreaseDakshina" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">−</button>
+                                    <span id="dakshinaQuantity" class="md:text-lg text-base">1</span>
+                                    <button id="increaseDakshina" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">+</button>
+                                    <button id="removeDakshina" class="bg-red-500 text-white md:px-3 px-2 md:py-1 py-0.5 rounded-md hover:bg-red-600 md:text-sm text-xs flex items-center gap-1">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white rounded-lg shadow-md md:p-4 p-2">
+                            <h3 class="md:text-lg text-base font-semibold text-gray-800">Deepdan</h3>
+                            <p class="md:text-sm text-xs text-gray-600">Offer lamps at Kashi Ganga Ghat, bringing light, peace, and prosperity into your life.</p>
+                            <p class="md:text-sm text-xs font-semibold text-orange-600 mt-1">₹101</p>
+                            <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                                <button id="addDeepdan" class="bg-orange-500 text-white md:px-4 px-3 md:py-2 py-1 rounded-lg hover:bg-orange-600 md:text-base text-sm w-full sm:w-auto">+ Add</button>
+                                <div id="deepdanQuantityControls" class="hidden flex items-center gap-2">
+                                    <button id="decreaseDeepdan" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">−</button>
+                                    <span id="deepdanQuantity" class="md:text-lg text-base">1</span>
+                                    <button id="increaseDeepdan" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">+</button>
+                                    <button id="removeDeepdan" class="bg-red-500 text-white md:px-3 px-2 md:py-1 py-0.5 rounded-md hover:bg-red-600 md:text-sm text-xs flex items-center gap-1">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white rounded-lg shadow-md md:p-4 p-2">
+                            <h3 class="md:text-lg text-base font-semibold text-gray-800">Cow Service</h3>
+                            <p class="md:text-sm text-xs text-gray-600">Performed in your name at Kashi Dham, this act brings spiritual blessings, peace, and happiness.</p>
+                            <p class="md:text-sm text-xs font-semibold text-orange-600 mt-1">₹151</p>
+                            <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                                <button id="addCowService" class="bg-orange-500 text-white md:px-4 px-3 md:py-2 py-1 rounded-lg hover:bg-orange-600 md:text-base text-sm w-full sm:w-auto">+ Add</button>
+                                <div id="cowServiceQuantityControls" class="hidden flex items-center gap-2">
+                                    <button id="decreaseCowService" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">−</button>
+                                    <span id="cowServiceQuantity" class="md:text-lg text-base">1</span>
+                                    <button id="increaseCowService" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">+</button>
+                                    <button id="removeCowService" class="bg-red-500 text-white md:px-3 px-2 md:py-1 py-0.5 rounded-md hover:bg-red-600 md:text-sm text-xs flex items-center gap-1">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white rounded-lg shadow-md md:p-4 p-2">
+                            <h3 class="md:text-lg text-base font-semibold text-gray-800">Annadan</h3>
+                            <p class="md:text-sm text-xs text-gray-600">Donate food to the needy, symbolizing selfless service and generosity.</p>
+                            <p class="md:text-sm text-xs font-semibold text-orange-600 mt-1">₹251</p>
+                            <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                                <button id="addAnnadan" class="bg-orange-500 text-white md:px-4 px-3 md:py-2 py-1 rounded-lg hover:bg-orange-600 md:text-base text-sm w-full sm:w-auto">+ Add</button>
+                                <div id="annadanQuantityControls" class="hidden flex items-center gap-2">
+                                    <button id="decreaseAnnadan" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">−</button>
+                                    <span id="annadanQuantity" class="md:text-lg text-base">1</span>
+                                    <button id="increaseAnnadan" class="bg-gray-200 text-gray-600 md:w-8 md:h-8 w-6 h-6 rounded-lg">+</button>
+                                    <button id="removeAnnadan" class="bg-red-500 text-white md:px-3 px-2 md:py-1 py-0.5 rounded-md hover:bg-red-600 md:text-sm text-xs flex items-center gap-1">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:p-4 p-2 bg-white border-t sticky bottom-0">
+                        <a id="payButton" href="payment.html" class="block bg-orange-500 text-white md:px-6 px-4 md:py-3 py-2 rounded-lg hover:bg-orange-600 md:text-lg text-base font-semibold text-center">
+                            ₹0 Pay
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const packageName = "Mahadev Rudrabhishek Puja";
+                    const pujaAmount = parseFloat(localStorage.getItem('pujaAmount')) || 851;
+                    const pujaPackageName = localStorage.getItem('pujaPackageName') || 'Quick Marriage Puja';
+                    const eventName = `${packageName} - ${pujaPackageName}`;
+                    const storedEventName = localStorage.getItem('eventName');
+                    if (storedEventName && storedEventName !== eventName) {
+                        localStorage.removeItem('cartItems');
+                        localStorage.removeItem('totalAmount');
+                    }
+                    document.getElementById('packageName').textContent = pujaPackageName;
+                    document.getElementById('packageAmount').textContent = `₹${pujaAmount}`;
+                    const items = {
+                        prasad: { price: 551, quantity: 0, element: 'prasad' },
+                        rudraksh: { price: 551, quantity: 0, element: 'rudraksh' },
+                        dakshina: { price: 251, quantity: 0, element: 'dakshina' },
+                        deepdan: { price: 101, quantity: 0, element: 'deepdan' },
+                        cowService: { price: 151, quantity: 0, element: 'cowService' },
+                        annadan: { price: 251, quantity: 0, element: 'annadan' }
+                    };
+                    const savedItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+                    for (const itemKey in items) {
+                        if (savedItems[itemKey] && savedItems[itemKey].quantity !== undefined) {
+                            items[itemKey].quantity = savedItems[itemKey].quantity;
+                        }
+                    }
+                    function saveItemsToLocalStorage() {
+                        localStorage.setItem('cartItems', JSON.stringify(items));
+                    }
+                    function updateTotal() {
+                        let total = pujaAmount;
+                        for (const item in items) {
+                            total += items[item].price * items[item].quantity;
+                        }
+                        document.getElementById('payButton').textContent = `₹${total} Pay`;
+                        localStorage.setItem('totalAmount', total.toString());
+                    }
+                    function updateItemControls(itemKey) {
+                        const item = items[itemKey];
+                        const addButton = document.getElementById(`add${item.element.charAt(0).toUpperCase() + item.element.slice(1)}`);
+                        const quantityControls = document.getElementById(`${item.element}QuantityControls`);
+                        const quantityDisplay = document.getElementById(`${item.element}Quantity`);
+                        if (item.quantity > 0) {
+                            addButton.classList.add('hidden');
+                            quantityControls.classList.remove('hidden');
+                            quantityDisplay.textContent = item.quantity;
+                        } else {
+                            addButton.classList.remove('hidden');
+                            quantityControls.classList.add('hidden');
+                        }
+                        updateTotal();
+                        saveItemsToLocalStorage();
+                    }
+                    for (const itemKey in items) {
+                        updateItemControls(itemKey);
+                    }
+                    for (const itemKey in items) {
+                        const item = items[itemKey];
+                        document.getElementById(`add${item.element.charAt(0).toUpperCase() + item.element.slice(1)}`).addEventListener('click', () => {
+                            item.quantity = 1;
+                            updateItemControls(itemKey);
+                        });
+                        document.getElementById(`increase${item.element.charAt(0).toUpperCase() + item.element.slice(1)}`).addEventListener('click', () => {
+                            item.quantity++;
+                            updateItemControls(itemKey);
+                        });
+                        document.getElementById(`decrease${item.element.charAt(0).toUpperCase() + item.element.slice(1)}`).addEventListener('click', () => {
+                            if (item.quantity > 1) {
+                                item.quantity--;
+                            } else {
+                                item.quantity = 0;
+                            }
+                            updateItemControls(itemKey);
+                        });
+                        document.getElementById(`remove${item.element.charAt(0).toUpperCase() + item.element.slice(1)}`).addEventListener('click', () => {
+                            item.quantity = 0;
+                            updateItemControls(itemKey);
+                        });
+                    }
+                    document.getElementById('payButton').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        localStorage.setItem('navigatingToPayment', 'true');
+                        localStorage.setItem('eventName', eventName);
+                        window.location.href = '../payment/payment.html';
+                    });
+                    updateTotal();
+                });
+                window.addEventListener('beforeunload', function () {
+                    if (!localStorage.getItem('navigatingToPayment')) {
+                        localStorage.removeItem('cartItems');
+                        localStorage.removeItem('totalAmount');
+                    } else {
+                        localStorage.removeItem('navigatingToPayment');
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
