@@ -219,104 +219,106 @@
       </form>
     </div>
 
-    <script>
-      const amount = parseFloat(localStorage.getItem("totalAmount")) || 0;
-      const eventName = localStorage.getItem("eventName") || "Unknown Event";
-      document.getElementById("displayAmount").textContent = amount.toFixed(2);
-      document.getElementById("eventName").value = eventName;
+<script>
+const amount = 0.0;
+const eventName = localStorage.getItem("eventName") || "Unknown Event";
+document.getElementById("displayAmount").textContent = amount.toFixed(2);
+document.getElementById("eventName").value = eventName;
 
-      document.getElementById("userDetailsForm").onsubmit = function (event) {
-        event.preventDefault();
+document.getElementById("userDetailsForm").onsubmit = function (e) {
+  e.preventDefault();
 
-        const userName = document.getElementById("userName").value;
-        const userPhone = document.getElementById("userPhone").value;
-        const userEmail = document.getElementById("userEmail").value;
-        const gotra = document.getElementById("gotra").value;
-        const address = document.getElementById("address").value;
-        const amount = document.getElementById("displayAmount").innerText;
+  const userName = document.getElementById("userName").value;
+  const userPhone = document.getElementById("userPhone").value;
+  const userEmail = document.getElementById("userEmail").value;
+  const gotra = document.getElementById("gotra").value;
+  const address = document.getElementById("address").value;
 
-        const razorpayApiKey = "rzp_live_UcnCYzIPLHdtGJ";
 
-        var options = {
-          key: razorpayApiKey,
-          amount: amount * 100,
-          currency: "INR",
-          name: "Hindu Mandir Puja",
-          description: "Payment for event",
-          handler: function (response) {
-            const paymentId = response.razorpay_payment_id;
-            const payButton = document.querySelector('button[type="submit"]');
-            payButton.innerText = "Waiting...";
-            payButton.disabled = true;
+  // Step 1: Create Razorpay order from backend
+  fetch("create_order.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ amount: amount })
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data.success) {
+        alert("Order creation failed: " + data.message);
+        return;
+      }
 
-            const formData = new FormData();
-            formData.append("eventName", eventName);
-            formData.append("name", userName);
-            formData.append("phone", userPhone);
-            formData.append("email", userEmail);
-            formData.append("gotra", gotra);
-            formData.append("address", address);
-            formData.append("amount", amount);
-            formData.append("payment_id", paymentId);
-            formData.append("payment_status", "complete");
+      const options = {
+        key: "rzp_live_UcnCYzIPLHdtGJ", // Your Razorpay Key ID
+        amount: amount * 100,
+        currency: "INR",
+        name: "Hindu Mandir Puja",
+        description: "Payment for event",
+        order_id: data.order_id, // 🔥 IMPORTANT
+        prefill: {
+          name: userName,
+          email: userEmail,
+          contact: userPhone,
+        },
+        theme: {
+          color: "#772d9f",
+        },
+        handler: function (response) {
+          // Step 2: Save payment to DB with verification
+          const formData = new FormData();
+          formData.append("eventName", eventName);
+          formData.append("name", userName);
+          formData.append("phone", userPhone);
+          formData.append("email", userEmail);
+          formData.append("gotra", gotra);
+          formData.append("address", address);
+          formData.append("amount", amount);
+          formData.append("payment_id", response.razorpay_payment_id);
+          formData.append("order_id", response.razorpay_order_id);
+          formData.append("signature", response.razorpay_signature);
+          formData.append("payment_status", "complete");
+          formData.append("cart_items", cartItems);
 
-            fetch("save_payment.php", {
-              method: "POST",
-              body: formData,
+          fetch("save_payment.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.success) {
+                localStorage.setItem("name", userName);
+                localStorage.setItem("phone", userPhone);
+                localStorage.setItem("amount", amount);
+                localStorage.setItem("payment_id", response.razorpay_payment_id);
+                localStorage.setItem("payment_status", "complete");
+                localStorage.setItem("date", new Date());
+                localStorage.setItem("address", address);
+                localStorage.setItem("navigatingToPayment", "true");
+                window.location.href = "thankyou.html";
+              } else {
+                alert("Save payment failed: " + data.message);
+              }
             })
-              .then((response) => response.json())
-              .then((data) => {
-                if (data.success) {
-                  localStorage.setItem("name", userName);
-                  localStorage.setItem("phone", userPhone);
-                  localStorage.setItem("amount", amount);
-                  localStorage.setItem("eventName", eventName);
-                  localStorage.setItem("payment_id", paymentId);
-                  localStorage.setItem("payment_status", "complete");
-                  localStorage.setItem("date", new Date());
-                  // Flag for navigation
-                  localStorage.setItem("navigatingToPayment", "true");
-                  window.location.href = "thankyou.html";
-                } else {
-                  alert("Error saving payment: " + data.message);
-                  payButton.innerText = "Pay Now";
-                  payButton.disabled = false;
-                }
-              })
-              .catch((error) => {
-                console.error("Error:", error);
-                alert("Error processing payment. Please try again.");
-                payButton.innerText = "Pay Now";
-                payButton.disabled = false;
-              });
-          },
-          prefill: {
-            name: userName,
-            email: userEmail,
-            contact: userPhone,
-          },
-          theme: {
-            color: "#772d9f",
-          },
-        };
-
-        const razorpay = new Razorpay(options);
-        razorpay.open();
-
-        razorpay.on("payment.failed", function () {
-          alert("Payment failed. Please try again.");
-        });
+            .catch(() => alert("Payment save failed!"));
+        },
       };
 
-      // Clear localStorage if user closes/reloads but not on navigation
-      window.addEventListener("beforeunload", function () {
-        if (!localStorage.getItem("navigatingToPayment")) {
-          localStorage.removeItem("totalAmount");
-          localStorage.removeItem("eventName");
-        } else {
-          localStorage.removeItem("navigatingToPayment");
-        }
-      });
-    </script>
+      const rzp = new Razorpay(options);
+      rzp.open();
+    })
+    .catch(() => alert("Failed to create order."));
+};
+
+// Prevent localStorage wipe on intentional navigation
+window.addEventListener("beforeunload", function () {
+  if (!localStorage.getItem("navigatingToPayment")) {
+    localStorage.removeItem("totalAmount");
+    localStorage.removeItem("eventName");
+  } else {
+    localStorage.removeItem("navigatingToPayment");
+  }
+});
+</script>
+
   </body>
 </html>
