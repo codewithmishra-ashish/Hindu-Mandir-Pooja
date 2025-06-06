@@ -272,20 +272,6 @@
       <div id="amountDisplay">
         Amount to be paid: ₹<span id="displayAmount"></span>
       </div>
-      <div id="cartItemsDisplay">
-        <h3>Cart Items</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Subtotal</th>
-            </tr>
-          </thead>
-          <tbody id="cartItems"></tbody>
-        </table>
-      </div>
       <h2>Enter Your Details</h2>
       <form id="userDetailsForm">
         <label for="eventName">Event Name:</label>
@@ -318,29 +304,11 @@
       if (amount) {
         document.getElementById("displayAmount").innerText = amount;
       }
-      const eventName = localStorage.getItem('package');
+      const eventName = localStorage.getItem('eventName');
       if (eventName) {
         document.getElementById("eventName").value = eventName;
       }
 
-      // Load cart items from localStorage
-      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [
-        { itemName: "Puja Item 1", quantity: 2, price: 100.00 },
-        { itemName: "Puja Item 2", quantity: 1, price: 300.00 }
-      ];
-
-      // Display cart items
-      const cartTable = document.getElementById('cartItems');
-      cartItems.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${item.itemName}</td>
-          <td>${item.quantity}</td>
-          <td>₹${item.price.toFixed(2)}</td>
-          <td>₹${(item.quantity * item.price).toFixed(2)}</td>
-        `;
-        cartTable.appendChild(row);
-      });
 
       async function createOrder(amount) {
         try {
