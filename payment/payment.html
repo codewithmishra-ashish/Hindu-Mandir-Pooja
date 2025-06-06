@@ -3,18 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Gateway</title>
+    <title>Payment Page</title>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '808518914545478');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=808518914545478&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MQ2K25VN');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nsotq330nv");
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function checkoutEvent() {
+        const eventName = document.getElementById('eventName')?.value || '';
+        const userName = document.getElementById('userName')?.value || '';
+        const userPhone = document.getElementById('userPhone')?.value || '';
+        const userEmail = document.getElementById('userEmail')?.value || '';
+        const gotra = document.getElementById('gotra')?.value || '';
+        const address = document.getElementById('address')?.value || '';
+        const displayAmount = document.getElementById('displayAmount');
+        const amount = displayAmount ? displayAmount.innerText : '0';
+
+        dataLayer.push({
+          'event': 'AddPaymentInfo',
+          'eventName': eventName,
+          'amount': amount,
+          'currency': 'INR',
+          'transactionId': generateTransactionId()
+        });
+        console.log('Event tracked:', {
+          eventName: eventName,
+          amount: amount,
+          currency: 'INR',
+          transactionId: generateTransactionId()
+        });
+      }
+
+      function generateTransactionId() {
+        return 'TXN' + Math.random().toString(36).substr(2, 9);
+      }
+
+      function setDefaultGotra() {
+        if (document.getElementById("defaultGotra").checked) {
+          document.getElementById("gotra").value = "Kashyap";
+        } else {
+          document.getElementById("gotra").value = "";
+        }
+      }
+    </script>
     <style>
       body {
         font-family: "Roboto", sans-serif;
@@ -26,7 +94,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(/assets/img/landing-page/logo-hindu.png);
+        background-image: url(/assets/img/landing-page/logo%20hindu.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 25%;
@@ -108,6 +176,26 @@
         background: linear-gradient(to right, #fff5f5, #fff);
         border: 2px solid rgba(165, 42, 42, 0.1);
       }
+      #cartItemsDisplay {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: #fafafa;
+      }
+      #cartItemsDisplay table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      #cartItemsDisplay th, #cartItemsDisplay td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      #cartItemsDisplay th {
+        background: #a52a2a;
+        color: white;
+      }
       #printReceiptButton {
         margin-top: 2px;
       }
@@ -120,6 +208,17 @@
         body {
           background-size: 35%;
           padding: 1px;
+        }
+        h1 {
+          font-size: 1.5em;
+        }
+        h2 {
+          font-size: 1.2em;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+          padding: 6px 8px;
         }
       }
       @media (max-width: 480px) {
@@ -148,7 +247,7 @@
         input[type="text"],
         input[type="tel"],
         input[type="email"] {
-          padding: 4px 6px;
+          padding: 1px;
           font-size: 0.6em;
           margin: 1px 0 6px;
         }
@@ -158,167 +257,244 @@
         }
         #amountDisplay {
           font-size: 1.2em;
-          padding: 6px;
+          padding: 5px;
           margin: 2px 0;
         }
       }
     </style>
   </head>
-  <body class="bg-orange-500">
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ2K25VN"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-      <h1>Payment Gateway</h1>
       <div id="amountDisplay">
         Amount to be paid: ₹<span id="displayAmount"></span>
       </div>
-
+      <div id="cartItemsDisplay">
+        <h3>Cart Items</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="cartItems"></tbody>
+        </table>
+      </div>
       <h2>Enter Your Details</h2>
       <form id="userDetailsForm">
         <label for="eventName">Event Name:</label>
         <input type="text" id="eventName" readonly />
-
         <label for="userName">Name:</label>
         <input type="text" id="userName" required />
-
         <label for="userPhone">Phone Number:</label>
-        <input type="tel" id="userPhone" required />
-
+        <input type="tel" id="phone" pattern="[0-9]{10}" required />
         <label for="userEmail">Email:</label>
         <input type="email" id="userEmail" required />
-
         <label for="gotra">Gotra:</label>
-        <input type="text" id="gotra" required />
+        <input type="text" id="gotra" />
         <div class="flex items-center gap-2">
-          <label class="text-xs" for="defaultGotra">
-            Don't know Gotra? <span class="text-xs">(गोत्र नहीं पता?)</span>
+          <label class="text-xs" for="defaultGotra">Don't know Gotra?
+            <span class="text-xs">(गोत्र नहीं पता?)</span>
           </label>
-          <input type="checkbox" id="defaultGotra" onclick="setDefaultGotra()" />
+          <input type="checkbox" id="defaultGotra" onclick="setDefaultGotra()">
         </div>
-        <script>
-          function setDefaultGotra() {
-            const gotraField = document.getElementById("gotra");
-            gotraField.value = document.getElementById("defaultGotra").checked ? "Kashyap" : "";
-          }
-        </script>
-
         <label for="address">Address:</label>
         <input type="text" id="address" required />
-
-        <button
-          type="submit"
-          class="bg-orange-500 mt-10 text-white px-4 py-2 rounded-md"
-        >
-          Pay Now
-        </button>
-        <button
-          class="bg-green-500 text-white px-4 py-2 rounded-md"
-          id="printReceiptButton"
-          style="display: none"
-        >
+        <button onclick="checkoutEvent()" class="bg-orange-500 mt-10 text-white px-4 py-2 rounded-md" type="submit">Pay Now</button>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-md" id="payButton" style="display: none">
           Print Payment Receipt
         </button>
       </form>
     </div>
-
-<script>
-const amount = 0.0;
-const eventName = localStorage.getItem("eventName") || "Unknown Event";
-document.getElementById("displayAmount").textContent = amount.toFixed(2);
-document.getElementById("eventName").value = eventName;
-
-document.getElementById("userDetailsForm").onsubmit = function (e) {
-  e.preventDefault();
-
-  const userName = document.getElementById("userName").value;
-  const userPhone = document.getElementById("userPhone").value;
-  const userEmail = document.getElementById("userEmail").value;
-  const gotra = document.getElementById("gotra").value;
-  const address = document.getElementById("address").value;
-
-
-  // Step 1: Create Razorpay order from backend
-  fetch("create_order.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ amount: amount })
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      if (!data.success) {
-        alert("Order creation failed: " + data.message);
-        return;
+    <script>
+      // Load amount and event name from localStorage
+      const amount = localStorage.getItem('totalAmount');
+      if (amount) {
+        document.getElementById("displayAmount").innerText = amount;
+      }
+      const eventName = localStorage.getItem('package');
+      if (eventName) {
+        document.getElementById("eventName").value = eventName;
       }
 
-      const options = {
-        key: "rzp_live_UcnCYzIPLHdtGJ", // Your Razorpay Key ID
-        amount: amount * 100,
-        currency: "INR",
-        name: "Hindu Mandir Puja",
-        description: "Payment for event",
-        order_id: data.order_id, // 🔥 IMPORTANT
-        prefill: {
-          name: userName,
-          email: userEmail,
-          contact: userPhone,
-        },
-        theme: {
-          color: "#772d9f",
-        },
-        handler: function (response) {
-          // Step 2: Save payment to DB with verification
-          const formData = new FormData();
-          formData.append("eventName", eventName);
-          formData.append("name", userName);
-          formData.append("phone", userPhone);
-          formData.append("email", userEmail);
-          formData.append("gotra", gotra);
-          formData.append("address", address);
-          formData.append("amount", amount);
-          formData.append("payment_id", response.razorpay_payment_id);
-          formData.append("order_id", response.razorpay_order_id);
-          formData.append("signature", response.razorpay_signature);
-          formData.append("payment_status", "complete");
-          formData.append("cart_items", cartItems);
+      // Load cart items from localStorage
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [
+        { itemName: "Puja Item 1", quantity: 2, price: 100.00 },
+        { itemName: "Puja Item 2", quantity: 1, price: 300.00 }
+      ];
 
-          fetch("save_payment.php", {
-            method: "POST",
-            body: formData,
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              if (data.success) {
-                localStorage.setItem("name", userName);
-                localStorage.setItem("phone", userPhone);
-                localStorage.setItem("amount", amount);
-                localStorage.setItem("payment_id", response.razorpay_payment_id);
-                localStorage.setItem("payment_status", "complete");
-                localStorage.setItem("date", new Date());
-                localStorage.setItem("address", address);
-                localStorage.setItem("navigatingToPayment", "true");
-                window.location.href = "thankyou.html";
-              } else {
-                alert("Save payment failed: " + data.message);
+      // Display cart items
+      const cartTable = document.getElementById('cartItems');
+      cartItems.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.itemName}</td>
+          <td>${item.quantity}</td>
+          <td>₹${item.price.toFixed(2)}</td>
+          <td>₹${(item.quantity * item.price).toFixed(2)}</td>
+        `;
+        cartTable.appendChild(row);
+      });
+
+      async function createOrder(amount) {
+        try {
+          const response = await fetch('create_order.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount: amount })
+          });
+          const result = await response.json();
+          if (!result.success) {
+            throw new Error(result.message || 'Failed to create order');
+          }
+          return result.order_id;
+        } catch (error) {
+          throw new Error(`Order creation failed: ${error.message}`);
+        }
+      }
+
+      document.getElementById("userDetailsForm").onsubmit = async function(event) {
+        event.preventDefault();
+        const userName = document.getElementById("userName").value;
+        const userPhone = document.getElementById("phone").value;
+        const userEmail = document.getElementById("userEmail").value;
+        const gotra = document.getElementById("gotra").value;
+        const address = document.getElementById("address").value;
+        const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        const displayAmount = document.getElementById("displayAmount").innerText;
+        const amount = parseFloat(displayAmount);
+        const razorpayApiKey = "rzp_live_UcnCYzIPLHdtGJ"; // Replace with your Razorpay API Key
+
+        // Validate amount
+        if (isNaN(amount) || amount <= 0) {
+          alert("Invalid amount. Please check and try again.");
+          return;
+        }
+
+        const payButton = document.querySelector('button[type="submit"]');
+        payButton.innerText = 'Processing...';
+        payButton.disabled = true;
+
+        try {
+          // Create Razorpay order
+          const orderId = await createOrder(amount);
+
+          const options = {
+            key: razorpayApiKey,
+            amount: amount * 100, // Convert to paise
+            currency: "INR",
+            name: "Hindu Mandir Puja",
+            description: `Payment for event: ${eventName}`,
+            order_id: orderId,
+            handler: async function (response) {
+              payButton.innerText = 'Saving...';
+              const paymentData = {
+                eventName,
+                name: userName,
+                email: userEmail,
+                phone: userPhone,
+                gotra,
+                address,
+                date,
+                amount,
+                paymentStatus: 'complete',
+                paymentId: response.razorpay_payment_id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_signature: response.razorpay_signature,
+                cartItems
+              };
+
+              try {
+                sessionStorage.setItem('paymentData', JSON.stringify(paymentData));
+                await saveToDatabase(paymentData);
+                window.location.href = 'thankyou.html';
+              } catch (error) {
+                console.error("Error saving data:", error.message);
+                alert(`Error saving payment data: ${error.message}`);
+                payButton.innerText = 'Pay Now';
+                payButton.disabled = false;
               }
-            })
-            .catch(() => alert("Payment save failed!"));
-        },
+            },
+            prefill: {
+              name: userName,
+              email: userEmail,
+              contact: userPhone
+            },
+            theme: {
+              color: "#772d9f"
+            }
+          };
+
+          const razorpay = new Razorpay(options);
+          razorpay.open();
+
+          razorpay.on('payment.failed', function (response) {
+            const paymentData = {
+              eventName,
+              name: userName,
+              email: userEmail,
+              phone: userPhone,
+              gotra,
+              address,
+              date,
+              amount,
+              paymentStatus: 'failed',
+              paymentId: response.error.metadata?.payment_id || "N/A",
+              razorpay_order_id: response.error.metadata?.order_id || "N/A",
+              razorpay_signature: null,
+              cartItems
+            };
+
+            saveToDatabase(paymentData)
+              .then(() => {
+                console.log("Failed payment data saved to database.");
+              })
+              .catch(error => {
+                console.error("Error saving failed payment data:", error.message);
+              });
+
+            alert(`Payment failed: ${response.error?.description || "Unknown error"}`);
+            payButton.innerText = 'Pay Now';
+            payButton.disabled = false;
+          });
+        } catch (error) {
+          console.error("Payment initiation failed:", error.message);
+          alert(`Error initiating payment: ${error.message}`);
+          payButton.innerText = 'Pay Now';
+          payButton.disabled = false;
+        }
       };
 
-      const rzp = new Razorpay(options);
-      rzp.open();
-    })
-    .catch(() => alert("Failed to create order."));
-};
-
-// Prevent localStorage wipe on intentional navigation
-window.addEventListener("beforeunload", function () {
-  if (!localStorage.getItem("navigatingToPayment")) {
-    localStorage.removeItem("totalAmount");
-    localStorage.removeItem("eventName");
-  } else {
-    localStorage.removeItem("navigatingToPayment");
-  }
-});
-</script>
-
+      function saveToDatabase(data) {
+        return new Promise((resolve, reject) => {
+          fetch('save_payment.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          })
+            .then(response => response.json())
+            .then(result => {
+              if (result.success) {
+                console.log("Data saved to database successfully.");
+                resolve();
+              } else {
+                throw new Error(result.message || "Failed to save data to database");
+              }
+            })
+            .catch(error => {
+              console.error("Error saving to database:", error.message);
+              reject(error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

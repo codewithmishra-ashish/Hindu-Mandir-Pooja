@@ -1,90 +1,117 @@
 <?php
-require_once 'razorpay-php/src/Razorpay.php';
-require_once 'razorpay-php/src/Api.php';
-require_once 'razorpay-php/src/Errors/SignatureVerificationError.php';
-require_once 'razorpay-php/src/Utility.php';
-
-use Razorpay\Api\Api;
-use Razorpay\Api\Errors\SignatureVerificationError;
-
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
 
-// Razorpay Keys
-$api_key = 'rzp_live_UcnCYzIPLHdtGJ';
-$api_secret = 'YOUR_SECRET_KEY'; // 🔁 Secure this in .env
+// Database configuration
+$host = 'localhost';
+$dbname = 'u765668449_puja1';
+$username = 'u765668449_puja1';
+$password = '??KA30Xt';
 
-// DB credentials
-$conn = new mysqli("localhost", "u765668449_puja1", "??KA30Xt", "u765668449_puja1");
-if ($conn->connect_error) {
-    die(json_encode(['success' => false, 'message' => 'DB connect failed']));
-}
+// Razorpay credentials
+$razorpay_key = 'rzp_live_UcnCYzIPLHdtGJ'; // Replace with your Razorpay Key ID
+$razorpay_secret = 'qtz09fsxYy6asz1HEgM2G6sp'; // Replace with your Razorpay Secret
 
-// Required POST fields
-$fields = ['eventName', 'name', 'phone', 'email', 'gotra', 'address', 'amount', 'payment_id', 'order_id', 'signature', 'payment_status', 'cart_items'];
-foreach ($fields as $f) {
-    if (!isset($_POST[$f])) {
-        echo json_encode(['success' => false, 'message' => "Missing $f"]);
+try {
+    // Create a PDO instance
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Get the JSON data from the request
+    $input = file_get_contents('php://input');
+    $data = json_decode($input, true);
+
+    // Validate required fields for payments
+    if (!isset($data['eventName'], $data['name'], $data['email'], $data['phone'], $data['gotra'], $data['address'], $data['date'], $data['amount'], $data['paymentStatus'], $data['paymentId'], $data['cartItems']) || !is_array($data['cartItems'])) {
+        echo json_encode(['success' => false, 'message' => 'Missing required fields or invalid cart items']);
         exit;
     }
-}
 
-// Extract and sanitize
-$eventName = $conn->real_escape_string($_POST['eventName']);
-$name = $conn->real_escape_string($_POST['name']);
-$phone = $conn->real_escape_string($_POST['phone']);
-$email = $conn->real_escape_string($_POST['email']);
-$gotra = $conn->real_escape_string($_POST['gotra']);
-$address = $conn->real_escape_string($_POST['address']);
-$amount = (float)$_POST['amount'];
-$payment_id = $_POST['payment_id'];
-$order_id = $_POST['order_id'];
-$signature = $_POST['signature'];
-$payment_status = $_POST['payment_status'];
-$payment_date = date('Y-m-d H:i:s');
-$cart_items = json_decode($_POST['cart_items'], true);
-
-// Signature verification
-$api = new Api($api_key, $api_secret);
-$attributes = [
-    'razorpay_order_id' => $order_id,
-    'razorpay_payment_id' => $payment_id,
-    'razorpay_signature' => $signature
-];
-
-try {
-    $api->utility->verifyPaymentSignature($attributes);
-} catch (SignatureVerificationError $e) {
-    echo json_encode(['success' => false, 'message' => 'Invalid signature']);
-    exit;
-}
-
-// Start DB Transaction
-$conn->begin_transaction();
-try {
-    // Insert into payments
-    $stmt = $conn->prepare("INSERT INTO payments (event_name, name, phone, email, gotra, address, amount, payment_id, payment_status, payment_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssdsss", $eventName, $name, $phone, $email, $gotra, $address, $amount, $payment_id, $payment_status, $payment_date);
-    if (!$stmt->execute()) throw new Exception("Payment insert failed: " . $stmt->error);
-    $stmt->close();
-
-    // Insert cart items
-    if (is_array($cart_items)) {
-        $stmt = $conn->prepare("INSERT INTO cart_items (payment_id, item_name, quantity, price) VALUES (?, ?, ?, ?)");
-        foreach ($cart_items as $item) {
-            $item_name = $conn->real_escape_string($item['name']);
-            $qty = (int)$item['quantity'];
-            $price = (float)$item['price'];
-            $stmt->bind_param("ssid", $payment_id, $item_name, $qty, $price);
-            if (!$stmt->execute()) throw new Exception("Cart insert failed: " . $stmt->error);
-        }
-        $stmt->close();
+    // Validate phone format (10 digits)
+    if (!preg_match('/^[0-9]{10}$/', $data['phone'])) {
+        echo json_encode(['success' => false, 'message' => 'Invalid phone number']);
+        exit;
     }
 
-    $conn->commit();
-    echo json_encode(['success' => true]);
-} catch (Exception $e) {
-    $conn->rollback();
-    echo json_encode(['success' => false, 'message' => $e->getMessage()]);
-}
+    // Verify Razorpay signature if payment is successful
+    if ($data['paymentStatus'] === 'complete') {
+        if (!isset($data['razorpay_order_id'], $data['razorpay_signature'])) {
+            echo json_encode(['success' => false, 'message' => 'Missing Razorpay order ID or signature']);
+            exit;
+        }
 
-$conn->close();
+        require 'razorpay-php/Razorpay.php'; // Include Razorpay PHP SDK
+        use Razorpay\Api\Api;
+
+        $api = new Api($razorpay_key, $razorpay_secret);
+        $attributes = [
+            'razorpay_order_id' => $data['razorpay_order_id'],
+            'razorpay_payment_id' => $data['paymentId'],
+            'razorpay_signature' => $data['razorpay_signature']
+        ];
+
+        try {
+            $api->utility->verifyPaymentSignature($attributes);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => 'Signature verification failed: ' . $e->getMessage()]);
+            exit;
+        }
+    }
+
+    // Begin transaction to ensure data consistency
+    $pdo->beginTransaction();
+
+    // Prepare the SQL statement for payments
+    $sql = "INSERT INTO payments (event_name, name, email, phone, gotra, address, amount, payment_id, payment_status, payment_date)
+            VALUES (:eventName, :name, :email, :phone, :gotra, :address, :amount, :paymentId, :paymentStatus, :date)";
+    $stmt = $pdo->prepare($sql);
+
+    // Bind parameters for payments
+    $stmt->bindParam(':eventName', $data['eventName']);
+    $stmt->bindParam(':name', $data['name']);
+    $stmt->bindParam(':email', $data['email']);
+    $stmt->bindParam(':phone', $data['phone']);
+    $stmt->bindParam(':gotra', $data['gotra']);
+    $stmt->bindParam(':address', $data['address']);
+    $stmt->bindParam(':amount', $data['amount'], PDO::PARAM_STR);
+    $stmt->bindParam(':paymentId', $data['paymentId']);
+    $stmt->bindParam(':paymentStatus', $data['paymentStatus']);
+    $stmt->bindParam(':date', $data['date']);
+
+    // Execute the statement for payments
+    $stmt->execute();
+
+    // Prepare the SQL statement for cart_items
+    $sqlCart = "INSERT INTO cart_items (payment_id, item_name, quantity, price)
+                VALUES (:paymentId, :itemName, :quantity, :price)";
+    $stmtCart = $pdo->prepare($sqlCart);
+
+    // Insert each cart item
+    foreach ($data['cartItems'] as $item) {
+        if (!isset($item['itemName'], $item['quantity'], $item['price']) || $item['quantity'] <= 0 || $item['price'] < 0) {
+            $pdo->rollBack();
+            echo json_encode(['success' => false, 'message' => 'Invalid cart item data']);
+            exit;
+        }
+        $stmtCart->bindParam(':paymentId', $data['paymentId']);
+        $stmtCart->bindParam(':itemName', $item['itemName']);
+        $stmtCart->bindParam(':quantity', $item['quantity'], PDO::PARAM_INT);
+        $stmtCart->bindParam(':price', $item['price'], PDO::PARAM_STR);
+        $stmtCart->execute();
+    }
+
+    // Commit the transaction
+    $pdo->commit();
+
+    // Return success response
+    echo json_encode(['success' => true, 'message' => 'Data and cart items saved successfully']);
+} catch (PDOException $e) {
+    $pdo->rollBack();
+    echo json_encode(['success' => false, 'message' => 'Database error: ' . $e->getMessage()]);
+} catch (Exception $e) {
+    $pdo->rollBack();
+    echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
+}
+?>
